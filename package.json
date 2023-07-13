@@ -1,0 +1,15 @@
+{
+  "name": "data-structures-and-algorithms-in-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 1%, last 2 versions, not dead, not IE 11",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "wahyu komarudin hidayah",
+  "license": "MIT License",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
