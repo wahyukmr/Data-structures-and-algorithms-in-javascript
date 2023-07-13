@@ -5,7 +5,7 @@
     - fibonacci(3) = [0,1,1];
     - fibonacci(7) = [0,1,1,2,3,5,8];
  */
-export function fibonacci(n) {
+function fibonacci(n) {
   const fib = [0, 1];
   for (let i = 2; i < n; i++) {
     fib[i] = fib[i - 1] + fib[i - 2];
@@ -26,7 +26,7 @@ console.log(fibonacci(7)); // Output: [0,1,1,2,3,5,8];
     - factorial(3) = 3*2*1 = 6;
     - factorial(7) = 7*6*5*4*3*2*1 = 5040;
  */
-export function factorial(n) {
+function factorial(n) {
   let result = 1;
   for (let i = 2; i <= n; i++) {
     console.log(i);
@@ -46,7 +46,7 @@ console.log(factorial(7)); // Output: 5040
     - isPrimeNumber(5) = true karena (1*5 atau 5*1);
     - isPrimeNumber(4)) = false karena (1*4 atau 2*2 atau 4*1);
   */
-export function isPrimeNumber(n) {
+function isPrimeNumber(n) {
   if (n < 2) {
     return false;
   }
@@ -72,7 +72,7 @@ console.log(isPrimeNumber(5)); // Output: true
     - isPowerOfTwo(5) = false;
   */
 // Cara pertama:
-export function isPowerOfTwo(n) {
+function isPowerOfTwo(n) {
   if (n < 1) {
     return false;
   }
@@ -91,7 +91,7 @@ console.log(isPowerOfTwo(5)); // Output: false
 // Big-O dari cara pertama adalah Logarithmic O(logn) Time complexity, karena jumlah eksekusi intruksi meningkat seiring `n` bertumbuh tetapi tidak dengan jumlah yang sama (memodisikasi nilai `n`).
 
 // Cara kedua dengan bitwise operator (&): SOLUSI TERBAIK
-export function isPowerOfTwoBitWise(n) {
+function isPowerOfTwoBitWise(n) {
   if (n < 1) {
     return false;
   }
@@ -127,7 +127,7 @@ export function isPowerOfTwoBitWise(n) {
     keterangan = F sebagai fungsi
   */
 // parameter `n` merujuk ke posisi elemen
-export function recursiveFibonacci(n) {
+function recursiveFibonacci(n) {
   if (n < 2) {
     return n;
   }
@@ -153,7 +153,7 @@ console.log(recursiveFibonacci(7)); // Output: 13
     
     jadi bisa dikatakan `n! = n * (n-1)!`
   */
-export function RecursiveFactorial(n) {
+function RecursiveFactorial(n) {
   if (n === 0) {
     return 1;
   }
