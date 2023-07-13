@@ -1,1 +1,3 @@
-console.log("babai");
+import * as mathAlgorithm from "../algorithm/math-algorithm.js";
+
+mathAlgorithm;

@@ -2,9 +2,14 @@
   "name": "data-structures-and-algorithms-in-javascript",
   "version": "1.0.0",
   "description": "",
+  "source": "src/index.html",
   "browserslist": "> 1%, last 2 versions, not dead, not IE 11",
+  "targets": {
+    "main": false
+  },
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel",
+    "build": "parcel build --dist-dir public"
   },
   "keywords": [],
   "author": "wahyu komarudin hidayah",
