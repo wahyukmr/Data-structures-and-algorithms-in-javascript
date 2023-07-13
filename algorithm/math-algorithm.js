@@ -12,9 +12,9 @@ export function fibonacci(n) {
   }
   return fib;
 }
-console.log(fibonacci(2)); // [0,1]
-console.log(fibonacci(3)); // [0,1,1];
-console.log(fibonacci(7)); // [0,1,1,2,3,5,8];
+console.log(fibonacci(2)); // Output: [0,1]
+console.log(fibonacci(3)); // Output: [0,1,1];
+console.log(fibonacci(7)); // Output: [0,1,1,2,3,5,8];
 // Big-O dari fibonacci() adalah Linear O(n) Time complexity, karena jika nilai n bertambah, jumlah eksekusi baris ke 21 juga meningkat.
 
 /**
@@ -34,8 +34,8 @@ export function factorial(n) {
   }
   return result;
 }
-console.log(factorial(3)); // 6
-console.log(factorial(7)); // 5040
+console.log(factorial(3)); // Output: 6
+console.log(factorial(7)); // Output: 5040
 // Big-O dari fungsi factorial() adalah Linear O(n) Time complexity, karena jika nilai n bertambah, jumlah eksekusi baris ke 42 juga meningkat.
 
 /**
@@ -57,9 +57,9 @@ export function isPrimeNumber(n) {
   }
   return true;
 }
-console.log(isPrimeNumber(2)); // true
-console.log(isPrimeNumber(4)); // false
-console.log(isPrimeNumber(5)); // true
+console.log(isPrimeNumber(2)); // Output: true
+console.log(isPrimeNumber(4)); // Output: false
+console.log(isPrimeNumber(5)); // Output: true
 // Big-O dari fungsi isPrimeNumber() adalah Linear O(n) Time complexity, karena jika nilai n bertambah, jumlah eksekusi baris ke 63 juga meningkat.
 
 /**
@@ -85,9 +85,9 @@ export function isPowerOfTwo(n) {
   }
   return true;
 }
-console.log(isPowerOfTwo(1)); // true
-console.log(isPowerOfTwo(2)); // true
-console.log(isPowerOfTwo(5)); // false
+console.log(isPowerOfTwo(1)); // Output: true
+console.log(isPowerOfTwo(2)); // Output: true
+console.log(isPowerOfTwo(5)); // Output: false
 // Big-O dari cara pertama adalah Logarithmic O(logn) Time complexity, karena jumlah eksekusi intruksi meningkat seiring `n` bertumbuh tetapi tidak dengan jumlah yang sama (memodisikasi nilai `n`).
 
 // Cara kedua dengan bitwise operator (&): SOLUSI TERBAIK
@@ -133,10 +133,10 @@ export function recursiveFibonacci(n) {
   }
   return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
 }
-console.log(recursiveFibonacci(0)); // 0
-console.log(recursiveFibonacci(1)); // 1
-console.log(recursiveFibonacci(6)); // 8
-console.log(recursiveFibonacci(7)); // 13
+console.log(recursiveFibonacci(0)); // Output: 0
+console.log(recursiveFibonacci(1)); // Output: 1
+console.log(recursiveFibonacci(6)); // Output: 8
+console.log(recursiveFibonacci(7)); // Output: 13
 // Big-O dari fungsi recursiveFibonacci() adalah quadratic O(2^n) Time complexity. Jika melihat pada Big-O Complexity Chart, performa dari Recursive O(2^n) sangat buruk dibandingkan dengan Linear O(n), jadi teknik Recursion bukanlah solusi yang baik untuk masalah fibonacci sequence.
 
 /**
@@ -159,7 +159,7 @@ export function RecursiveFactorial(n) {
   }
   return n * RecursiveFactorial(n - 1);
 }
-console.log(RecursiveFactorial(0)); // 1
-console.log(RecursiveFactorial(1)); // 1
-console.log(RecursiveFactorial(5)); // 120
+console.log(RecursiveFactorial(0)); // Output: 1
+console.log(RecursiveFactorial(1)); // Output: 1
+console.log(RecursiveFactorial(5)); // Output: 120
 // Big-O dari fungsi RecursiveFactorial() adalah Linear O(n) Time complexity, karena jika nilai n bertambah, jumlah eksekusi ikut meningkat pada kecepatan yang sama.
