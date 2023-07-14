@@ -3,7 +3,11 @@ import * as otherAlgorithms from "../algorithm/other-algorithms-and-problem-solv
 import * as searchAlgorithm from "../algorithm/search-algorithm.js";
 import * as sortingAlgorithm from "../algorithm/sorting-algorithm.js";
 
+import * as stackArray from "../data-structures/stack-array.js";
+
 mathAlgorithm;
 searchAlgorithm;
 sortingAlgorithm;
 otherAlgorithms;
+
+stackArray;
