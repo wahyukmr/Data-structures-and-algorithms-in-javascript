@@ -3,11 +3,15 @@ import * as otherAlgorithms from "../algorithm/other-algorithms-and-problem-solv
 import * as searchAlgorithm from "../algorithm/search-algorithm.js";
 import * as sortingAlgorithm from "../algorithm/sorting-algorithm.js";
 
-import * as stackArray from "../data-structures/stack-array.js";
+import * as circularQueue from "../data-structures/queue-circular.js";
+import * as linearQueue from "../data-structures/queue-linear.js";
+import * as stack from "../data-structures/stack-array.js";
 
 mathAlgorithm;
 searchAlgorithm;
 sortingAlgorithm;
 otherAlgorithms;
 
-stackArray;
+stack;
+linearQueue;
+circularQueue;
