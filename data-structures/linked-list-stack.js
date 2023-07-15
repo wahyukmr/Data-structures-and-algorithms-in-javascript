@@ -14,7 +14,7 @@ export default class LinkedListStack {
   }
 
   push(item) {
-    this.list.append(item);
+    this.list.prepend(item);
   }
 
   pop() {
