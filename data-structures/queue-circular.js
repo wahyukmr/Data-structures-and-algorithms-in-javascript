@@ -1,4 +1,4 @@
-class CircularQueue {
+export default class CircularQueue {
   constructor(capacity) {
     this.capacity = capacity;
     this.items = new Array(capacity);
@@ -58,20 +58,3 @@ class CircularQueue {
     return result;
   }
 }
-const queue = new CircularQueue(5);
-console.log(queue.isEmpty()); // Output: true
-
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
-queue.enqueue(40);
-queue.enqueue(50);
-console.log(queue.print()); // Output: [10, 20, 30, 40, 50]
-console.log(queue.peek()); // Output: 10
-
-console.log(queue.dequeue()); // Output: 10
-console.log(queue.dequeue()); // Output: 20
-queue.enqueue(400);
-queue.enqueue(500);
-console.log(queue.print()); // [30, 40, 50, 400, 500]
-console.log(queue.peek()); // 30
