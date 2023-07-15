@@ -120,7 +120,7 @@ export default class LinkedList {
     if (this.isEmpty()) {
       return null;
     }
-    const value = this.head.value;
+    const value = this.head.data;
     this.head = this.head.pointer;
     if (this.head === null) {
       this.tail = null;
@@ -134,7 +134,7 @@ export default class LinkedList {
     if (this.isEmpty()) {
       return null;
     }
-    const value = this.tail.value;
+    const value = this.tail.data;
     if (this.size === 1) {
       this.head = null;
       this.tail = null;

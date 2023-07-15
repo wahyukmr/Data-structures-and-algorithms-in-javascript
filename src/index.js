@@ -3,6 +3,7 @@ import * as otherAlgorithms from "../algorithm/other-algorithms-and-problem-solv
 import * as searchAlgorithm from "../algorithm/search-algorithm.js";
 import * as sortingAlgorithm from "../algorithm/sorting-algorithm.js";
 
+import LinkedListStack from "../data-structures/linked-list-stack.js";
 import LinkedList from "../data-structures/linked-list.js";
 import CircularQueue from "../data-structures/queue-circular.js";
 import LinearQueue from "../data-structures/queue-linear.js";
@@ -75,37 +76,51 @@ console.log(circularQueue.peek()); // 30
 console.log(
   "------------------- LINKED LIST DATA STRUCTURE -------------------"
 );
-const linkedList = new LinkedList();
-console.log(linkedList.isEmpty());
-console.log(linkedList.getSize());
-console.log(linkedList.print()); // Output: []
+const list1 = new LinkedList();
+console.log(list1.isEmpty());
+console.log(list1.getSize());
+console.log(list1.print()); // Output: []
 
-linkedList.prepend(10);
-linkedList.prepend(20);
-linkedList.prepend(30);
-console.log(linkedList.print()); // Output: [30, 20, 10]
+list1.prepend(10);
+list1.prepend(20);
+list1.prepend(30);
+console.log(list1.print()); // Output: [30, 20, 10]
 
-linkedList.removeFromFront();
-linkedList.removeFromFront();
-linkedList.removeFromFront();
-console.log(linkedList.print()); // Output: []
+list1.removeFromFront();
+list1.removeFromFront();
+list1.removeFromFront();
+console.log(list1.print()); // Output: []
 
-linkedList.append(40);
-linkedList.append(60);
-linkedList.append(50);
-linkedList.append(70);
-console.log(linkedList.print()); // Output: [40, 60, 50, 70]
+list1.append(40);
+list1.append(60);
+list1.append(50);
+list1.append(70);
+console.log(list1.print()); // Output: [40, 60, 50, 70]
 
-linkedList.removeFromEnd();
-console.log(linkedList.print()); // Output: [40, 60, 50]
+list1.removeFromEnd();
+console.log(list1.print()); // Output: [40, 60, 50]
 
-linkedList.reverse();
-console.log(linkedList.print()); // Output: [50, 60, 40]
+list1.reverse();
+console.log(list1.print()); // Output: [50, 60, 40]
 
-linkedList.insert(1, 0);
-linkedList.insert(2, 1);
-linkedList.insert(3, 2);
-console.log(linkedList.print()); // Output: [1, 2, 3, 50, 60, 40]
-console.log(linkedList.getSize()); // Output: 6
+list1.insert(1, 0);
+list1.insert(2, 1);
+list1.insert(3, 2);
+console.log(list1.print()); // Output: [1, 2, 3, 50, 60, 40]
+console.log(list1.getSize()); // Output: 6
 
-console.log(linkedList.search(3)); // Output: 2
+console.log(list1.search(3)); // Output: 2
+
+console.log(
+  "------------------- LINKED LIST STACK DATA STRUCTURE -------------------"
+);
+const list2 = new LinkedListStack();
+console.log(list2.isEmpty());
+list2.push(20);
+list2.push(10);
+list2.push(30);
+console.log(list2.getSize());
+console.log(list2.print());
+console.log(list2.pop());
+console.log(list2.print());
+console.log(list2.peek());
