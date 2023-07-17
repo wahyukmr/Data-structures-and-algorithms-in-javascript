@@ -1,5 +1,3 @@
-[1. ~ ALGORITMA :](#1--algoritma-)
-
 - [1. ~ ALGORITMA :](#1--algoritma-)
   - [1.1. Mendefinisikan algoritma](#11-mendefinisikan-algoritma)
   - [1.2. Mengapa algoritma](#12-mengapa-algoritma)
