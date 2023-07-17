@@ -563,7 +563,9 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
         [Code example »»](./data-structures/linked-list-stack.js)
 
         `push()` => menambahkan elemen atau node diatas node teratas saat ini.
+
         `pop()` => menghapus elemen atau node dari stack teratas dan mengembalikan elemen tersebut.
+
         `peek()` => mengembalikan elemen teratas pada stack tanpa menghapusnya.
 
       - **_implementasi Queue data structure menggunakan singly linkede list di JavaScript_**:
@@ -585,7 +587,9 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
         [Code example »»](./data-structures/linked-list-queue.js)
 
         `enqueue()` => menambahkan elemen ke queue di belakang node terakhir saat ini.
+
         `dequeue()` => menghapus elemen terdepan queue dan mengembalikan elemen tersebut.
+
         `peek()` => mengembalikan elemen terdepan pada queue tanpa menghapusnya.
 
     - [x] **Doubly Linked List**
