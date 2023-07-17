@@ -13,11 +13,11 @@ export default class LinkedListStack {
     return this.list.getSize();
   }
 
-  push(item) {
-    this.list.prepend(item);
+  enqueue(item) {
+    this.list.append(item);
   }
 
-  pop() {
+  dequeue() {
     return this.list.removeFromFront();
   }
 

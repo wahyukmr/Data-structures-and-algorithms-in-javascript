@@ -1,7 +1,7 @@
 class Node {
-  constructor(data) {
-    this.data = data;
-    this.pointer = null;
+  constructor(element) {
+    this.element = element;
+    this.next = null;
   }
 }
 
@@ -18,110 +18,118 @@ export default class LinkedList {
 
   getSize() {
     return this.size;
-    // console.log(this.head);
-    // console.log(this.tail);
   }
 
-  // O(1) - Constant
   prepend(value) {
     const newNode = new Node(value);
     if (this.isEmpty()) {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      newNode.pointer = this.head;
+      newNode.next = this.head;
       this.head = newNode;
     }
     this.size++;
   }
 
-  // O(1) - Constant
   append(value) {
     const newNode = new Node(value);
     if (this.isEmpty()) {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      this.tail.pointer = newNode;
+      this.tail.next = newNode;
       this.tail = newNode;
     }
     this.size++;
   }
 
-  // jika indexnya sama dengan 0 maka O(1) - Constant, namun selebihnya O(n) - Linear
-  insert(value, index) {
-    if (index < 0 || index > this.size) {
-      return console.log("Invalid position");
+  insert(value, position) {
+    if (!Number.isInteger(position) || position < 0 || position > this.size) {
+      console.log("Invalid position");
+      return;
     }
-    if (index === 0) {
-      return this.prepend(value);
+    if (position === 0) {
+      this.prepend(value);
     } else {
-      // membuat node baru
       const newNode = new Node(value);
+      let current = this.head;
+      let prev = null;
+      let index = 0;
 
-      // melacak node sebelum index yang ditentukan
-      let prev = this.head;
-      for (let i = 0; i < index - 1; i++) {
-        prev = prev.pointer;
+      while (index < position) {
+        prev = current;
+        current = prev.next;
+        index++;
       }
-
-      newNode.pointer = prev.pointer; // menempatkan node sebelumnya ke pointer node baru
-      prev.pointer = newNode; // mengganti posisi node sebelumnya dengan node baru
-
+      prev.next = newNode;
+      newNode.next = current;
+      if (position === this.size) {
+        this.tail = newNode;
+      }
       this.size++;
     }
   }
 
-  // removeIndex(index) {
-  //   if (index < 0 || index > this.size) {
-  //     return console.log("Invalid position");
-  //   }
-  //   let removedNode;
-  //   if (index === 0) {
-  //     removedNode = this.head;
-  //     this.head = this.head.pointer;
-  //   } else {
-  //     let prev = this.head;
-  //     for (let i = 0; i < index - 1; i++) {
-  //       prev = prev.pointer;
-  //     }
-  //     removedNode = prev.pointer;
-  //     prev.pointer = removedNode.pointer;
-  //   }
-  //   this.size--;
-  //   return removedNode.data;
-  // }
+  removeFrom(position) {
+    if (!Number.isInteger(position) || position < 0 || position >= this.size) {
+      return "Invalid position";
+    }
 
-  // removeValue(value) {
-  //   if (this.isEmpty()) {
-  //     return console.log("Invalid position");
-  //   }
-  //   if (this.head.value === value) {
-  //     this.head = this.head.pointer;
-  //     this.size--;
-  //     return value;
-  //   } else {
-  //     let prev = this.head;
-  //     while (prev.pointer && prev.pointer.data !== value) {
-  //       prev = prev.pointer;
-  //     }
-  //     if (prev.pointer) {
-  //       const removedNode = prev.pointer;
-  //       prev.pointer = removedNode.pointer;
-  //       this.size--;
-  //       return value;
-  //     }
-  //     return null;
-  //   }
-  // }
+    if (position === 0) {
+      this.removeFromFront();
+    } else if (position === this.size - 1) {
+      this.removeFromEnd();
+    } else {
+      let removedNode;
+      let prev = this.head;
 
-  // O(1) - Constant
-  removeFromFront() {
+      // hasil dari perulangan akan mendapatkan node sebelum node yang akan dihapus dan menyimpannya dalam variabel `prev`
+      for (let i = 0; i < position - 1; i++) {
+        prev = prev.next;
+      }
+
+      removedNode = prev.next;
+      prev.next = removedNode.next;
+      this.size--;
+      return removedNode.element;
+    }
+  }
+
+  removeValue(value) {
     if (this.isEmpty()) {
+      return console.log("List is empty");
+    }
+
+    if (this.head.element === value) {
+      return this.removeFromFront();
+    } else if (this.tail.element === value) {
+      return this.removeFromEnd();
+    } else {
+      let prev = this.head;
+      // memeriksa apakah ada elemen selanjutnya dan nilai elemen selanjutnya tidak sama dengan `value`
+      while (prev.next && prev.next.element !== value) {
+        // jika tidak ditemukan elemen dengan nilai yang sama dengan `value`, maka prev.next akan bernilai null
+        prev = prev.next;
+      }
+      // jika prev.next bukan null, berarti elemen dengan nilai `value` ditemukan dalam linked list
+      if (prev.next) {
+        const removedNode = prev.next;
+        prev.next = removedNode.next;
+        this.size--;
+        return value;
+      }
       return null;
     }
-    const value = this.head.data;
-    this.head = this.head.pointer;
+  }
+
+  removeFromFront() {
+    if (this.isEmpty()) {
+      return console.log("List is empty");
+    }
+
+    const value = this.head.element;
+    this.head = this.head.next;
     if (this.head === null) {
       this.tail = null;
     }
@@ -129,28 +137,26 @@ export default class LinkedList {
     return value;
   }
 
-  // O(n) - linear
   removeFromEnd() {
     if (this.isEmpty()) {
-      return null;
+      return console.log("List is empty");
     }
-    const value = this.tail.data;
+    const value = this.tail.element;
     if (this.size === 1) {
       this.head = null;
       this.tail = null;
     } else {
       let prev = this.head;
-      while (prev.pointer !== this.tail) {
-        prev = prev.pointer;
+      while (prev.next !== this.tail) {
+        prev = prev.next;
       }
-      prev.pointer = null;
+      prev.next = null;
       this.tail = prev;
     }
     this.size--;
     return value;
   }
 
-  // O(n) - linear
   search(value) {
     if (this.isEmpty()) {
       return -1;
@@ -158,10 +164,10 @@ export default class LinkedList {
     let index = 0;
     let current = this.head;
     while (current) {
-      if (current.data === value) {
+      if (current.element === value) {
         return index;
       }
-      current = current.pointer;
+      current = current.next;
       index++;
     }
     return -1;
@@ -174,9 +180,9 @@ export default class LinkedList {
     // melakukan perulangan sampai akhir list
     while (current) {
       // menyimpan referensi node selanjutnya dalam variabel next
-      let next = current.pointer;
+      const next = current.next;
       // pointer pada node saat ini akan menunjuk ke node sebelumnya
-      current.pointer = prev;
+      current.next = prev;
       // memindahkan prev dan current ke node selanjutnya untuk melanjutkan proses pembalikan
       prev = current;
       current = next;
@@ -190,8 +196,8 @@ export default class LinkedList {
     let current = this.head;
     const result = [];
     while (current) {
-      result.push(current.data);
-      current = current.pointer;
+      result.push(current.element);
+      current = current.next;
     }
     return result;
   }
