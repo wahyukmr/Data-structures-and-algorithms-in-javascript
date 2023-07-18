@@ -3,6 +3,8 @@ import * as otherAlgorithms from "../algorithm/other-algorithms-and-problem-solv
 import * as searchAlgorithm from "../algorithm/search-algorithm.js";
 import * as sortingAlgorithm from "../algorithm/sorting-algorithm.js";
 
+import HashTableWithMap from "../data-structures/hash-table-map.js";
+import HashTableWithObject from "../data-structures/hash-table-object.js";
 import LinkedListDouble from "../data-structures/linked-list-double.js";
 import LinkedListQueue from "../data-structures/linked-list-queue.js";
 import LinkedListStack from "../data-structures/linked-list-stack.js";
@@ -183,3 +185,33 @@ console.log(list4.print()); // Output: [10, 2, 1]
 
 list4.reverse();
 console.log(list4.print()); // Output: [1, 2, 10]
+
+console.log(
+  "------------------- HASH TABLE WITH OBJECT DATA STRUCTURE -------------------"
+);
+const studentsWithObject = new HashTableWithObject(10);
+studentsWithObject.set("12345", "John Doe");
+studentsWithObject.set("67890", "Jane Smith");
+studentsWithObject.set("54321", "Bob Johnson");
+studentsWithObject.set("12345", "John Smith"); // Tabrakan dengan kunci "12345"
+
+console.log("Nama Mahasiswa NIM 12345:", studentsWithObject.get("12345"));
+
+studentsWithObject.remove("67890");
+
+studentsWithObject.display();
+
+console.log(
+  "------------------- HASH TABLE WITH MAP DATA STRUCTURE -------------------"
+);
+const studentsWithMap = new HashTableWithMap();
+studentsWithMap.set("12345", "John Doe", 85);
+studentsWithMap.set("67890", "Jane Smith", 92);
+studentsWithMap.set("54321", "Bob Johnson", 78);
+studentsWithMap.set("12345", "John Smith", 88); // Tabrakan dengan NIM 12345
+
+console.log("Nilai Mahasiswa NIM 12345:", studentsWithMap.get("12345"));
+
+studentsWithMap.remove("67890");
+
+studentsWithMap.display();

@@ -340,7 +340,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
       removal => O(1) - Constant
 
-    - **_alasan mengapa struktur data stack khusus lebih disarankan daripada menggunakan struktur data array yang memiliki metode serupa_**:
+    - **_alasan mengapa struktur data stack khusus lebih disarankan daripada menggunakan struktur data array yang memiliki method serupa_**:
 
       Fokus pada fungsionalitas => struktur data Stack dirancang khusus untuk operasi tumpukan, memastikan bahwa operasi yang relevan dengan konsep tumpukan dilakukan dengan jelas.
 
@@ -631,3 +631,92 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
         `removeFromFront()` => O(1) - Constant
 
         `removeFromEnd()` => O(1) - Constant
+
+4.  **Hash Table**
+
+    - **_karakteristik_**:
+
+      Hash table adalah struktur data yang digunakan untuk menyimpan data dalam bentuk pasangan kunci-nilai (`key`-`value`). Karakteristik utama dari hash table adalah penggunaan fungsi `hash` untuk mengubah `key` menjadi indeks dalam array, di mana `value` yang sesuai disimpan. Dengan teknik ini, pencarian, penghapusan, dan pengambilan data biasanya dapat dilakukan dalam waktu konstan, membuat hash table sangat efisien untuk banyak kasus.
+
+      Hash table mendukung tiga operasi utama: `Set`, `Get` dan `Remove`.
+
+      Map dan Object javascript adalah implementasi khusus dari data struktur hash table. Object Class menambahkan `key`nya sendiri, sehingga key yang dimasukkan kemungkinan akan terjadi konflik dan menimpa default property bawaan. Sedangkan struktur data Map datang untuk mengatasi masalah ini, dan sejujurnya ini adalah implementasi yang harus digunakan saat menulis kode. Meskipun javascript sudah memiliki dua implementasi hash table, menulis implementasi hash table kita sendiri juga penting untuk pertanyaan wawancara.
+
+    - **_kelebihan_**:
+
+      kecepatan: operasi pencarian, penambahan, dan penghapusan data biasanya berjalan dengan waktu konstan O(1) dengan catatan kasus terburuk linear O(n), menjadikan hash table sangat efisien.
+
+      efisien: Dalam situasi tertentu, hash table dapat mengungguli struktur data lainnya dalam hal kecepatan dan efisiensi memori.
+
+    - **_kelemahan_**:
+
+      collision (tabrakan): dalam beberapa kasus, dua atau lebih kunci berbeda dapat menghasilkan indeks yang sama. Untuk mengatasinya, teknik resolusi tabrakan seperti **chaining** (menggunakan linked list di setiap index) atau **open addressing** (menyimpan data di index lain jika terjadi tabrakan) digunakan, yang dapat mengurangi kecepatan operasi menjadi O(n) dalam situasi terburuk.
+
+      pengurangan efisiensi: jika fungsi hash yang buruk digunakan, banyak tabrakan dapat terjadi, menyebabkan performa hash table menurun.
+
+    - **_penggunaan yang tepat_**:
+
+      dapat diimplementasikan jika ingin pencarian, penyisipan dan penghapusan data berdasarkan `key` secara konstan diperlukan.
+
+      hash table sangat disarankan untuk algoritma yang memprioritaskan operasi pencarian dan pengambilan data. Karena akan menghasilkan time complexity constant.
+
+      hash table adalah pilihan yang tepat untuk data yang diurutkan secara acak karena pengaturan pasangan kunci-nilainya.
+
+      jika ingin menghindari pengulangan data dalam kumpulan besar dan menginginkan operasi yang efisien untuk memastikan uniknya setiap kunci.
+
+    - **_contoh penggunaan_**:
+
+      kamus (dictionary): Hash table dapat digunakan untuk mengimplementasikan kamus, di mana setiap kata memiliki arti atau definisi yang terkait.
+
+      caching: Hash table sering digunakan dalam teknik caching untuk menyimpan hasil perhitungan atau data yang sering digunakan sehingga dapat diakses dengan cepat.
+
+      penghitungan frekuensi: Hash table dapat digunakan untuk menghitung frekuensi kemunculan elemen dalam array atau string.
+
+      autentikasi: Hash table digunakan dalam pengembangan sistem keamanan untuk menyimpan informasi pengguna dan token otentikasi.
+
+    - **_implementasi Hash table menggunakan Object dengan Chaining untuk menghindari tabrakan index yang sama di JavaScript_**:
+
+      kelebihan:
+
+      - sederhana dan cepat: Objek adalah struktur data yang sangat cepat dan mudah digunakan di JavaScript. Pengambilan nilai berdasarkan kunci di objek memiliki kompleksitas O(1) (waktu konstan), yang menjadikannya pilihan yang cepat untuk hash table dengan kunci yang sederhana seperti string atau angka.
+      - dukungan pada versi javascript lama: Objek adalah bagian dari bahasa JavaScript sejak awal, sehingga dapat digunakan pada versi JavaScript yang lebih lama tanpa masalah.
+
+      kekurangan:
+
+      - tidak mendukung semua tipe data kunci: Objek hanya mendukung kunci dalam bentuk string atau simbol. Penggunaan kunci yang kompleks seperti array atau objek dapat menghadirkan tantangan dalam implementasi hash table.
+      - iterasi lebih rumit: meskipun objek dapat diiterasi melalui loop `for...in`, pengaturan loop yang benar untuk mendapatkan seluruh pasangan kunci-nilai dalam hash table dapat sedikit rumit.
+      - penanganan tabrakan lebih rumit: ketika terjadi tabrakan, kita harus memperhatikan cara mengelola data dalam objek agar tidak menimpa nilai-nilai yang ada dan memastikan kunci yang unik.
+
+      [Code example »»](./data-structures/hash-table-object.js)
+
+      `hash()` => fungsi yang menentukan index dari pasangan `key` dan `value` yang ditentukan. Kompleksitas waktunya O(n) - Linear rata-rata kasus
+
+      `set()` => untuk mengatur penyimpanan pasangan `key`-`value`. Kompleksitas waktunya O(k) di rata-rata kasus, dengan k adalah jumlah kunci yang ada dalam setiap bucket. Biasanya memiliki kompleksitas lebih baik karena penggunaan teknik chaining yang efektif.
+
+      `get()` => untuk mengambil `value` berdasarkan `key`. Kompleksitas waktunya O(k) di rata-rata kasus, dengan k adalah jumlah kunci yang ada dalam setiap bucket. Biasanya memiliki kompleksitas lebih baik karena penggunaan teknik chaining yang efektif.
+
+      `remove()` => untuk menghapus pasangan `key`-`value`. Kompleksitas waktunya O(k) di rata-rata kasus, dengan k adalah jumlah kunci yang ada dalam setiap bucket. Biasanya memiliki kompleksitas lebih baik karena penggunaan teknik chaining yang efektif.
+
+    - **_implementasi Hash table menggunakan Map dengan Chaining untuk menghindari tabrakan index yang sama di JavaScript_**:
+
+      kelebihan:
+
+      - tipe kunci yang fleksibel: Map dapat menggunakan berbagai tipe data sebagai kunci, termasuk string, angka, objek, dan tipe data lainnya. Ini memberikan fleksibilitas lebih besar dalam memilih kunci sesuai kebutuhan.
+      - iterasi mudah: Map memiliki method `forEach()` dan `for...of`, yang memudahkan iterasi melalui seluruh pasangan kunci-nilai dalam hash table tanpa perlu mengonversi menjadi array terlebih dahulu.
+      - efisiensi pada kunci Objek: Ketika ingin menggunakan objek JavaScript sebagai kunci dalam hash table, Map menangani objek dengan benar sebagai kunci, sehingga kunci objek yang berbeda dianggap unik.
+      - method bawaan yang berguna: Map menyediakan method bawaan untuk memeriksa ukuran hash table (`size`), menghapus semua pasangan kunci-nilai (`clear()`), dan lainnya, yang membuatnya lebih mudah digunakan dan dikelola.
+
+      kekurangan:
+
+      - kompatibilitas: Map mungkin tidak sepenuhnya kompatibel dengan beberapa pustaka atau lingkungan lama yang belum mendukung ECMAScript 6 (ES6), karena Map diperkenalkan dalam ES6.
+      - keterbatasan key ttype: beberapa penggunaan kunci dengan tipe data yang kompleks, seperti array asosiatif, bisa lebih rumit dalam Map. Meskipun Map mendukung objek sebagai kunci, terkadang keterbatasannya tergantung pada cara objek tersebut di-hash.
+
+      [Code example »»](./data-structures/hash-table-map.js)
+
+      `set()` => untuk mengatur penyimpanan pasangan `key`-`value`. Kompleksitas waktunya O(1) - Constant rata-rata kasus
+
+      `get()` => untuk mengambil `value` berdasarkan `key`. Kompleksitas waktunya O(1) - Constant rata-rata kasus
+
+      `remove()` => untuk menghapus pasangan `key`-`value`. Kompleksitas waktunya O(1) - Constant rata-rata kasus
+
+      `hash()` => fungsi yang menentukan index dari pasangan `key` dan `value` yang ditentukan. Kompleksitas waktunya O(n) - Linear rata-rata kasus
