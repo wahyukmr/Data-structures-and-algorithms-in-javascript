@@ -160,7 +160,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
       Array adalah struktur data linear yang dapat menyimpan kumpulan value yang disimpan secara berurutan dalam memori. Array dapat berisi campuran tipe data yang berbeda. Elemen-elemen dalam array diakses menggunakan indeks. Index pertama dimulai dari 0 bukan 1. Array adalah iterables, mereka dapat digunakan dengan for-of loop.
 
-    - **_penggunaan yang tepat_**:
+    - **_kapan penggunaannya_**:
 
       berguna saat kita harus menyimpan nilai individual dan menambah/menghapus nilai dari akhir struktur data.
 
@@ -196,7 +196,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
       Object adalah struktur data berupa pasangan kunci-nilai (key-value) yang tidak diurutkan. Key nya harus berupa tipe data String atau Simbol, sedangkan valuenya dapat berupa tipe data apapun. Setiap key harus unik dalam object, tidak bisa memiliki key dengan nama yang sama. Untuk mengambil nilai, dapat menggunakan key yang sesuai dengan value yang diinginkan. Object bukan sebuah iterable, tidak bisa menggunakannya dengan for-of loop.
 
-    - **_penggunaan yang tepat_**:
+    - **_kapan penggunaannya_**:
 
       digunakan saat pencarian berdasarkan kunci, seperti dalam basis data, pemetaan unik antara kunci dan nilai atau query search.
 
@@ -368,7 +368,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
         Hanya elemen pertama yang dapat diakses dan dihapus.
 
-      - **_penggunaan yang tepat_**:
+      - **_kapan penggunaannya_**:
 
         saat membutuhkan elemen-elemen untuk disimpan dan diakses dalam urutan linier dan tidak perlu memanfaatkan ruang kosong yang dihasilkan oleh penghapusan elemen.
 
@@ -416,7 +416,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
         kapasitas terbatas pada jumlah elemen yang dapat disimpan dalam antrian dan kompleksitas implementasi yang rumit karena memerlukan manipulasi index untuk mengatur penambahan dan penghapusan elemen.
 
-      - **_penggunaan yang tepat_**:
+      - **_kapan penggunaannya_**:
 
         jika efisiensi memori sangat penting, terutama jika memiliki sumber daya yang terbatas atau membatasi alokasi memori. karena circular queue dapat memungkinkan penggunaan memori yang lebih efisien dengan memanfaatkan kembali ruang kosong yang dihasilkan oleh penghapusan elemen.
 
@@ -482,7 +482,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
         tidak dapat melakukan iterasi mundur secara langsung.
 
-      - **_penggunaan yang tepat_**:
+      - **_kapan penggunaannya_**:
 
         jika perlu melakukan operasi penambahan atau penghapusan elemen secara efisien di awal atau akhir linked list.
 
@@ -606,7 +606,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
         memerlukan penggunaan memori lebih banyak dibandingkan dengan singly linked list karena setiap node menyimpan pointer ke node sebelumnya dan node berikutnya.
 
-      - **_penggunaan yang tepat_**:
+      - **_kapan penggunaannya_**:
 
         jika perlu melakukan operasi pencarian maju dan mundur yang efisien.
 
@@ -654,7 +654,7 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
 
       pengurangan efisiensi: jika fungsi hash yang buruk digunakan, banyak tabrakan dapat terjadi, menyebabkan performa hash table menurun.
 
-    - **_penggunaan yang tepat_**:
+    - **_kapan penggunaannya_**:
 
       dapat diimplementasikan jika ingin pencarian, penyisipan dan penghapusan data berdasarkan `key` secara konstan diperlukan.
 
@@ -720,3 +720,96 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
       `remove()` => untuk menghapus pasangan `key`-`value`. Kompleksitas waktunya O(1) - Constant rata-rata kasus
 
       `hash()` => fungsi yang menentukan index dari pasangan `key` dan `value` yang ditentukan. Kompleksitas waktunya O(n) - Linear rata-rata kasus
+
+5.  **Tree**
+
+    - **_karakteristik_**:
+
+      struktur data tree adalah struktur data yang berbentuk seperti pohon yang terdiri dari simpul-simpul (node) yang saling terhubung melalui garis-garis (edge). Setiap simpul memiliki tepat satu simpul atasannya, kecuali simpul atas (root) yang tidak memiliki simpul atasannya, dan setiap simpul dapat memiliki banyak simpul anak (child).
+
+      struktur data tree adalah struktur data non-linear, tidak seperti array, linked list, stack dan queue yang merupakan struktur data linear. Dalam struktur data linear, waktu yang diperlukan untuk melakukan "search" sebanding dengan ukuran kumpulan data, lebih banyak data lebih banyak pula waktu yang dibutuhkan untuk mencari data tersebut. Disisi lain non-linear memungkinkan akses yang lebih cepat dan lebih mudah ke data.
+
+      struktur data tree juga tidak akan berisi loop atau siklus apapun
+
+    - **_kelebihan_**:
+
+      representasi hierarki: tree sangat baik untuk merepresentasikan data dalam bentuk hierarki.
+
+      pencarian efisien: pencarian pada tree biasanya lebih efisien daripada pencarian linear pada array atau linked list jika tree cukup terstruktur.
+
+      penyimpanan data terstruktur: tree memungkinkan penyimpanan data yang terstruktur dengan mudah sehingga operasi seperti penambahan, penghapusan, dan pemutakhiran data dapat dilakukan secara efisien.
+
+      pengurutan: tree dapat digunakan untuk mengimplementasikan struktur data lain seperti binary search tree (BST) yang memungkinkan pengurutan data.
+
+    - **_kelemahan_**:
+
+      penggunaan memori: implementasi tree memerlukan alokasi memori untuk menyimpan simpul dan tepi, yang dapat menyebabkan penggunaan memori yang lebih besar daripada struktur data lain seperti array atau linked list.
+
+      kesulitan pengelolaan: tree memerlukan pengelolaan dan perhatian lebih untuk memastikan agar tree tetap terstruktur dan tidak menjadi cemara (degenerate), yang dapat mempengaruhi efisiensi operasi.
+
+    - **_contoh penggunaan_**:
+
+      struktur organisasi: representasi hierarki dari departemen dan pegawai dalam sebuah organisasi.
+
+      folder dalam sistem file: representasi folder dan subfolder dalam sistem file komputer.
+
+      kehidupan: representasi silsilah keluarga atau hierarki kehidupan dalam biologi.
+
+      DOM
+
+      chat bots
+
+    - **_implementasi Tree menggunakan Binary Search Tree di JavaScript_**:
+
+      biasanya struktur data tree jarang diminta untuk mengimplementasikannya dengan **generic tree**, melainkan menggunakan **binary search tree**.
+
+      binary search tree (BST):
+
+      binary search tree (BST) adalah salah satu jenis struktur data tree yang memiliki sifat terurut dan efisien dalam melakukan operasi pencarian, penambahan, dan penghapusan data. BST memiliki struktur data hierarki dimana setiap simpul memiliki paling banyak **_dua anak_**, yaitu anak kiri dan anak kanan.
+
+      binary search tree memiliki dua sifat berikut: nilai di setiap simpul anak kiri harus lebih kecil daripada nilai di simpul induk, sedangkan nilai di setiap simpul anak kanan harus lebih besar daripada nilai di simpul induk.
+
+      operasi utama binary search tree: `insert` (untuk menambahkan sebuah node ke tree), `search` (untuk menemukan node berdasarkan valuenya), `DFS` atau `BFS` dan `deletion` (untuk menghapus node berdasarkan valuenya).
+
+      teknik traversal (BST):
+
+      teknik traversal pada struktur data Binary Search Tree (BST) dalam JavaScript adalah metode pencarian dengan cara mengunjungi atau melintasi semua node dalam BST dengan urutan tertentu.
+
+      - teknik traversal pada (BST) menggunakan pendekatan **Depth-First Search (DFS)** mempunyai tiga varian pencarian, yaitu : `inorder` (node-node dalam BST dikunjungi secara urut mulai dari node paling kiri, kemudian ke node induk, dan akhirnya ke node paling kanan), `preorder` (node-node dalam BST dikunjungi secara urut mulai dari node induk, kemudian ke node kiri, dan akhirnya ke node kanan), dan `postorder` (node-node dalam BST dikunjungi secara urut mulai dari node paling kiri, kemudian ke node paling kanan, dan akhirnya ke node induk). Dengan menggunakan salah satu teknik traversal ini, kita dapat mengakses dan memanipulasi data pada BST sesuai dengan urutan yang diinginkan.
+
+      - teknik traversal pada (BST) menggunakan pendekatan **Breadth-First Search (BFS)** adalah untuk mencetak nilai (value) dari setiap node dalam BST secara level-by-level, dimulai dari root node hingga mencapai daun pada level terakhir.
+
+      kelebihan (BST):
+
+      - pencarian efisien: BST memungkinkan pencarian data dengan cepat karena kita dapat mengurangi jumlah simpul yang harus diperiksa secara signifikan pada setiap langkah.
+      - penyimpanan terurut: data dalam BST disimpan secara terurut, sehingga memudahkan dalam operasi pengurutan dan pemrosesan data dalam urutan tertentu.
+      - operasi sisip dan hapus: BST memungkinkan penambahan dan penghapusan data dengan efisien, mempertahankan sifat terurutnya.
+
+      kekurangan (BST):
+
+      - kemungkinan degenerasi: jika data yang dimasukkan ke BST sudah terurut atau hampir terurut, BST dapat menjadi tidak seimbang dan berubah menjadi struktur linear, yang dapat mengurangi efisiensi operasi.
+      - sensitif terhadap data: kinerja BST sangat bergantung pada seberapa seimbang struktur tree. Jika data yang dimasukkan memiliki pola yang tidak seimbang, performa pencarian bisa menurun.
+
+      kapan harus menggunakan (BST):
+
+      - data perlu disimpan secara terurut untuk memudahkan pencarian dan pengurutan data.
+      - diperlukan operasi pencarian, penambahan, dan penghapusan data dengan efisien.
+      - data yang dimasukkan tidak memiliki pola yang cenderung tidak seimbang atau terurut.
+
+      [Code example »»](./data-structures/binary-search-tree.js)
+
+      `isEmpty()` => memeriksa apakah BST kosong atau tidak. Time Complexity: O(1) - Constant.
+
+      `insert(value)` => untuk memasukkan nilai baru ke dalam BST. Time Complexity: O(log n) dalam kasus rata-rata dan O(n) dalam kasus terburuknya.
+
+      `search(value)` => untuk mencari nilai tertentu dalam BST. Time Complexity: O(log n) dalam kasus rata-rata dan O(n) dalam kasus terburuknya.
+
+      `preorderTraversal(rootNode)`, `inorderTraversal(rootNode)`, `postorderTraversal(rootNode)` => melakukan traversal pada BST. Time Complexity: O(n).
+
+      `levelOrderTraversal()` => untuk melakukan traversal pada BST secara level-by-level (BFS). Time Complexity: O(n).
+
+      `printLevel(level, rootNode)` => untuk mencetak nilai dari node pada level tertentu dalam BST secara (DFS). Time Complexity: O(n).
+
+      `min(rootNode)`, `max(rootNode)` => untuk mencari nilai terkecil (min) dan terbesar (max) dalam BST. Time Complexity: O(log n) dalam kasus rata-rata dan O(n) dalam kasus terburuk.
+
+      `remove(value)`, `removeNode(rootNode, value)` => untuk menghapus nilai tertentu dari BST. Time Complexity: O(log n) dalam kasus rata-rata dan O(n) dalam kasus terburuk.

@@ -3,6 +3,7 @@ import * as otherAlgorithms from "../algorithm/other-algorithms-and-problem-solv
 import * as searchAlgorithm from "../algorithm/search-algorithm.js";
 import * as sortingAlgorithm from "../algorithm/sorting-algorithm.js";
 
+import BinarySearchTree from "../data-structures/binary-search-tree.js";
 import HashTableWithMap from "../data-structures/hash-table-map.js";
 import HashTableWithObject from "../data-structures/hash-table-object.js";
 import LinkedListDouble from "../data-structures/linked-list-double.js";
@@ -215,3 +216,31 @@ console.log("Nilai Mahasiswa NIM 12345:", studentsWithMap.get("12345"));
 studentsWithMap.remove("67890");
 
 studentsWithMap.display();
+
+console.log(
+  "------------------- BINARY SEARCH TREE DATA STRUCTURE -------------------"
+);
+const bts = new BinarySearchTree();
+console.log(bts.isEmpty()); // Output: true
+
+bts.insert(10);
+bts.insert(5);
+bts.insert(15);
+bts.insert(3);
+bts.insert(7);
+
+console.log("search:", bts.search(25)); // Output: null
+console.log("search:", bts.search(5)); // Output: 5
+
+// bts.preorderTraversal(); // Output: 10, 5, 3, 7, 15
+// bts.inorderTraversal(); // Output: 3, 5, 7, 10, 15
+bts.postorderTraversal(); // Output: 3, 7, 5, 15, 10
+
+console.log(bts.leverOrderTraversal()); // Output: [10, 5, 15, 3, 7]
+
+console.log("min:", bts.min()); // Output: 3
+console.log("man:", bts.max()); // Output: 15
+
+bts.remove(7);
+console.log(bts.leverOrderTraversal()); // Output: [10, 5, 15, 3]
+bts.printLevel(2); // Output: 5 /n 15
