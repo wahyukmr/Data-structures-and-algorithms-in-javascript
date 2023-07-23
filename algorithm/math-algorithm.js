@@ -101,7 +101,7 @@ function isPowerOfTwoBitWise(n) {
 
 /**
  * * Recursion
- * Pengertian: recursion adalah teknik menyelesaikan masalah dimana solusinya bergantung pada solusi kasus yang lebih kecil dari masalah yang sama. Atau bisa dikatakan recursion adalah ketika fungsi memanggil dirinya sendiri.
+ * Pengertian: Rekursi adalah sebuah konsep dalam pemrograman di mana sebuah fungsi dapat memanggil dirinya sendiri secara berulang hingga mencapai kondisi berhenti (base case) tertentu.
  * Kenapa harus recursion: ini adalah teknik yang tepat untuk menyederhanakan solusi.
  * Tips memecahkan masalah dengan Recursion:
     - mencari cara untuk memecahkan masalah menjadi versi yang lebih kecil.

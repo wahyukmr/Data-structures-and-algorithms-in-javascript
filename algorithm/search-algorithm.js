@@ -20,7 +20,6 @@ function linearSearch(n, t) {
 console.log(linearSearch([-5, 2, 10, 4, 6], 10)); // Output: 2
 console.log(linearSearch([-5, 2, 10, 4, 6], 6)); // Output: 4
 console.log(linearSearch([-5, 2, 10, 4, 6], 20)); // Output: -1
-// Big-O dari Linear Search adalah Linear O(n) Time complexity, karena jika nilai n bertambah, jumlah eksekusi kondisinya juga meningkat.
 
 /**
  * * 2. Binary Search
@@ -56,7 +55,6 @@ function binarySearch(arr, t) {
 console.log(binarySearch([-5, 2, 4, 6, 10], 10)); // Output: 4
 console.log(binarySearch([-5, 2, 4, 6, 10], 20)); // Output: -1
 console.log(binarySearch([-5, 2, 4, 6, 10], -1)); // Output: -1
-// Big-O dari Binary Search adalah Logarithmic O(logn) Time complexity, karena dalam setiap langkah, ukuran area pencarian berkurang menjadi setengah dari ukuran sebelumnya. Oleh karena itu, waktu eksekusi algoritma ini tidak bertambah linear dengan jumlah elemen dalam array, tetapi berbanding terbalik dengan logaritma basis 2 dari jumlah elemen.
 
 /**
  * * Recursive Binary Search

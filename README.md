@@ -7,6 +7,11 @@
 - [2. ~ DATA STRUCTURES :](#2--data-structures-)
   - [2.1. Built-in Data Structure di JavaScript:](#21-built-in-data-structure-di-javascript)
   - [2.2. Custom Data Structure di JavaScript:](#22-custom-data-structure-di-javascript)
+- [3. ~ SUMMARY](#3--summary)
+  - [Algoritma](#algoritma)
+  - [Struktur data](#struktur-data)
+
+Data struktur dan algoritma berjalan seiring seperti Yin dan Yang, **_gelas_** dan **_air_**. Tanpa gelas, air tidak bisa ditampung. Tanpa struktur data, kita tidak memiliki object untuk menerapkan logika. Tanpa air, gelas itu hanya ruang hampa yang kosong. Tanpa algoritma, object tidak dapat diubah atau dikonsumsi.
 
 ## 1. ~ ALGORITMA :
 
@@ -128,8 +133,6 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
    **_pengertian:_** algoritma akan menggunakan jumlah memori tambahan yang bertumbuh secara linier terhadap ukuran masukan (n), namun juga dipengaruhi oleh logaritma dari ukuran masukan tersebut (log n).
    **_contoh:_** Merge Sort dan Quick Sort.
 
-Jadi, meskipun ada keterkaitan antara kompleksitas waktu dan kompleksitas ruang, keduanya adalah konsep yang berbeda. Sebuah algoritma dapat memiliki kompleksitas waktu yang baik tetapi kompleksitas ruang yang buruk, atau sebaliknya.
-
 ### 1.5. Teknik desain algoritma
 
 Algorithm design techniques adalah pendekatan umum untuk menerapkan algoritma.
@@ -144,7 +147,7 @@ Beberapa teknik design algoritma yang populer digunakan:
 
 ## 2. ~ DATA STRUCTURES :
 
-Struktur data adalah cara kita menyimpan, mengorganisir, dan mengelola data dalam program kita agar ketika dibutuhkan dapat diakses dengan cara yang tepat dan efisien. Data Struktur membantu menyelesaikan persoalan dengan cara yang lebih efisien dalam hal **time** dan **memory**.
+Struktur data adalah cara kita menyimpan, mengorganisir, dan mengelola data dalam program kita agar ketika dibutuhkan dapat diakses dengan cara yang tepat dan efisien. Struktur data menentukan **_space complexity_** (kompleksitas ruang) dari program, yaitu berapa banyak ruang memori yang dibutuhkan untuk menyimpan dan memproses data.
 
 Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendalam tentang hal-hal yang sudah diketahui sebelumnya. Contoh diantaranya:
 
@@ -935,3 +938,178 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
         `display()` => O(v + e) - Linear
 
         `hasEdge(fromNode, toNode)` => O(1) - Constant
+
+## 3. ~ SUMMARY
+
+### Algoritma
+
+**Search Algorithms**
+
+1. Linear Search
+   - time complexity: O(n) - Linear
+   - space complexity: O(1) - Constant
+   - digunakan ketika: list atau array kecil, data tidak terurut, atau tidak ada informasi tentang pola data.
+2. Binary Search
+   - time complexity: O(log n) - Logarithmic
+   - space complexity: O(1) - Constant
+   - digunakan ketika: data sudah terurut dan besar, untuk mengurutkan daftar sebelum mencari.
+
+**Sort Algorithms**
+
+1. Bubble Sort
+   - time complexity: O(n^2) - Quadratic
+   - space complexity: O(1) - Constant
+   - digunakan ketika: jumlah data terbatas dan tidak terlalu besar.
+2. Selection Sort
+   - time complexity: O(n^2) - Quadratic
+   - space complexity: O(1) - Constant
+   - digunakan ketika: jumlah data terbatas dan tidak terlalu besar.
+3. Insertion Sort
+   - time complexity: O(n^2) - Quadratic
+   - space complexity: O(1) - Constant
+   - digunakan ketika: jumlah data terbatas dan sebagian besar sudah terurut.
+4. Merge Sort
+   - time complexity: O(n log n)
+   - space complexity: O(n) - Linear
+   - digunakan ketika: menguatkan pengurutan data besar, performa dan stabilitas sangat diutamakan
+5. Quick Sort
+   - time complexity: O(n log n) pada kasus rata-rata dan O(n^2) pada kasus terburuk
+   - space complexity: O(log n) pada kasus rata-rata dan O(n) pada kasus terburuk
+   - digunakan ketika: menguatkan pengurutan data besar, performa baik pada kasus rata-rata.
+
+**Graph Algorithms**
+
+1. Depth-First Search (DFS)
+   - time complexity: O(v + e) dimana 'v' = jumlah node dan 'e' = jumlah edge
+   - space complexity: O(v)
+   - digunakan ketika: ingin menjelajahi seluruh cabang suatu graph, atau mencari jalur tertentu dari satu node ke node lainnya.
+2. Breadth-First Search (BFS)
+   - time complexity: O(v + e) dimana 'v' = jumlah node dan 'e' = jumlah edge
+   - space complexity: O(v)
+   - digunakan ketika: mencari jalur terpendek atau menjelajahi seluruh level pada graph.
+
+### Struktur data
+
+**Built-in Data Struktur:**
+
+1. Array:
+
+   - time complexity:
+     - akses elemen berdasarkan indeks: O(1)
+     - pencarian elemen: O(n)
+     - penambahan atau penghapusan elemen di akhir: O(1)
+     - penambahan atau penghapusan elemen di tengah: O(n)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - mengakses elemen berdasarkan indeks atau pengaksesan data yang cepat melalui index.
+     - untuk penyimpanan data dengan ukuran tetap atau terurut.
+
+2. Object:
+
+   - time complexity:
+     - akses elemen: O(1)
+     - pencarian elemen: O(n)
+     - penambahan atau penghapusan elemen: O(1)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - untuk menyimpan data dalam bentuk key-value (pair) dengan akses cepat berdasarkan key.
+
+3. Set:
+
+   - time complexity:
+     - insert (penambahan data): O(1)
+     - search (pencarian data): O(1)
+     - delete (penghapusan data): O(1)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - untuk menyimpan himpunan data unik tanpa duplikat.
+     - contoh penggunaan: menghilangkan duplikat dalam array, operasi matematika.
+
+4. Map:
+
+   - time complexity:
+     - insert (penambahan data): O(1)
+     - search (pencarian data): O(1)
+     - delete (penghapusan data): O(1)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - untuk memetakan kunci unik ke nilai tertentu.
+     - contoh penggunaan: penyimpanan data berstruktur dengan kunci yang dapat diakses.
+
+**Custom Data Struktur:**
+
+1. Stack:
+
+   - time complexity:
+     - push (penambahan elemen): O(1)
+     - pop (penghapusan elemen): O(1)
+     - top (mengakses elemen teratas): O(1)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - untuk menangani tumpukan data dengan prinsip "last in, first out" (LIFO).
+     - contoh penggunaan: pengelolaan rekursi, penghitungan ekspresi matematika.
+
+2. Queue:
+
+   - time complexity:
+     - Enqueue (penambahan elemen): O(1)
+     - Dequeue (penghapusan elemen): O(1)
+     - Front (mengakses elemen depan): O(1)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - untuk mengelola antrian data dengan prinsip "first in, first out" (FIFO).
+     - contoh penggunaan: pengelolaan antrian tugas, simulasi proses.
+
+3. Linked List:
+
+   - time complexity:
+     - akses elemen berdasarkan indeks: O(1)
+     - pencarian elemen: O(n)
+     - penambahan atau penghapusan elemen: O(1) (jika akses ke node yang bersangkutan telah diketahui), O(n) (jika mencari node terlebih dahulu)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - membutuhkan fleksibilitas dalam penambahan atau penghapusan elemen secara dinamis.
+     - untuk mengimplementasikan stack, queue, dan linked list terurut.
+
+4. Doubly Linked List:
+
+   - time complexity: sama dengan Linked List
+   - space complexity: O(n)
+   - digunakan ketika:
+     - membutuhkan kemampuan untuk mengakses elemen ke depan dan ke belakang.
+     - untuk implementasi yang lebih kompleks yang membutuhkan traversal maju dan mundur.
+
+5. Hash Table:
+
+   - time complexity:
+     - insert (penambahan data): O(1) (rata-rata), O(n) (kasus terburuk)
+     - search (pencarian data): O(1) (rata-rata), O(n) (kasus terburuk)
+     - delete (penghapusan data): O(1) (rata-rata), O(n) (kasus terburuk)
+   - space complexity: O(n)
+   - digunakan ketika:
+     - untuk melakukan pencarian cepat berdasarkan kunci unik.
+     - contoh penggunaan: penyimpanan data dengan indeks yang dikenali.
+
+6. Trie:
+
+   - time complexity:
+     - insert (penambahan data): O(m), m adalah panjang string
+     - search (pencarian data): O(m), m adalah panjang string
+     - delete (penghapusan data): O(m), m adalah panjang string
+   - space complexity: O(n \* m), n adalah jumlah node, m adalah panjang string
+   - digunakan ketika:
+     - untuk pencarian, penambahan, dan penghapusan cepat dari string.
+     - contoh penggunaan: kamus, autocorrect, spell checker.
+
+7. Binary Search Tree (BST):
+
+- time complexity:
+  - insert (penambahan data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
+  - search (pencarian data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
+  - delete (penghapusan data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
+- space complexity: O(n)
+- digunakan ketika:
+  - untuk mencari, menambahkan, dan menghapus data dengan efisien.
+  - contoh penggunaan: struktur data tree dengan kunci terurut.
+
+Note: kompleksitas waktu dan ruang dapat berbeda tergantung pada implementasi algoritma dan struktur data tertentu, serta input yang diberikan. Dalam pemrograman, pemilihan algoritma dan struktur data yang tepat sangat penting untuk mencapai performa yang optimal sesuai dengan kasus penggunaan.
