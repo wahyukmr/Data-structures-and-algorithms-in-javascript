@@ -813,3 +813,125 @@ Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendala
       `min(rootNode)`, `max(rootNode)` => untuk mencari nilai terkecil (min) dan terbesar (max) dalam BST. Time Complexity: O(log n) dalam kasus rata-rata dan O(n) dalam kasus terburuk.
 
       `remove(value)`, `removeNode(rootNode, value)` => untuk menghapus nilai tertentu dari BST. Time Complexity: O(log n) dalam kasus rata-rata dan O(n) dalam kasus terburuk.
+
+6.  **Graph**
+
+    - **_karakteristik_**:
+
+      Graph adalah struktur data non-linear yang terdiri dari kumpulan node atau vertex (simpul) yang saling terhubung melalui edge (garis). Node mewakili objek atau entitas dan setiap Node diberi nama unik yang membedakannya dari Node yang lain, sedangkan edge menunjukkan hubungan antara dua node. Graph digunakan untuk merepresentasikan berbagai jenis koneksi, seperti jaringan sosial, peta, dan sistem transportasi. Tree merupakan tipe khusus dari struktur data Graph.
+
+      ada dua jenis Graph:
+
+      - **directed** yang berarti hubungan antara dua node atau edge memiliki arah (biasanya edge direpresentasikan oleh arah panah pada Graph yang dapat dilalui) ini seperti jalur satu arah, misalnya instagram yang mana kita bisa mengikuti seseorang tapi dia tidak otomatis mengikuti kita.
+      - **undirected** yang berarti edge tidak memiliki arah (tidak adanya panah memberi tahu kita bahwa graph merupakan undirected) ini seperti jalur dua arah, misalnya facebook yang mana kita dan teman kita saling berteman.
+
+      setiap edge juga bisa memiliki bobot (weighted) atau tidak memiliki bobot (unweighted). Bobot ini bisa berarti jarak, waktu, atau nilai lainnya yang mewakili tingkat keterkaitan antara dua node. Misalnya dalam Graph rute transportasi, bobot bisa merepresentasikan jarak atau waktu antara dua tempat yang ditentukan.
+
+      Intinya, data struktur Graph ini memudahkan kita untuk menggambarkan dan menganalisis hubungan kompleks antara berbagai elemen, dan banyak aplikasi keren yang bisa dibangun dengan bantuan Graph.
+
+    - **_kelebihan_**:
+
+      representasi hubungan yang kompleks: Graph memungkinkan representasi hubungan yang kompleks antara entitas-entitas yang terkait.
+
+      pencarian jalur: Graph sangat efisien untuk melakukan pencarian jalur dan menjawab pertanyaan seperti "Apakah ada jalan dari node A ke node B?".
+
+      model real-world scenarios: Graph digunakan untuk memodelkan banyak skenario dalam kehidupan nyata, seperti jaringan sosial, sistem transportasi, dan jaringan komputer.
+
+    - **_kelemahan_**:
+
+      penggunaan memori: Implementasi graph dengan jumlah node dan edge yang besar bisa memakan banyak memori.
+
+      kompleksitas implementasi: Mengelola graph, terutama ketika ukurannya besar, dapat menjadi rumit.
+
+    - **_contoh penggunaan_**:
+
+      peta dan rute (google map): Graph digunakan untuk merepresentasikan jalan dan keterhubungan antara tempat-tempat di peta.
+
+      grafik akhir (finite state machine): Graph digunakan untuk merepresentasikan aliran program atau bahasa formal.
+
+      sistem rekomendasi: Graph digunakan untuk merepresentasikan hubungan antara produk dan preferensi pengguna.
+
+      jaringan sosial: Graph digunakan untuk merepresentasikan koneksi antara pengguna. Facebook, instagram, linkedin semuanya menggunakan strukur data Graph untuk menunjukkan hubungan timbal balik, saran postingan dan rekomendasi lainnya.
+
+    - **_representasi struktur data Graph_**:
+
+      1.  representasi Graph dengan menggunakan Array (Adjacency Matrix)
+
+          metode ini menggunakan array dua dimensi untuk menyimpan status keterhubungan antara node-node. Ukuran array ini adalah (n x n), dimana n adalah jumlah node dalam graph. Baris dan kolom dalam matriks menunjukkan node-node yang ada, dan nilai dalam sel matriks menunjukkan apakah ada edge atau tidak antara node-node tersebut. Metode ini cocok untuk graph yang padat dengan banyak edge.
+
+          contoh:
+
+              // graph:
+
+                  B
+                /   \
+              A       C
+
+              // asumsikan urutan node adalah A, B, C
+              const graphMatrix = [
+                /* A B C */
+                [ 0, 1, 0], // Node A terhubung dengan B (nilai 1 menunjukkan adanya edge)
+                [ 1, 0, 1], // Node B terhubung dengan A dan C
+                [ 0, 1, 0], // Node C terhubung dengan B
+              ];
+
+      2.  representasi Graph dengan menggunakan Object (Adjacency List)
+
+          metode ini menggunakan objek (atau Map) JavaScript untuk merepresentasikan setiap node dan array (arau Set) untuk menyimpan node yang terhubung. Setiap node akan menjadi properti dari objek, dan nilai dari properti tersebut akan berupa array yang berisi node-node yang terhubung dengan node tersebut melalui edge. Ini adalah metode yang paling umum digunakan karena efisien untuk graph yang jarang terhubung (sparse graph) karena hanya menyimpan informasi tentang edge yang ada.
+
+          contoh: misalkan kita memiliki graph untuk merepresentasikan jaringan sosial sederhana. Node-node dalam graph mewakili pengguna, dan edge-edge mewakili pertemanan di antara mereka.
+
+              Graph:
+              A -- B -- C
+               \            /
+                 \        /
+                     D
+
+              // Representasi dengan Adjacency List:
+              const graph = {
+                A: ["B", "D"], // A berteman dengan B dan D
+                B: ["A", "C"], // B berteman dengan A dan C
+                C: ["B"],      // C berteman dengan B
+                D: ["A"],      // D berteman dengan A
+              };
+
+              console.log(graph["A"]) // Output: ["B", "D"]
+              console.log(graph["B"]) // Output: ["A", "C"]
+              console.log(graph["C"]) // Output: ["B"]
+              console.log(graph["D"]) // Output: ["A"]
+
+      Adjacency Matrix Vs Adjacency List:
+
+      - jika graph jarang terhubung, representasi menggunakan objek (Adjacency List) lebih efisien karena hanya menyimpan informasi tentang edge yang ada. Sedangkan menggunakan array (Adjacency Matrik) akan menyimpan informasi tentang ada atau tidaknya edge.
+      - jika graph padat dan memiliki banyak edge, representasi menggunakan array (Adjacency Matrix) dapat lebih efisien karena hanya menggunakan ruang memori untuk seluruh kumpulan node.
+      - dengan Adjacency List, menyisipkan (inserting) dan mendapatkan (finding) node yang bersebelahan memiliki constant time complexity. lain halnya dengan Adjacency Matrik yang memiliki linear time complexity.
+
+      - **_implementasi graph dengan adjacency list di JavaScript_**:
+
+        [Code example »»](./data-structures/graph.js)
+
+        `addNode(node)` => menambahkan node baru ke dalam graph.
+
+        `addEdge(fromNode, toNode)` => menambahkan edge antara dua node yang ada dalam graph.
+
+        `removeNode(node)` => menghapus node beserta seluruh edge yang terhubung dengan node tersebut.
+
+        `removeEdge(fromNode, toNode)` => menghapus edge antara dua node yang ada dalam graph.
+
+        `display()` => mencetak adjacency list untuk menampilkan hubungan antara node-node dalam graph.
+
+        `hasEdge(fromNode, toNode)` => mengecek apakah ada edge yang menghubungkan dua node yang diberikan.
+
+      - **_big-O dari graph dengan adjacency list method_**:
+
+        `addNode(node)` => O(1) - Constant
+
+        `addEdge(fromNode, toNode)` => O(1) - Constant
+
+        `removeNode(node)` => O(n) - Linear
+
+        `removeEdge(fromNode, toNode)` => O(1) - Constant
+
+        `display()` => O(v + e) - Linear
+
+        `hasEdge(fromNode, toNode)` => O(1) - Constant

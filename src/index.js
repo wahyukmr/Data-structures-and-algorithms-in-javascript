@@ -4,6 +4,7 @@ import * as searchAlgorithm from "../algorithm/search-algorithm.js";
 import * as sortingAlgorithm from "../algorithm/sorting-algorithm.js";
 
 import BinarySearchTree from "../data-structures/binary-search-tree.js";
+import Graph from "../data-structures/graph.js";
 import HashTableWithMap from "../data-structures/hash-table-map.js";
 import HashTableWithObject from "../data-structures/hash-table-object.js";
 import LinkedListDouble from "../data-structures/linked-list-double.js";
@@ -244,3 +245,26 @@ console.log("man:", bts.max()); // Output: 15
 bts.remove(7);
 console.log(bts.leverOrderTraversal()); // Output: [10, 5, 15, 3]
 bts.printLevel(2); // Output: 5 /n 15
+
+console.log(
+  "------------------- GRAPH DATA STRUCTURE WITH ADJACENCY LIST -------------------"
+);
+const myGraph = new Graph();
+myGraph.addNode("A");
+myGraph.addNode("B");
+myGraph.addNode("C");
+// myGraph.addNode("D");
+
+myGraph.addEdge("A", "B");
+myGraph.addEdge("B", "C");
+// myGraph.addEdge("A", "C");
+// myGraph.addEdge("B", "D");
+// myGraph.addEdge("C", "D");
+
+myGraph.display();
+console.log(myGraph.hasEdge("A", "B"));
+console.log(myGraph.hasEdge("A", "C"));
+
+myGraph.removeEdge("A", "B");
+myGraph.removeNode("A");
+myGraph.display();
