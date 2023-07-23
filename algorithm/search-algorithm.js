@@ -1,13 +1,13 @@
 /**
  * * 1. Linear Search
- * Pengertian: Linear Search memeriksa setiap elemen secara berurutan dari awal sampai akhir.
+ * Pengertian: pencarian nilai tertentu dalam array dengan menelusuri satu per satu elemen dari awal hingga ditemukan atau mencapai akhir array.
  * Kelebihan: tidak perlu mengurutkan elemen.
  * Kelemahan: tidak efisien untuk menangani input size dalam jumlah yang banyak.
- * TODO: diberikan elemen array `n` dan elemen `t`, tentukan index dari `t` pada array. Return -1 jika target elemennya tidak diemukan.
  * Example:
     - arr = [-5,2,10,4,6] dan t = 10 maka outputnya adalah 2
     - arr = [-5,2,10,4,6] dan t = 6 maka outputnya adalah 4
     - arr = [-5,2,10,4,6] dan t = 20 maka outputnya adalah -1
+* TODO: diberikan elemen array `n` dan elemen `t`, tentukan index dari `t` pada array. Return -1 jika target elemennya tidak diemukan.
  */
 function linearSearch(n, t) {
   for (let i = 0; i < n.length; i++) {
@@ -24,16 +24,17 @@ console.log(linearSearch([-5, 2, 10, 4, 6], 20)); // Output: -1
 
 /**
  * * 2. Binary Search
- * Pengertian: Binary search mencari target elemen dari tengah elemen yang diberikan.
-    1. menentukan pointer (tengah elemen)
-    2. jika target lebih besar dari pointer maka ambil semua elemen setelah pointer, namun jika target lebih kecil dari pointer maka ambile semua elemen sebelum pointer.
-    3. ulangi proses ini sampai menemukan target.
+* Pengertian: pencarian nilai tertentu dalam array terurut dengan membagi interval pencarian menjadi dua bagian dan mengeliminasi setengah interval yang tidak mungkin mengandung nilai yang dicari.
+ * Steps:
+    - menentukan pointer (tengah elemen)
+    - jika target lebih besar dari pointer maka ambil semua elemen setelah pointer, namun jika target lebih kecil dari pointer maka ambile semua elemen sebelum pointer.
+    - ulangi proses ini sampai menemukan target.
   * Kelemahan: Binary search hanya berfungsi pada array yang telah diurutkan, jika tidak memiliki array yang diurutkan bisa menggunakan Linear search sebagai alternatif atau melakukan pekerjaan tambahan dengan mengurutkan array terlebih dahulu kemudian menerapkan Binary search.
-  * TODO: diberikan array yang diurutkan dari elemen `arr` dan elemen target `t`, tentukan index dari `t` pada array. Return -1 jika target elemennya tidak diemukan.
   * Example:
     - arr = [-5,2,4,6,10] dan t = 10 maka outputnya adalah 4
     - arr = [-5,2,4,6,10] dan t = 6 maka outputnya adalah 3
     - arr = [-5,2,4,6,10] dan t = 20 maka outputnya adalah -1
+  * TODO: diberikan array yang diurutkan dari elemen `arr` dan elemen target `t`, tentukan index dari `t` pada array. Return -1 jika target elemennya tidak diemukan.
   */
 function binarySearch(arr, t) {
   let leftIndex = 0; // merujuk ke elemen pertama dalam array
@@ -55,11 +56,11 @@ function binarySearch(arr, t) {
 console.log(binarySearch([-5, 2, 4, 6, 10], 10)); // Output: 4
 console.log(binarySearch([-5, 2, 4, 6, 10], 20)); // Output: -1
 console.log(binarySearch([-5, 2, 4, 6, 10], -1)); // Output: -1
-// Big-O dari Binary Search adalah Logarithmic O(logn) Time complexity, karena meskipun memiliki loop didalamnya, akan tetapi detailnya ada didalam loop tersebut dimana setiap iterasi mengurangi input size hingga setengahnya.
+// Big-O dari Binary Search adalah Logarithmic O(logn) Time complexity, karena dalam setiap langkah, ukuran area pencarian berkurang menjadi setengah dari ukuran sebelumnya. Oleh karena itu, waktu eksekusi algoritma ini tidak bertambah linear dengan jumlah elemen dalam array, tetapi berbanding terbalik dengan logaritma basis 2 dari jumlah elemen.
 
 /**
  * * Recursive Binary Search
- * Pengertian: pengertian dan contohnya sama seperti sebelumnya, hanya saja menggunakan teknik yang lebih disederhanakan.
+ * Rekursi adalah sebuah konsep dalam pemrograman di mana sebuah fungsi dapat memanggil dirinya sendiri secara berulang hingga mencapai kondisi berhenti (base case) tertentu. Dengan kata lain dengan teknik ini akan menyederhanakan code.
  * TODO: diberikan array yang diurutkan dari elemen `arr` dan elemen target `t`, tentukan index dari `t` pada array. Return -1 jika target elemennya tidak diemukan.
  */
 function recursiveBinarySearch(arr, t) {
