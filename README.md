@@ -61,9 +61,9 @@ Sebagai seorang pengembang atau perancang algoritma, tujuannya adalah untuk menc
 
 Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi berapa lama jalannya sebuah kode. Faktor itu seperti jumlah data, koneksi, jumlah memori, kecepatan prosesor, dll.
 
-**Beberapa contoh Big-O Time complexity**
+**Beberapa contoh Big-O Time complexity:**
 
-1. **O(1) - Constant Time Complexity:**
+1. **O(1) - Constant Time Complexity**
 
    **_pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar input size nya. Algoritma dengan kompleksitas waktu Constant sangat efisien.
 
@@ -71,7 +71,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** mengakses elemen dalam array menggunakan indeks, pengoperasian matematika sederhana, atau operasi yang melibatkan jumlah data tetap.
 
-2. **O(log n) - Logarithmic Time Complexity:**
+2. **O(log n) - Logarithmic Time Complexity**
 
    **_pengertian:_** algoritma membutuhkan waktu yang meningkat secara perlahan seiring dengan pertambahan input size. Algoritma dengan kompleksitas waktu logaritmik juga efisien, terutama untuk data yang besar.
 
@@ -79,7 +79,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** biner search dalam daftar terurut atau pembagian dan conquering dalam algoritma seperti **_merge sort_** atau **_binary search tree_**.
 
-3. **O(n) - Linear Time Complexity:**
+3. **O(n) - Linear Time Complexity**
 
    **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size. Algoritma dengan kompleksitas waktu linier efisien untuk jumlah data yang relatif kecil.
 
@@ -87,7 +87,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** iterasi melalui array untuk mencari elemen tertentu atau melakukan operasi sederhana pada setiap elemen.
 
-4. **O(n log n) - Loglinear Time Complexity:**
+4. **O(n log n) - Loglinear Time Complexity**
 
    **_pengertian:_** waktu eksekusi algoritma bertumbuh sebanding secara linear dengan input size, tetapi juga dipengaruhi oleh algoritma dari input size tersebut. Algoritma dengan kompleksitas waktu Loglinear umumnya efisien untuk jumlah data yang besar.
 
@@ -95,7 +95,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** algoritma pengurutan seperti Merge Sort dan Quick Sort.
 
-5. **O(n^2) - Quadratic Time Complexity:**
+5. **O(n^2) - Quadratic Time Complexity**
 
    **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien untuk jumlah data yang besar.
 
@@ -103,7 +103,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** bubble sort, selection sort atau algoritma yang melibatkan nested loop..
 
-6. **O(n^3) - Cubic Time Complexity:**
+6. **O(n^3) - Cubic Time Complexity**
 
    **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan cubik / pangkat 3 dari input size. Mereka sering terjadi dalam algoritma yang melibatkan nested loop. Algoritma dengan kompleksitas waktu Cubic seringkali tidak efisien untuk jumlah data yang besar.
 
@@ -111,7 +111,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** algoritma yang melibatkan 3 nested loop.
 
-7. **O(2^n) - Eksponensial Time Complexity:**
+7. **O(2^n) - Eksponensial Time Complexity**
 
    **_pengertian:_** algoritma dengan waktu eksekusinya tumbuh secara eksponensial dengan ukuran masukan. Algoritma dengan kompleksitas waktu Eksponensial sangat tidak efisien, terutama untuk jumlah data yang besar.
 
@@ -119,32 +119,38 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_contoh:_** algoritma brute force atau rekursi tak terbatas.
 
-**Beberapa contoh Space complexity:**
+**Beberapa contoh Big-O Space complexity:**
 
-1. **O(1) - Constant Space Complexity:**
+1. **O(1) - Constant Space Complexity**
 
    **_pengertian:_** algoritma akan menggunakan jumlah memori yang tetap, tidak bergantung pada input size. Ini berarti algoritma ini mengalokasikan jumlah memori yang konstan untuk menjalankan tugasnya.
+
    **_contoh:_** operasi aritmetika sederhana, pengambilan elemen dari array dengan indeks yang diketahui atau sorting algoritma dalam array.
 
-2. **O(n) - Linear Space Complexity:**
+2. **O(n) - Linear Space Complexity**
 
    **_pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan input size, atau ikut bertambah seiring bertambahnya input size.
+
    **_penggunaan:_** algoritma yang memerlukan penyimpanan data linier seperti traversal atau pemrosesan elemen dalam suatu struktur data seperti array atau linked list.
 
-3. **O(n^2) - Quadratic Space Complexity:**
+3. **O(n^2) - Quadratic Space Complexity**
 
    **_pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan kuadrat dari input size. Algoritma ini seringkali terlihat pada nested loop atau saat menggunakan matriks dua dimensi.
+
    **_contoh:_** algoritma bubble sort yang membandingkan setiap elemen dengan setiap elemen lainnya.
+
    **_penggunaan:_** biasanya digunakan dalam algoritma pemrosesan matriks, permutasi, atau kombinasi.
 
-4. **O(log n) - Logarithmic Space Complexity:**
+4. **O(log n) - Logarithmic Space Complexity**
 
    **_pengertian:_** algoritma akan menggunakan jumlah memori yang bertumbuh tetapi tidak pada jumlah yang sama dengan input size. Algoritma ini seringkali terlihat pada algoritma divide and conquer seperti Binary Search atau Binary Tree.
+
    **_penggunaan:_** saat memproses masukan yang terurut atau terstruktur secara terbagi-bagi.
 
-5. **O(n log n) - Loglinear Space Complexity:**
+5. **O(n log n) - Loglinear Space Complexity**
 
    **_pengertian:_** algoritma akan menggunakan jumlah memori tambahan yang bertumbuh secara linier terhadap ukuran masukan (n), namun juga dipengaruhi oleh logaritma dari ukuran masukan tersebut (log n).
+
    **_contoh:_** Merge Sort dan Quick Sort.
 
 ### 1.5. Teknik desain algoritma
