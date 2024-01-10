@@ -66,7 +66,9 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 1. **O(1) - Constant Time Complexity:**
 
    **_pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar input size nya. Algoritma dengan kompleksitas waktu Constant sangat efisien.
+
    **_case:_** cocok untuk kasus-kasus di mana input size tidak berpengaruh pada waktu eksekusi algoritma.
+
    **_contoh:_** mengakses elemen dalam array menggunakan indeks, pengoperasian matematika sederhana, atau operasi yang melibatkan jumlah data tetap.
 
 2. **O(log n) - Logarithmic Time Complexity:**
