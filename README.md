@@ -74,37 +74,49 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 2. **O(log n) - Logarithmic Time Complexity:**
 
    **_pengertian:_** algoritma membutuhkan waktu yang meningkat secara perlahan seiring dengan pertambahan input size. Algoritma dengan kompleksitas waktu logaritmik juga efisien, terutama untuk data yang besar.
+
    **_case:_** umumnya digunakan dalam kasus-kasus di mana data diurutkan atau dibagi setengahnya secara berulang.
+
    **_contoh:_** biner search dalam daftar terurut atau pembagian dan conquering dalam algoritma seperti **_merge sort_** atau **_binary search tree_**.
 
 3. **O(n) - Linear Time Complexity:**
 
    **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size. Algoritma dengan kompleksitas waktu linier efisien untuk jumlah data yang relatif kecil.
+
    **_case:_** jika harus membaca setiap item dalam list atau jika melihat loop dalam algoritma.
+
    **_contoh:_** iterasi melalui array untuk mencari elemen tertentu atau melakukan operasi sederhana pada setiap elemen.
 
 4. **O(n log n) - Loglinear Time Complexity:**
 
    **_pengertian:_** waktu eksekusi algoritma bertumbuh sebanding secara linear dengan input size, tetapi juga dipengaruhi oleh algoritma dari input size tersebut. Algoritma dengan kompleksitas waktu Loglinear umumnya efisien untuk jumlah data yang besar.
+
    **_case:_** sangat efisien digunakan dalam kasus-kasus pengurutan atau pencarian data dalam skala besar dan kompleks.
+
    **_contoh:_** algoritma pengurutan seperti Merge Sort dan Quick Sort.
 
 5. **O(n^2) - Quadratic Time Complexity:**
 
    **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien untuk jumlah data yang besar.
+
    **_case:_** Meskipun mereka dapat digunakan untuk data kecil, perlu dihindari dalam kasus-kasus dengan jumlah data yang besar karena waktu eksekusi yang lambat.
+
    **_contoh:_** bubble sort, selection sort atau algoritma yang melibatkan nested loop..
 
 6. **O(n^3) - Cubic Time Complexity:**
 
    **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan cubik / pangkat 3 dari input size. Mereka sering terjadi dalam algoritma yang melibatkan nested loop. Algoritma dengan kompleksitas waktu Cubic seringkali tidak efisien untuk jumlah data yang besar.
+
    **_case:_** Waktu eksekusinya tumbuh secara kuadratik dengan ukuran masukan.
+
    **_contoh:_** algoritma yang melibatkan 3 nested loop.
 
 7. **O(2^n) - Eksponensial Time Complexity:**
 
    **_pengertian:_** algoritma dengan waktu eksekusinya tumbuh secara eksponensial dengan ukuran masukan. Algoritma dengan kompleksitas waktu Eksponensial sangat tidak efisien, terutama untuk jumlah data yang besar.
+
    **_case:_** algoritma ini perlu dihindari dalam kasus-kasus dengan jumlah data yang signifikan.
+
    **_contoh:_** algoritma brute force atau rekursi tak terbatas.
 
 **Beberapa contoh Space complexity:**
