@@ -73,7 +73,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 2. **O(log n) - Logarithmic Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang meningkat secara perlahan seiring dengan pertambahan input size. Algoritma dengan kompleksitas waktu logaritmik juga efisien, terutama untuk data yang besar.
+   **_pengertian:_** algoritma membutuhkan waktu yang meningkat secara perlahan seiring dengan pertambahan input size. Sehingga algoritma dengan kompleksitas waktu Logaritmik masih sangat bagus atau efisien, terutama untuk data yang besar.
 
    **_case:_** umumnya digunakan dalam kasus-kasus di mana data diurutkan atau dibagi setengahnya secara berulang.
 
