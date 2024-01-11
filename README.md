@@ -97,7 +97,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 5. **O(n^2) - Quadratic Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien untuk jumlah data yang besar.
+   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien, apalagi untuk jumlah data yang besar.
 
    **_case:_** Meskipun mereka dapat digunakan untuk data kecil, perlu dihindari dalam kasus-kasus dengan jumlah data yang besar karena waktu eksekusi yang lambat.
 
