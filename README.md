@@ -81,7 +81,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 3. **O(n) - Linear Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size. Algoritma dengan kompleksitas waktu linier efisien untuk jumlah data yang relatif kecil.
+   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size. Algoritma dengan kompleksitas waktu linier masih dapat diterima dan efisien untuk jumlah data yang relatif kecil.
 
    **_case:_** jika harus membaca setiap item dalam list atau jika melihat loop dalam algoritma.
 
