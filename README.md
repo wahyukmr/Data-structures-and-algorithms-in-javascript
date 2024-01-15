@@ -59,7 +59,7 @@ Sebagai seorang pengembang atau perancang algoritma, tujuannya adalah untuk menc
 
 **Big-O notation** adalah metode yang digunakan untuk memperkirakan kompleksitas waktu (time complexity) dan kompleksitas ruang (space complexity) terburuk dari sebuah algoritma. Sehingga dapat menumbuhkan kesadaran kita untuk mencari alternatif yang lebih baik sebelum data semakin besar dan berdampak kepada performa aplikasi yang kita buat.
 
-Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi berapa lama jalannya sebuah kode. Faktor itu seperti jumlah data, koneksi, jumlah memori, kecepatan prosesor, dll.
+Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi berapa lama jalannya sebuah kode. Salah satunya adalah tidak semua prosesor akan berjalan pada kecepatan yang sama, jadi alih-alih menghitung waktu aplikasi, lebih baik menghitung jumlah instruksi yang dijalankan aplikasi.
 
 **Beberapa contoh Big-O Time complexity:**
 
