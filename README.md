@@ -65,93 +65,97 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 1. **O(1) - Constant Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar atau banyaknya input yang diberikan. Sehingga algoritma dengan kompleksitas waktu Constant adalah yang terbaik.
+   **_Pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar atau banyaknya input yang diberikan. Sehingga algoritma dengan kompleksitas waktu Constant adalah yang terbaik.
 
-   **_case:_** cocok untuk kasus-kasus di mana input size tidak berpengaruh pada waktu eksekusi algoritma.
+   **_Case:_** cocok untuk kasus-kasus di mana input size tidak berpengaruh pada waktu eksekusi algoritma.
 
-   **_contoh:_** mengakses elemen dalam array menggunakan indeks, pengoperasian matematika sederhana, atau operasi yang melibatkan jumlah data tetap.
+   **_Contoh:_** mengakses elemen dalam array menggunakan indeks, pengoperasian matematika sederhana, atau operasi yang melibatkan jumlah data tetap.
 
-2. **O(log n) - Logarithmic Time Complexity**
+2. **O(n) - Linear Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang meningkat secara perlahan seiring dengan pertambahan input size. Sehingga algoritma dengan kompleksitas waktu Logaritmik masih sangat bagus atau efisien, terutama untuk data yang besar.
+   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size nya. Algoritma dengan kompleksitas waktu linear masih dapat diterima dan efisien untuk jumlah data yang relatif kecil.
 
-   **_case:_** umumnya digunakan dalam kasus-kasus di mana data diurutkan atau dibagi setengahnya secara berulang.
+   **_Case:_** jika harus membaca setiap item dalam list atau jika melihat loop dalam algoritma dengan data yang relatif kecil.
 
-   **_contoh:_** biner search dalam daftar terurut atau pembagian dan conquering dalam algoritma seperti **_merge sort_** atau **_binary search tree_**.
+   **_Contoh:_** iterasi melalui array untuk mencari elemen tertentu atau melakukan operasi sederhana pada setiap elemen.
 
-3. **O(n) - Linear Time Complexity**
+3. **O(log n) - Logarithmic Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size nya. Algoritma dengan kompleksitas waktu linear masih dapat diterima dan efisien untuk jumlah data yang relatif kecil.
+   **_Pengertian:_** pencarian ini lebih efisien daripada yang membutuhkan waktu sebanding dengan jumlah input (O(n)), tetapi memerlukan lebih banyak langkah daripada pencarian konstan (O(1)). Pencarian logaritmik atau O(log n), meningkat secara bertahap ketika input bertambah, tetapi peningkatan ini hanya bersifat marginal (peningkatan yang tidak terlalu besar meskipun ukuran inputnya bertambah). Contoh bagus dari metode ini adalah pencarian biner. Sehingga algoritma dengan kompleksitas waktu Logaritmik masih sangat bagus atau efisien, terutama untuk data yang besar.
 
-   **_case:_** jika harus membaca setiap item dalam list atau jika melihat loop dalam algoritma dengan data yang relatif kecil.
+   **_Analogi:_** bayangkan ketika bermain permainan tebak-tebakan dengan petunjuk "terlalu tinggi", "terlalu rendah", atau "benar". Rentang angkanya adalah dari 1 hingga 100. Masalah ini bisa dipecahkan secara sistematis. Misalnya, menebak angka 50 - ternyata terlalu tinggi. Lalu, menebak angka 25 - masih terlalu tinggi. Kemudian, bisa memilih angka 12 atau 13. Dengan cara ini, akan terus membagi dua rentang pencarian setiap kali menebak.
 
-   **_contoh:_** iterasi melalui array untuk mencari elemen tertentu atau melakukan operasi sederhana pada setiap elemen.
+   Dengan menggunakan pendekatan pencarian biner seperti ini, meskipun rentang input adalah 100, kita bisa menemukan jawaban dalam waktu kurang dari 5 atau 6 tebakan. Metode ini memiliki kompleksitas waktu O(log n). Bahkan jika rentang input (n) sepuluh kali lipat lebih besar, waktu yang diperlukan untuk menebaknya tidak akan sepuluh kali lebih lama.
+
+   **_Case:_** umumnya digunakan dalam kasus-kasus di mana data diurutkan atau dibagi setengahnya secara berulang.
+
+   **_Contoh:_** biner search dalam daftar terurut atau pembagian dan conquering dalam algoritma seperti **_merge sort_** atau **_binary search tree_**.
 
 4. **O(n log n) - Loglinear Time Complexity**
 
-   **_pengertian:_** waktu eksekusi algoritma bertumbuh sebanding secara linear dengan input size, tetapi juga dipengaruhi oleh algoritma dari input size tersebut. Algoritma dengan kompleksitas waktu Loglinear umumnya efisien untuk jumlah data yang besar.
+   **_Pengertian:_** waktu eksekusi algoritma bertumbuh sebanding secara linear dengan input size, tetapi juga dipengaruhi oleh algoritma dari input size tersebut. Algoritma dengan kompleksitas waktu Loglinear umumnya efisien untuk jumlah data yang besar.
 
-   **_case:_** sangat efisien digunakan dalam kasus-kasus pengurutan atau pencarian data dalam skala besar dan kompleks.
+   **_Case:_** sangat efisien digunakan dalam kasus-kasus pengurutan atau pencarian data dalam skala besar dan kompleks.
 
-   **_contoh:_** algoritma pengurutan seperti Merge Sort dan Quick Sort.
+   **_Contoh:_** algoritma pengurutan seperti Merge Sort dan Quick Sort.
 
 5. **O(n^2) - Quadratic Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien, apalagi untuk jumlah data yang besar.
+   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien, apalagi untuk jumlah data yang besar.
 
-   **_case:_** Meskipun mereka dapat digunakan untuk data kecil, perlu dihindari dalam kasus-kasus dengan jumlah data yang besar karena waktu eksekusi yang lambat.
+   **_Case:_** Meskipun mereka dapat digunakan untuk data kecil, perlu dihindari dalam kasus-kasus dengan jumlah data yang besar karena waktu eksekusi yang lambat.
 
-   **_contoh:_** bubble sort, selection sort atau algoritma yang melibatkan nested loop..
+   **_Contoh:_** bubble sort, selection sort atau algoritma yang melibatkan nested loop..
 
 6. **O(n^3) - Cubic Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang sebanding dengan cubik / pangkat 3 dari input size. Mereka sering terjadi dalam algoritma yang melibatkan nested loop. Algoritma dengan kompleksitas waktu Cubic seringkali tidak efisien untuk jumlah data yang besar.
+   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan cubik / pangkat 3 dari input size. Mereka sering terjadi dalam algoritma yang melibatkan nested loop. Algoritma dengan kompleksitas waktu Cubic seringkali tidak efisien untuk jumlah data yang besar.
 
-   **_case:_** Waktu eksekusinya tumbuh secara kuadratik dengan ukuran masukan.
+   **_Case:_** Waktu eksekusinya tumbuh secara kuadratik dengan ukuran masukan.
 
-   **_contoh:_** algoritma yang melibatkan 3 nested loop.
+   **_Contoh:_** algoritma yang melibatkan 3 nested loop.
 
 7. **O(2^n) - Eksponensial Time Complexity**
 
-   **_pengertian:_** algoritma dengan waktu eksekusinya tumbuh secara eksponensial dengan ukuran masukan. Algoritma dengan kompleksitas waktu Eksponensial sangat tidak efisien, terutama untuk jumlah data yang besar.
+   **_Pengertian:_** algoritma dengan waktu eksekusinya tumbuh secara eksponensial dengan ukuran masukan. Algoritma dengan kompleksitas waktu Eksponensial sangat tidak efisien, terutama untuk jumlah data yang besar.
 
-   **_case:_** algoritma ini perlu dihindari dalam kasus-kasus dengan jumlah data yang signifikan.
+   **_Case:_** algoritma ini perlu dihindari dalam kasus-kasus dengan jumlah data yang signifikan.
 
-   **_contoh:_** algoritma brute force atau rekursi tak terbatas.
+   **_Contoh:_** algoritma brute force atau rekursi tak terbatas.
 
 **Beberapa contoh Big-O Space complexity:**
 
 1. **O(1) - Constant Space Complexity**
 
-   **_pengertian:_** algoritma akan menggunakan jumlah memori yang tetap, tidak bergantung pada input size. Ini berarti algoritma ini mengalokasikan jumlah memori yang konstan untuk menjalankan tugasnya.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang tetap, tidak bergantung pada input size. Ini berarti algoritma ini mengalokasikan jumlah memori yang konstan untuk menjalankan tugasnya.
 
-   **_contoh:_** operasi aritmetika sederhana, pengambilan elemen dari array dengan indeks yang diketahui atau sorting algoritma dalam array.
+   **_Contoh:_** operasi aritmetika sederhana, pengambilan elemen dari array dengan indeks yang diketahui atau sorting algoritma dalam array.
 
 2. **O(n) - Linear Space Complexity**
 
-   **_pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan input size, atau ikut bertambah seiring bertambahnya input size.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan input size, atau ikut bertambah seiring bertambahnya input size.
 
    **_penggunaan:_** algoritma yang memerlukan penyimpanan data linier seperti traversal atau pemrosesan elemen dalam suatu struktur data seperti array atau linked list.
 
 3. **O(n^2) - Quadratic Space Complexity**
 
-   **_pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan kuadrat dari input size. Algoritma ini seringkali terlihat pada nested loop atau saat menggunakan matriks dua dimensi.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan kuadrat dari input size. Algoritma ini seringkali terlihat pada nested loop atau saat menggunakan matriks dua dimensi.
 
-   **_contoh:_** algoritma bubble sort yang membandingkan setiap elemen dengan setiap elemen lainnya.
+   **_Contoh:_** algoritma bubble sort yang membandingkan setiap elemen dengan setiap elemen lainnya.
 
    **_penggunaan:_** biasanya digunakan dalam algoritma pemrosesan matriks, permutasi, atau kombinasi.
 
 4. **O(log n) - Logarithmic Space Complexity**
 
-   **_pengertian:_** algoritma akan menggunakan jumlah memori yang bertumbuh tetapi tidak pada jumlah yang sama dengan input size. Algoritma ini seringkali terlihat pada algoritma divide and conquer seperti Binary Search atau Binary Tree.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang bertumbuh tetapi tidak pada jumlah yang sama dengan input size. Algoritma ini seringkali terlihat pada algoritma divide and conquer seperti Binary Search atau Binary Tree.
 
    **_penggunaan:_** saat memproses masukan yang terurut atau terstruktur secara terbagi-bagi.
 
 5. **O(n log n) - Loglinear Space Complexity**
 
-   **_pengertian:_** algoritma akan menggunakan jumlah memori tambahan yang bertumbuh secara linier terhadap ukuran masukan (n), namun juga dipengaruhi oleh logaritma dari ukuran masukan tersebut (log n).
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori tambahan yang bertumbuh secara linier terhadap ukuran masukan (n), namun juga dipengaruhi oleh logaritma dari ukuran masukan tersebut (log n).
 
-   **_contoh:_** Merge Sort dan Quick Sort.
+   **_Contoh:_** Merge Sort dan Quick Sort.
 
 ### 1.5. Teknik desain algoritma
 
