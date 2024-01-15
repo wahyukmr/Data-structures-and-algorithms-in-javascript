@@ -46,8 +46,8 @@ Jadi, dengan mempertimbangkan poin-poin diatas, kita dapat mengevaluasi kinerja 
 
 Efisiensi suatu algoritma penting karena membantu memecahkan masalah lebih cepat dan memberikan hasil akhir yang baik. Ada dua konsep untuk mengevaluasi kinerja suatu algoritma yang perlu dipertimbangkan dalam mengukur efisiensi algoritma :
 
-1. **Time complexity** merupakan langkah atau upaya untuk mengukur seberapa efisien sebuah algoritma dalam menangani ukuran masukan atau input size yang diberikan. Time complexity menggambarkan berapa banyak waktu yang dibutuhkan oleh algoritma untuk menyelesaikan operasinya, dan biasanya dinyatakan dalam notasi Big-O.
-2. **Space complexity** adalah jenis kompleksitas yang mengukur penggunaan memori atau ruang yang diperlukan oleh algoritma. Ini menggambarkan seberapa efisien algoritma dalam menggunakan memori saat menjalankan operasinya, dan juga dinyatakan dalam notasi Big-O.
+1. **Time complexity** merupakan langkah atau upaya untuk mengevaluasi seberapa efisien sebuah algoritma dalam menangani ukuran input yang diberikan. Time complexity menggambarkan berapa banyak waktu atau kinerja waktu yang dibutuhkan untuk menyelesaikan tugasnya.
+2. **Space complexity** adalah jenis kompleksitas yang mengukur penggunaan memori atau ruang yang diperlukan oleh algoritma. Ini menggambarkan seberapa efisien algoritma dalam menggunakan memori saat menjalankan operasinya.
 
 Untuk mencapai algoritma yang efisien perlu mempertimbangkan kedua konsep di atas. Secara teoritis, mungkin ada kasus di mana algoritma memiliki kompleksitas waktu yang cepat dan kompleksitas ruang yang sedikit memakan memori. Namun, dalam praktikanya, ada trade-off antara kompleksitas waktu dan kompleksitas ruang, dan seringkali terdapat keterkaitan antara keduanya.
 
@@ -57,7 +57,7 @@ Sebagai seorang pengembang atau perancang algoritma, tujuannya adalah untuk menc
 
 ### 1.4. Mengimplementasikan Time dan Space Complexity
 
-**Big-O notation** adalah metode yang digunakan untuk memperkirakan kompleksitas waktu (time complexity) dan kompleksitas ruang (space complexity) terburuk dari sebuah algoritma. Sehingga dapat menumbuhkan kesadaran kita untuk mencari alternatif yang lebih baik sebelum data semakin besar dan berdampak kepada performa aplikasi yang kita buat.
+**Big-O notation** adalah metode atau metrik yang digunakan untuk menentukan efisiensi algoritma. Dengan demikian, ini memberikan perkiraan berapa lama waktu yang dibutuhkan kode untuk berjalan pada set input yang berbeda atau mempertimbangkan jumlah waktu yang dibutuhkan algoritma. Sehingga dapat menumbuhkan kesadaran kita untuk mencari alternatif yang lebih baik sebelum data semakin besar dan berdampak kepada performa aplikasi yang kita buat.
 
 Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi berapa lama jalannya sebuah kode. Salah satunya adalah tidak semua prosesor akan berjalan pada kecepatan yang sama, jadi alih-alih menghitung waktu aplikasi, lebih baik menghitung jumlah instruksi yang dijalankan aplikasi.
 
@@ -67,19 +67,11 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_Pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar atau banyaknya input yang diberikan. Sehingga algoritma dengan kompleksitas waktu Constant adalah yang terbaik.
 
-   **_Case:_** cocok untuk kasus-kasus di mana input size tidak berpengaruh pada waktu eksekusi algoritma.
+   **_Case:_** cocok untuk kasus-kasus di mana ukuran input tidak berpengaruh pada waktu eksekusi algoritma.
 
    **_Contoh:_** mengakses elemen dalam array menggunakan indeks, pengoperasian matematika sederhana, atau operasi yang melibatkan jumlah data tetap.
 
-2. **O(n) - Linear Time Complexity**
-
-   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan input size nya. Algoritma dengan kompleksitas waktu linear masih dapat diterima dan efisien untuk jumlah data yang relatif kecil.
-
-   **_Case:_** jika harus membaca setiap item dalam list atau jika melihat loop dalam algoritma dengan data yang relatif kecil.
-
-   **_Contoh:_** iterasi melalui array untuk mencari elemen tertentu atau melakukan operasi sederhana pada setiap elemen.
-
-3. **O(log n) - Logarithmic Time Complexity**
+2. **O(log n) - Logarithmic Time Complexity**
 
    **_Pengertian:_** pencarian ini lebih efisien daripada yang membutuhkan waktu sebanding dengan jumlah input (O(n)), tetapi memerlukan lebih banyak langkah daripada pencarian konstan (O(1)). Pencarian logaritmik atau O(log n), meningkat secara bertahap ketika input bertambah, tetapi peningkatan ini hanya bersifat marginal (peningkatan yang tidak terlalu besar meskipun ukuran inputnya bertambah). Contoh bagus dari metode ini adalah pencarian biner. Sehingga algoritma dengan kompleksitas waktu Logaritmik masih sangat bagus atau efisien, terutama untuk data yang besar.
 
@@ -91,9 +83,17 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_Contoh:_** biner search dalam daftar terurut atau pembagian dan conquering dalam algoritma seperti **_merge sort_** atau **_binary search tree_**.
 
+3. **O(n) - Linear Time Complexity**
+
+   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan ukuran inputnya. Algoritma dengan kompleksitas waktu linear masih dapat diterima dan efisien untuk jumlah data yang relatif kecil.
+
+   **_Case:_** jika harus membaca setiap item dalam list atau jika melihat loop dalam algoritma dengan data yang relatif kecil.
+
+   **_Contoh:_** iterasi melalui array untuk mencari elemen tertentu atau melakukan operasi sederhana pada setiap elemen.
+
 4. **O(n log n) - Loglinear Time Complexity**
 
-   **_Pengertian:_** waktu eksekusi algoritma bertumbuh sebanding secara linear dengan input size, tetapi juga dipengaruhi oleh algoritma dari input size tersebut. Algoritma dengan kompleksitas waktu Loglinear umumnya efisien untuk jumlah data yang besar.
+   **_Pengertian:_** waktu eksekusi algoritma bertumbuh sebanding dengan ukuran inputnya, tetapi juga dipengaruhi oleh algoritma dari ukuran input tersebut. Algoritma dengan kompleksitas waktu Loglinear umumnya efisien untuk jumlah data yang besar.
 
    **_Case:_** sangat efisien digunakan dalam kasus-kasus pengurutan atau pencarian data dalam skala besar dan kompleks.
 
@@ -101,23 +101,23 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 5. **O(n^2) - Quadratic Time Complexity**
 
-   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan kuadrat / pangkat 2 dari input size. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien, apalagi untuk jumlah data yang besar.
+   **_Pengertian:_** ini adalah kompleksitas kuadratik, yang berarti bahwa pekerjaan digandakan (n²) dari ukuran input yang diberikan. Misalkan, berapa banyak perhitungan yang diperlukan jika n = 6? Jawabannya adalah 6 x 6 jadi 36. Algoritma dengan kompleksitas waktu Quadratic biasanya tidak efisien, apalagi untuk jumlah data yang besar.
 
-   **_Case:_** Meskipun mereka dapat digunakan untuk data kecil, perlu dihindari dalam kasus-kasus dengan jumlah data yang besar karena waktu eksekusi yang lambat.
+   **_Case:_** meskipun mereka dapat digunakan untuk data kecil, perlu dihindari dalam kasus-kasus dengan jumlah data yang besar karena waktu eksekusi yang lambat.
 
-   **_Contoh:_** bubble sort, selection sort atau algoritma yang melibatkan nested loop..
+   **_Contoh:_** bubble sort, selection sort atau algoritma yang melibatkan nested loop.
 
 6. **O(n^3) - Cubic Time Complexity**
 
-   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan cubik / pangkat 3 dari input size. Mereka sering terjadi dalam algoritma yang melibatkan nested loop. Algoritma dengan kompleksitas waktu Cubic seringkali tidak efisien untuk jumlah data yang besar.
+   **_Pengertian:_** algoritma membutuhkan waktu yang sebanding dengan cubik / pangkat 3 dari ukuran input. Mereka sering terjadi dalam algoritma yang melibatkan nested loop. Algoritma dengan kompleksitas waktu Cubic seringkali tidak efisien untuk jumlah data yang besar.
 
-   **_Case:_** Waktu eksekusinya tumbuh secara kuadratik dengan ukuran masukan.
+   **_Case:_** waktu eksekusinya tumbuh secara kuadratik dengan ukuran masukan.
 
    **_Contoh:_** algoritma yang melibatkan 3 nested loop.
 
 7. **O(2^n) - Eksponensial Time Complexity**
 
-   **_Pengertian:_** algoritma dengan waktu eksekusinya tumbuh secara eksponensial dengan ukuran masukan. Algoritma dengan kompleksitas waktu Eksponensial sangat tidak efisien, terutama untuk jumlah data yang besar.
+   **_Pengertian:_** algoritma dengan waktu eksekusinya tumbuh secara eksponensial dengan ukuran input. Algoritma dengan kompleksitas waktu Eksponensial sangat tidak efisien, terutama untuk jumlah data yang besar.
 
    **_Case:_** algoritma ini perlu dihindari dalam kasus-kasus dengan jumlah data yang signifikan.
 
@@ -127,19 +127,19 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 1. **O(1) - Constant Space Complexity**
 
-   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang tetap, tidak bergantung pada input size. Ini berarti algoritma ini mengalokasikan jumlah memori yang konstan untuk menjalankan tugasnya.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang tetap, tidak bergantung pada ukuran input. Ini berarti algoritma ini mengalokasikan jumlah memori yang konstan untuk menjalankan tugasnya.
 
    **_Contoh:_** operasi aritmetika sederhana, pengambilan elemen dari array dengan indeks yang diketahui atau sorting algoritma dalam array.
 
 2. **O(n) - Linear Space Complexity**
 
-   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan input size, atau ikut bertambah seiring bertambahnya input size.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan ukuran input, atau ikut bertambah seiring bertambahnya ukuran input.
 
    **_penggunaan:_** algoritma yang memerlukan penyimpanan data linier seperti traversal atau pemrosesan elemen dalam suatu struktur data seperti array atau linked list.
 
 3. **O(n^2) - Quadratic Space Complexity**
 
-   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan kuadrat dari input size. Algoritma ini seringkali terlihat pada nested loop atau saat menggunakan matriks dua dimensi.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang sebanding dengan kuadrat dari ukuran input. Algoritma ini seringkali terlihat pada nested loop atau saat menggunakan matriks dua dimensi.
 
    **_Contoh:_** algoritma bubble sort yang membandingkan setiap elemen dengan setiap elemen lainnya.
 
@@ -147,7 +147,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 4. **O(log n) - Logarithmic Space Complexity**
 
-   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang bertumbuh tetapi tidak pada jumlah yang sama dengan input size. Algoritma ini seringkali terlihat pada algoritma divide and conquer seperti Binary Search atau Binary Tree.
+   **_Pengertian:_** algoritma akan menggunakan jumlah memori yang bertumbuh tetapi tidak pada jumlah yang sama dengan ukuran input. Algoritma ini seringkali terlihat pada algoritma divide and conquer seperti Binary Search atau Binary Tree.
 
    **_penggunaan:_** saat memproses masukan yang terurut atau terstruktur secara terbagi-bagi.
 
