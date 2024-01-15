@@ -65,7 +65,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 1. **O(1) - Constant Time Complexity**
 
-   **_pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar input size nya. Sehingga algoritma dengan kompleksitas waktu Constant adalah yang terbaik.
+   **_pengertian:_** algoritma membutuhkan waktu yang tetap untuk menyelesaikan tugas, tidak peduli seberapa besar atau banyaknya input yang diberikan. Sehingga algoritma dengan kompleksitas waktu Constant adalah yang terbaik.
 
    **_case:_** cocok untuk kasus-kasus di mana input size tidak berpengaruh pada waktu eksekusi algoritma.
 
