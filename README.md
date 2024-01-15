@@ -171,13 +171,25 @@ Beberapa teknik design algoritma yang populer digunakan:
 
 ## 2. ~ DATA STRUCTURES :
 
-Struktur data adalah cara kita menyimpan, mengorganisir, dan mengelola data dalam program kita agar ketika dibutuhkan dapat diakses dengan cara yang tepat dan efisien. Struktur data menentukan **_space complexity_** (kompleksitas ruang) dari program, yaitu berapa banyak ruang memori yang dibutuhkan untuk menyimpan dan memproses data.
+Struktur data adalah cara kita menyimpan, mengorganisir, dan mengelola data dalam program agar ketika dibutuhkan dapat diakses dengan cara yang tepat dan efisien. Struktur data menentukan **_space complexity_** (kompleksitas ruang) dari program, yaitu berapa banyak ruang memori yang dibutuhkan untuk menyimpan dan memproses data.
 
-Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendalam tentang hal-hal yang sudah diketahui sebelumnya. Contoh diantaranya:
+Mempelajari data struktur juga membantu mendapatkan pemahaman yang lebih mendalam tentang hal-hal yang sudah diketahui sebelumnya. Seperti:
 
 - DOM: menggunakan struktur data Tree.
 - Tombol maju dan mundur browser: menggunkan struktur data Stack.
 - OS: menggunakan struktur data Queue.
+
+Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear dan non-linear. Ini berkaitan dengan bagaimana elemen disimpan dalam struktur data.
+
+**Linear data struktur:**
+
+- Elemen-elemen dalam struktur ini disusun satu demi satu. Penyimpanan dan akses elemen dalam struktur data linear mengikuti urutan sekuensial (pencarian dilakukan dengan mengikuti urutan tersebut dari awal sampai akhir).
+- Linear data struktur dibagi lagi menjadi dua bagian, Static data struktur dan Dynamic data struktur. Array merupakan contoh dari static data struktur sedangkan queue, stack, dan list adalah contoh dari dynamic data struktur.
+
+**Non-Linear data struktur:**
+
+- struktur ini tidak memungkinkan penelusuran data secara sekuensial, Namun membuat pencarian data tertentu sangat cepat.
+- Struktur data tree dan graph adalah bagian dari Non-linear data struktur.
 
 ### 2.1. Built-in Data Structure di JavaScript:
 
