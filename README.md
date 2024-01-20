@@ -1,16 +1,16 @@
 - [1. ~ ALGORITMA](#1--algoritma)
-  - [1.1. Mendefinisikan algoritma](#11-mendefinisikan-algoritma)
-  - [1.2. Mengapa algoritma](#12-mengapa-algoritma)
-  - [1.3. Menganalisis algoritma](#13-menganalisis-algoritma)
-  - [1.4. Mengimplementasikan Time dan Space Complexity](#14-mengimplementasikan-time-dan-space-complexity)
-  - [1.5. Teknik desain algoritma](#15-teknik-desain-algoritma)
+  - [1.1. Mendefinisikan algoritma:](#11-mendefinisikan-algoritma)
+  - [1.2. Mengapa algoritma:](#12-mengapa-algoritma)
+  - [1.3. Menganalisis algoritma:](#13-menganalisis-algoritma)
+  - [1.4. Mengimplementasikan Time dan Space Complexity:](#14-mengimplementasikan-time-dan-space-complexity)
+  - [1.5. Teknik desain algoritma:](#15-teknik-desain-algoritma)
 - [2. ~ DATA STRUCTURES :](#2--data-structures-)
   - [2.1. Basic Data Structure:](#21-basic-data-structure)
   - [2.2. Built-in Data Structure di JavaScript:](#22-built-in-data-structure-di-javascript)
   - [2.2. Custom Data Structure di JavaScript:](#22-custom-data-structure-di-javascript)
 - [3. ~ SUMMARY](#3--summary)
-  - [Algoritma](#algoritma)
-  - [Struktur data](#struktur-data)
+  - [Algoritma::](#algoritma)
+  - [Struktur data:](#struktur-data)
 
 Data struktur dan algoritma berjalan seiring seperti Yin dan Yang, **_gelas_** dan **_air_**. Tanpa gelas, air tidak bisa ditampung. Tanpa struktur data, kita tidak memiliki object untuk menerapkan logika. Tanpa air, gelas itu hanya ruang hampa yang kosong. Tanpa algoritma, object tidak dapat diubah atau dikonsumsi.
 
@@ -22,7 +22,7 @@ Data struktur dan algoritma berjalan seiring seperti Yin dan Yang, **_gelas_** d
 
 Mempelajari algoritma akan memberikan pemahaman yang lebih dalam tentang **Complexity** dan **Efficiency**.
 
-### 1.1. Mendefinisikan algoritma
+### 1.1. Mendefinisikan algoritma:
 
 1. Mengurai persoalan dengan jelas, input dan outpur.
 2. Langkah-langkah dalam keperluan algoritma harus diurutkan secara spesifik.
@@ -30,11 +30,11 @@ Mempelajari algoritma akan memberikan pemahaman yang lebih dalam tentang **Compl
 4. Algoritma harus menghasilkan sebauh hasil.
 5. Algoritma harus selesai dalam jumlah waktu yang terbatas.
 
-### 1.2. Mengapa algoritma
+### 1.2. Mengapa algoritma:
 
 Sebagai developer, kita akan menemukan masalah yang perlu kita selesaikan. Saat mempelajari algoritma, pada dasarnya akan mempelajari berbagai teknik untuk menyelesaikan masalah tersebut secara efisien. Satu masalah bisa diselesaikan dengan banyak cara menggunakan algoritma yang berbeda. Setiap algoritma memiliki keuntungan dan kerugian masing-masing dalam hal kinerja.
 
-### 1.3. Menganalisis algoritma
+### 1.3. Menganalisis algoritma:
 
 Tidak ada satu pun cara untuk mengukur apakah suatu algoritma merupakan solusi yang tepat karena tidak dapat diprediksi dan bergantung pada sejumlah faktor, diantaranya:
 
@@ -58,7 +58,7 @@ Misalnya, algoritma dengan kompleksitas waktu yang sangat cepat mungkin memerluk
 
 Sebagai seorang pengembang atau perancang algoritma, tujuannya adalah untuk mencoba mengoptimalkan kedua aspek tersebut sebaik mungkin, agar algoritma yang dikembangkan berkinerja baik secara keseluruhan.
 
-### 1.4. Mengimplementasikan Time dan Space Complexity
+### 1.4. Mengimplementasikan Time dan Space Complexity:
 
 **Big-O notation** adalah metode atau metrik yang digunakan untuk menentukan efisiensi algoritma. Dengan demikian, ini memberikan perkiraan berapa lama waktu yang dibutuhkan kode untuk berjalan pada set input yang berbeda atau mempertimbangkan jumlah waktu yang dibutuhkan algoritma. Sehingga dapat menumbuhkan kesadaran kita untuk mencari alternatif yang lebih baik sebelum data semakin besar dan berdampak kepada performa aplikasi yang kita buat.
 
@@ -160,7 +160,7 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
    **_Contoh:_** Merge Sort dan Quick Sort.
 
-### 1.5. Teknik desain algoritma
+### 1.5. Teknik desain algoritma:
 
 Algorithm design techniques (teknik desain algoritma) adalah pendekatan umum untuk menerapkan algoritma.
 
@@ -1017,7 +1017,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 ## 3. ~ SUMMARY
 
-### Algoritma
+### Algoritma::
 
 **Search Algorithms**
 
@@ -1064,7 +1064,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
    - space complexity: O(v)
    - digunakan ketika: mencari jalur terpendek atau menjelajahi seluruh level pada graph.
 
-### Struktur data
+### Struktur data:
 
 **Built-in Data Struktur:**
 
