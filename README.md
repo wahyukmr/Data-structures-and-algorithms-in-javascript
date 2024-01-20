@@ -48,8 +48,11 @@ Jadi, dengan mempertimbangkan poin-poin diatas, kita dapat mengevaluasi kinerja 
 Efisiensi suatu algoritma penting karena membantu memecahkan masalah lebih cepat dan memberikan hasil akhir yang baik. Ada dua konsep untuk mengevaluasi kinerja suatu algoritma yang perlu dipertimbangkan dalam mengukur efisiensi algoritma :
 
 1. **Time Complexity**
+
    Merupakan langkah atau upaya untuk mengevaluasi seberapa efisien sebuah algoritma dalam menangani ukuran input yang diberikan. Time complexity menggambarkan berapa banyak waktu atau kinerja waktu yang dibutuhkan untuk menyelesaikan tugasnya.
+
 2. **Space Complexity**
+
    Adalah jenis kompleksitas yang mengukur penggunaan memori atau ruang yang diperlukan oleh algoritma. Ini menggambarkan seberapa efisien algoritma dalam menggunakan memori saat menjalankan operasinya.
 
 Untuk mencapai algoritma yang efisien perlu mempertimbangkan kedua konsep di atas. Secara teoritis, mungkin ada kasus di mana algoritma memiliki kompleksitas waktu yang cepat dan kompleksitas ruang yang sedikit memakan memori. Namun, dalam praktikanya, ada trade-off antara kompleksitas waktu dan kompleksitas ruang, dan seringkali terdapat keterkaitan antara keduanya.
@@ -167,26 +170,31 @@ Algorithm design techniques (teknik desain algoritma) adalah pendekatan umum unt
 Beberapa teknik design algoritma yang populer digunakan:
 
 1. **Bruce force**
+
    Merupakan teknik sederhana dan lengkap yang mengevaluasi setiap kemungkinan hasil untuk menemukan solusi terbaik.
 
    Contohnya: **_Linear Search algorithm_**.
 
 2. **Greedy**
+
    Pendekatan yang memilih opsi terbaik saat ini tanpa pertimbangan untuk masa yang akan datang.
 
    Contohnya: **_Dijkstra's algorithm_**, **_Prim's algorithm_** dan **_Kruskal's algorithm_** (yang semuanya diterapkan pada struktur data graf).
 
 3. **Divide and Conquer**
+
    Teknik yang membagi masalah menjadi sub-masalah yang lebih kecil. Setiap sub-masalah kemudian diselesaikan dan solusi parsial digabungkan kembali untuk menentukan solusi keseluruhan.
 
    Contohnya: **_Binary Search algorithm_**, **_Quick Sort algorithm_**, **_Merge Sort algorithm_** dan **_Tower of Hanoi_**.
 
 4. **Dynamic Programming**
+
    Mirip seperti Divide and Conquer, teknik yang membagi masalah menjadi sub-masalah yang lebih kecil. Namun perbedaannya membagi masalah menjadi submasalah yang lebih kecil tetapi saling tumpang tindih, menyimpan hasilnya dan menggunakannya kembali untuk sub-masalah yang sama. Ini disebut memoization dan merupakan teknik pengoptimalan yang meningkatkan time complexity dari algoritma kita.
 
    Contohnya: **_Fibonacci numbers_** dan **_Climbing Staircase_**.
 
 5. **Backtracking**
+
    Mirip seperti "brute force", yakni membuat semua solusi yang memungkinkan tetapi akan diperiksa apakah solusi memenuhi semua kendala yang diberikan dan hanya setelah itu kita melanjutkan dengan menghasilkan solusi-solusi berikutnya. Jika kendala tidak terpenuhi, maka mundur dan pergi ke jalur yang berbeda untuk menemukan solusi.
 
    Contohnya: **_N-Queens problem_**.
@@ -235,11 +243,11 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 1.  **Array**
 
-    - **_karakteristik_**:
+    **_karakteristik_**:
 
-      Array adalah struktur data linear yang dapat menyimpan kumpulan value yang disimpan secara berurutan dalam memori. Array dapat berisi campuran tipe data yang berbeda. Elemen-elemen dalam array diakses menggunakan indeks. Index pertama dimulai dari 0 bukan 1. Array adalah iterables, mereka dapat digunakan dengan for-of loop.
+    Array adalah struktur data linear yang dapat menyimpan kumpulan value yang disimpan secara berurutan dalam memori. Array dapat berisi campuran tipe data yang berbeda. Elemen-elemen dalam array diakses menggunakan indeks. Index pertama dimulai dari 0 bukan 1. Array adalah iterables, mereka dapat digunakan dengan for-of loop.
 
-    - **_kapan penggunaannya_**:
+**_kapan penggunaannya_**:
 
       berguna saat kita harus menyimpan nilai individual dan menambah/menghapus nilai dari akhir struktur data.
 
@@ -269,7 +277,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       `forEach()` / `map()` / `filter()` / `reduce()` = O(n) - Linear.
 
-2.  **Object**
+1.  **Object**
 
     - **_karakteristik_**:
 
@@ -290,7 +298,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
       access => O(1) - Constant
       `Object.keys()`, `Object.values()`, `Object.entries()`, akan memiliki time complexity O(n) - Linear.
 
-3.  **Set**
+2.  **Set**
 
     - **_karakteristik_**:
 
@@ -331,7 +339,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       `forEach()` = O(n) - Linear.
 
-4.  **Map**
+3.  **Map**
 
     - **_karakteristik_**:
 
