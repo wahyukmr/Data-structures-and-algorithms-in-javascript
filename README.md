@@ -1,4 +1,4 @@
-- [1. ~ ALGORITMA :](#1--algoritma-)
+- [1. ~ ALGORITMA](#1--algoritma)
   - [1.1. Mendefinisikan algoritma](#11-mendefinisikan-algoritma)
   - [1.2. Mengapa algoritma](#12-mengapa-algoritma)
   - [1.3. Menganalisis algoritma](#13-menganalisis-algoritma)
@@ -14,7 +14,7 @@
 
 Data struktur dan algoritma berjalan seiring seperti Yin dan Yang, **_gelas_** dan **_air_**. Tanpa gelas, air tidak bisa ditampung. Tanpa struktur data, kita tidak memiliki object untuk menerapkan logika. Tanpa air, gelas itu hanya ruang hampa yang kosong. Tanpa algoritma, object tidak dapat diubah atau dikonsumsi.
 
-## 1. ~ ALGORITMA :
+## 1. ~ ALGORITMA
 
 **Algoritma** adalah sekumpulan langkah-langkah atau instruksi yang dapat diimplementasikan dalam bahasa pemrograman yang berbeda untuk memecahkan masalah tertentu.
 
@@ -216,6 +216,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 ### 2.1. Basic Data Structure:
 
 1. **String**
+
    String adalah fitur fundamental dalam bahasa pemrograman. String didefinisikan sebagai urutan karakter atau simbol diapit oleh tanda petik tunggal atau ganda. Mayoritas bahasa mendukung karakter ASCII primer dan representasi Unicode. Sebuah karakter menempati satu byte memori, tetapi ada berbagai cara merepresentasikan string.
 
    Terdapat perbedaan signifikan dalam cara setiap bahasa merepresentasikan dan mendukung string. Operasi dasar termasuk membuat, memodifikasi, menyalin, dan menetapkan string ke variabel. Operasi sehari-hari melibatkan penggabungan, penambahan string, pencarian substring, dan manipulasi koleksi string. Beberapa bahasa memungkinkan tindakan aljabar pada string, seperti perbandingan alfabetis dan operasi boolean.
