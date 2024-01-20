@@ -5,7 +5,8 @@
   - [1.4. Mengimplementasikan Time dan Space Complexity](#14-mengimplementasikan-time-dan-space-complexity)
   - [1.5. Teknik desain algoritma](#15-teknik-desain-algoritma)
 - [2. ~ DATA STRUCTURES :](#2--data-structures-)
-  - [2.1. Built-in Data Structure di JavaScript:](#21-built-in-data-structure-di-javascript)
+  - [2.1. Basic Data Structure:](#21-basic-data-structure)
+  - [2.2. Built-in Data Structure di JavaScript:](#22-built-in-data-structure-di-javascript)
   - [2.2. Custom Data Structure di JavaScript:](#22-custom-data-structure-di-javascript)
 - [3. ~ SUMMARY](#3--summary)
   - [Algoritma](#algoritma)
@@ -46,8 +47,10 @@ Jadi, dengan mempertimbangkan poin-poin diatas, kita dapat mengevaluasi kinerja 
 
 Efisiensi suatu algoritma penting karena membantu memecahkan masalah lebih cepat dan memberikan hasil akhir yang baik. Ada dua konsep untuk mengevaluasi kinerja suatu algoritma yang perlu dipertimbangkan dalam mengukur efisiensi algoritma :
 
-1. **Time complexity** merupakan langkah atau upaya untuk mengevaluasi seberapa efisien sebuah algoritma dalam menangani ukuran input yang diberikan. Time complexity menggambarkan berapa banyak waktu atau kinerja waktu yang dibutuhkan untuk menyelesaikan tugasnya.
-2. **Space complexity** adalah jenis kompleksitas yang mengukur penggunaan memori atau ruang yang diperlukan oleh algoritma. Ini menggambarkan seberapa efisien algoritma dalam menggunakan memori saat menjalankan operasinya.
+1. **Time Complexity**
+   Merupakan langkah atau upaya untuk mengevaluasi seberapa efisien sebuah algoritma dalam menangani ukuran input yang diberikan. Time complexity menggambarkan berapa banyak waktu atau kinerja waktu yang dibutuhkan untuk menyelesaikan tugasnya.
+2. **Space Complexity**
+   Adalah jenis kompleksitas yang mengukur penggunaan memori atau ruang yang diperlukan oleh algoritma. Ini menggambarkan seberapa efisien algoritma dalam menggunakan memori saat menjalankan operasinya.
 
 Untuk mencapai algoritma yang efisien perlu mempertimbangkan kedua konsep di atas. Secara teoritis, mungkin ada kasus di mana algoritma memiliki kompleksitas waktu yang cepat dan kompleksitas ruang yang sedikit memakan memori. Namun, dalam praktikanya, ada trade-off antara kompleksitas waktu dan kompleksitas ruang, dan seringkali terdapat keterkaitan antara keduanya.
 
@@ -159,15 +162,34 @@ Metode Big-O notation diperlukan karena ada banyak faktor yang mempengaruhi bera
 
 ### 1.5. Teknik desain algoritma
 
-Algorithm design techniques adalah pendekatan umum untuk menerapkan algoritma.
+Algorithm design techniques (teknik desain algoritma) adalah pendekatan umum untuk menerapkan algoritma.
 
 Beberapa teknik design algoritma yang populer digunakan:
 
-1. **Bruce force** - merupakan teknik sederhana dan lengkap yang mengevaluasi setiap kemungkinan hasil untuk menemukan solusi terbaik. Contohnya **_Linear Search algorithm_**.
-2. **Greedy** - pendekatan yang memilih opsi terbaik saat ini tanpa pertimbangan untuk masa yang akan datang. Contohnya **_Dijkstra's algorithm_**, **_Prim's algorithm_** dan **_Kruskal's algorithm_** yang semuanya diterapkan pada struktur data graf.
-3. **Divide and Conquer** - teknik yang membagi masalah menjadi sub-masalah yang lebih kecil. Setiap sub-masalah kemudian diselesaikan dan solusi parsial digabungkan kembali untuk menentukan solusi keseluruhan. Contohnya **_Binary Search algorithm_**, **_Quick Sort algorithm_**, **_Merge Sort algorithm_** dan **_Tower of Hanoi_**.
-4. **Dynamic Programming** - mirip seperti Divide and Conquer, teknik yang membagi masalah menjadi sub-masalah yang lebih kecil. Namun perbedaannya membagi masalah menjadi submasalah yang lebih kecil tetapi saling tumpang tindih, menyimpan hasilnya dan menggunakannya kembali untuk sub-masalah yang sama. Ini disebut memoization dan merupakan teknik pengoptimalan yang meningkatkan time complexity dari algoritma kita. Contohnya **_Fibonacci numbers_** dan **_Climbing Staircase_**.
-5. **Backtracking** - mirip seperti brute force, yakni membuat semua solusi yang memungkinkan tetapi akan diperiksa apakah solusi memenuhi semua kendala yang diberikan dan hanya setelah itu kita melanjutkan dengan menghasilkan solusi-solusi berikutnya. Jika kendala tidak terpenuhi, maka mundur dan pergi ke jalur yang berbeda untuk menemukan solusi. Contohnya **_N-Queens problem_**.
+1. **Bruce force**
+   Merupakan teknik sederhana dan lengkap yang mengevaluasi setiap kemungkinan hasil untuk menemukan solusi terbaik.
+
+   Contohnya: **_Linear Search algorithm_**.
+
+2. **Greedy**
+   Pendekatan yang memilih opsi terbaik saat ini tanpa pertimbangan untuk masa yang akan datang.
+
+   Contohnya: **_Dijkstra's algorithm_**, **_Prim's algorithm_** dan **_Kruskal's algorithm_** (yang semuanya diterapkan pada struktur data graf).
+
+3. **Divide and Conquer**
+   Teknik yang membagi masalah menjadi sub-masalah yang lebih kecil. Setiap sub-masalah kemudian diselesaikan dan solusi parsial digabungkan kembali untuk menentukan solusi keseluruhan.
+
+   Contohnya: **_Binary Search algorithm_**, **_Quick Sort algorithm_**, **_Merge Sort algorithm_** dan **_Tower of Hanoi_**.
+
+4. **Dynamic Programming**
+   Mirip seperti Divide and Conquer, teknik yang membagi masalah menjadi sub-masalah yang lebih kecil. Namun perbedaannya membagi masalah menjadi submasalah yang lebih kecil tetapi saling tumpang tindih, menyimpan hasilnya dan menggunakannya kembali untuk sub-masalah yang sama. Ini disebut memoization dan merupakan teknik pengoptimalan yang meningkatkan time complexity dari algoritma kita.
+
+   Contohnya: **_Fibonacci numbers_** dan **_Climbing Staircase_**.
+
+5. **Backtracking**
+   Mirip seperti "brute force", yakni membuat semua solusi yang memungkinkan tetapi akan diperiksa apakah solusi memenuhi semua kendala yang diberikan dan hanya setelah itu kita melanjutkan dengan menghasilkan solusi-solusi berikutnya. Jika kendala tidak terpenuhi, maka mundur dan pergi ke jalur yang berbeda untuk menemukan solusi.
+
+   Contohnya: **_N-Queens problem_**.
 
 ## 2. ~ DATA STRUCTURES :
 
@@ -183,7 +205,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 **Linear data struktur:**
 
-- Elemen-elemen dalam struktur ini disusun satu demi satu. Penyimpanan dan akses elemen dalam struktur data linear mengikuti urutan sekuensial (pencarian dilakukan dengan mengikuti urutan tersebut dari awal sampai akhir).
+- Elemen-elemen dalam struktur ini disusun satu demi satu. Penyimpanan dan akses elemen dalam struktur data linear mengikuti urutan sekuensial (pencarian dilakukan dengan mengikuti urutan dari awal sampai akhir).
 - Linear data struktur dibagi lagi menjadi dua bagian, Static data struktur dan Dynamic data struktur. Array merupakan contoh dari static data struktur sedangkan queue, stack, dan list adalah contoh dari dynamic data struktur.
 
 **Non-Linear data struktur:**
@@ -191,7 +213,24 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 - struktur ini tidak memungkinkan penelusuran data secara sekuensial, Namun membuat pencarian data tertentu sangat cepat.
 - Struktur data tree dan graph adalah bagian dari Non-linear data struktur.
 
-### 2.1. Built-in Data Structure di JavaScript:
+### 2.1. Basic Data Structure:
+
+1. **String**
+   String adalah fitur fundamental dalam bahasa pemrograman. String didefinisikan sebagai urutan karakter atau simbol diapit oleh tanda petik tunggal atau ganda. Mayoritas bahasa mendukung karakter ASCII primer dan representasi Unicode. Sebuah karakter menempati satu byte memori, tetapi ada berbagai cara merepresentasikan string.
+
+   Terdapat perbedaan signifikan dalam cara setiap bahasa merepresentasikan dan mendukung string. Operasi dasar termasuk membuat, memodifikasi, menyalin, dan menetapkan string ke variabel. Operasi sehari-hari melibatkan penggabungan, penambahan string, pencarian substring, dan manipulasi koleksi string. Beberapa bahasa memungkinkan tindakan aljabar pada string, seperti perbandingan alfabetis dan operasi boolean.
+
+   Simbol escape `()` digunakan untuk memasukkan karakter khusus dalam string. Contoh: `String = "the man said \"two more pints please\" to the barman"`. Escape karakter dapat digunakan untuk menyertakan simbol seperti `#, %` atau tanda kutip ganda dalam string.
+
+   Penggunaan:
+
+   - Pemrosesan Bahasa Alami (Natural Language Processing / NLP) seringkali berurusan dengan string.
+   - Kodek string (format yang digunakan untuk merepresentasikan string atau teks) perlu diperhatikan saat membaca dari berbagai sumber seperti Twitter atau X, file PDF, atau Reddit.
+   - Ketika menulis string ke dalam program, biasanya menerapkan Tokenisasi (proses mengubah string menjadi array string yang lebih kecil, sehingga akan memudahkan pemrosesan).
+
+   Mutabilitas string merujuk pada kemampuan untuk mengubah string setelah dibuat. Beberapa bahasa memperbolehkan perubahan (mutabilitas string) seperti Ruby dan PHP, sementara yang lain menggunakan immutabilitas seperti Java, C#, JavaScript, Python, Go. Immutabilitas dapat menghemat memori dengan mengarahkan variabel ke lokasi yang sama saat terjadi perubahan.
+
+### 2.2. Built-in Data Structure di JavaScript:
 
 1.  **Array**
 
