@@ -38,10 +38,10 @@ Sebagai developer, kita akan menemukan masalah yang perlu kita selesaikan. Saat 
 
 Tidak ada satu pun cara untuk mengukur apakah suatu algoritma merupakan solusi yang tepat karena tidak dapat diprediksi dan bergantung pada sejumlah faktor, diantaranya:
 
-- bahasa pemrograman yang digunakan untuk mengimplementasikan algoritma.
-- komputer tempat program dijalankan.
-- program lain yang berjalan bersamaan.
-- kualitas sistem operasi.
+- Bahasa pemrograman yang digunakan untuk mengimplementasikan algoritma.
+- Komputer tempat program dijalankan.
+- Program lain yang berjalan bersamaan.
+- Kualitas sistem operasi.
 
 Jadi, dengan mempertimbangkan poin-poin diatas, kita dapat mengevaluasi kinerja suatu algoritma bergantung kepada **_input size_** atau ukuran inputnya.
 
@@ -218,7 +218,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 **Non-Linear data struktur:**
 
-- struktur ini tidak memungkinkan penelusuran data secara sekuensial, Namun membuat pencarian data tertentu sangat cepat.
+- Struktur ini tidak memungkinkan penelusuran data secara sekuensial, Namun membuat pencarian data tertentu sangat cepat.
 - Struktur data tree dan graph adalah bagian dari Non-linear data struktur.
 
 ### 2.1. Basic Data Structure:
@@ -243,33 +243,33 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 1.  **Array**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
       Array adalah struktur data linear yang dapat menyimpan kumpulan value yang disimpan secara berurutan dalam memori. Array dapat berisi campuran tipe data yang berbeda. Elemen-elemen dalam array diakses menggunakan indeks. Index pertama dimulai dari 0 bukan 1. Array adalah iterables, mereka dapat digunakan dengan for-of loop.
 
-    - **_kapan penggunaannya_**:
+    - **_Kapan penggunaannya_**:
 
-      berguna saat kita harus menyimpan nilai individual dan menambah/menghapus nilai dari akhir struktur data.
+      Berguna saat kita harus menyimpan nilai individual dan menambah/menghapus nilai dari akhir struktur data.
 
-    - **_kelemahan_**:
+    - **_Kelemahan_**:
 
-      kurang efektif untuk menambah/menghapus elemen dalam data yang besar karena array mengakses elemen secara berurutan. Jadi akan menjadi sulit dan memakan waktu yang lebih lama jika terdapat banyak elemen terlebih lagi jika perubahan dilakukan di tengah atau di akhir array.
+      Kurang efektif untuk menambah/menghapus elemen dalam data yang besar karena array mengakses elemen secara berurutan. Jadi akan menjadi sulit dan memakan waktu yang lebih lama jika terdapat banyak elemen terlebih lagi jika perubahan dilakukan di tengah atau di akhir array.
 
-    - **_mengatasi kelemahan_**:
+    - **_Mengatasi kelemahan_**:
 
-      beberapa bahasa pemrograman menyediakan struktur data dinamis, seperti linked list atau dynamic array.
+      Beberapa bahasa pemrograman menyediakan struktur data dinamis, seperti linked list atau dynamic array.
 
-    - **_big-O Time Complexity dari Array_**:
+    - **_Big-O Time Complexity dari Array_**:
 
-      insertion / removal element dari akhir array => O(1) - Constant
+      Insertion / removal element dari akhir array => O(1) - Constant
 
-      insertion / removal element dari awal array => O(n) - Linear
+      Insertion / removal element dari awal array => O(n) - Linear
 
-      searching => O(n) - Linear
+      Searching => O(n) - Linear
 
-      access => O(1) - Constant
+      Access => O(1) - Constant
 
-    - **_method array dengan Time Complexity yang umum terjadi_**:
+    - **_Method array dengan Time Complexity yang umum terjadi_**:
 
       `push()` / `pop()` = O(1) - Constant.
 
@@ -279,59 +279,59 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 1.  **Object**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
       Object adalah struktur data berupa pasangan kunci-nilai (key-value) yang tidak diurutkan. Key nya harus berupa tipe data String atau Simbol, sedangkan valuenya dapat berupa tipe data apapun. Setiap key harus unik dalam object, tidak bisa memiliki key dengan nama yang sama. Untuk mengambil nilai, dapat menggunakan key yang sesuai dengan value yang diinginkan. Object bukan sebuah iterable, tidak bisa menggunakannya dengan for-of loop.
 
-    - **_kapan penggunaannya_**:
+    - **_Kapan penggunaannya_**:
 
-      digunakan saat pencarian berdasarkan kunci, seperti dalam basis data, pemetaan unik antara kunci dan nilai atau query search.
+      Digunakan saat pencarian berdasarkan kunci, seperti dalam basis data, pemetaan unik antara kunci dan nilai atau query search.
 
-    - **_big-O Time Complexity dari Object_**:
+    - **_Big-O Time Complexity dari Object_**:
 
-      insertion => O(1) - Constant
+      Insertion => O(1) - Constant
 
-      removal => O(1) - Constant
+      Removal => O(1) - Constant
 
-      searching => O(n) - Linear
+      Searching => O(n) - Linear
 
-      access => O(1) - Constant
+      Access => O(1) - Constant
       `Object.keys()`, `Object.values()`, `Object.entries()`, akan memiliki time complexity O(n) - Linear.
 
 1.  **Set**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
       Set adalah struktur data yang dapat menampung kumpulan value dan harus unik (tidak sama satu dengan yang lain). Set dapat berisi campuran tipe data yang berbeda. Set adalah dynamically sized (tidak perlu mendeklarasikan ukuran Set sebelum mendeklarasikannya). Set tidak mempertahankan urutan penyisipan yang dilakukan, misalnya elemen yang dimasukkan terlebih dahulu dalam Set bukan berarti itu akan menjadi elemen pertama di Set. Set merupakan iterable, bisa digunakan dengan for-of loop.
 
     - **_Set vs Array_**:
 
-      keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
+      Keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
 
-      array dapat berisi nilai duplicate sedangkan Set tidak bisa.
+      Array dapat berisi nilai duplicate sedangkan Set tidak bisa.
 
-      urutan penyisipan dipertahankan dalam array tetapi tidak pada kasus Set.
+      Urutan penyisipan dipertahankan dalam array tetapi tidak pada kasus Set.
 
-      searching dan deleting elemen pada Set lebih cepat jika dibandingkan dengan Array.
+      Searching dan deleting elemen pada Set lebih cepat jika dibandingkan dengan Array.
 
-    - **_contoh code_**:
+    - **_Contoh code_**:
 
-            // set constructor secara optional menerima array sebagai argumennya
-            const set = new Set([1, 2, 3]);
+          // set constructor secara optional menerima array sebagai argumennya
+          const set = new Set([1, 2, 3]);
 
-            set.add(4); // menambahkan angka 4
-            set.add(4); // hanya akan ada satu angka 4 dalam set.
-            console.log(set.has(4)) // true
-            set.delete(3); // menghapus value 3.
-            console.log(set.size) // memeriksa jumlah item set.
-            set.clear(); // menghapus semua item dalam set.
+          set.add(4); // menambahkan angka 4
+          set.add(4); // hanya akan ada satu angka 4 dalam set.
+          console.log(set.has(4)) // true
+          set.delete(3); // menghapus value 3.
+          console.log(set.size) // memeriksa jumlah item set.
+          set.clear(); // menghapus semua item dalam set.
 
-            // get value
-            for (const item of set) {
-               console.log(item);
-            }
+          // get value
+          for (const item of set) {
+          console.log(item);
+          }
 
-    - **_method Set dengan big-O Time Complexity yang umum terjadi_**:
+    - **_Method Set dengan big-O Time Complexity yang umum terjadi_**:
 
       `add(value)` / `delete(value)` / `has(value)` / `clear()` / `size` atau `length` = O(1) - Constant.
 
@@ -341,7 +341,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 1.  **Map**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
       Map adalah struktur data yang digunakan untuk menyimpan pasangan key-value. Key dan value bisa berupa tipe data apapun. Untuk mengambil value dapat menggunakan key yang sesuai. Map merupakan iterable, dapat digunakan dengan for-of loop.
 
@@ -355,27 +355,27 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       Object bukan merupakan iterable, sedangkan Map merupakan iterable.
 
-      jumlah item dalam Object harus ditentukan secara manual, sedangkan itu sudah tersedia dengan property `size`pada Map.
+      Jumlah item dalam Object harus ditentukan secara manual, sedangkan itu sudah tersedia dengan property `size`pada Map.
 
-      selain menyimpan data, kita dapat melampirkan fungsionalitas ke dalam Object sedangkan Map hanya dibatasi untuk menyinpan data.
+      Selain menyimpan data, kita dapat melampirkan fungsionalitas ke dalam Object sedangkan Map hanya dibatasi untuk menyinpan data.
 
-    - **_contoh code_**:
+    - **_Contoh code_**:
 
-            // map constructor secara optional menerima array sebagai argumennya
-            const map = new Map([["a", 1], ["b", 2]]);
+          // map constructor secara optional menerima array sebagai argumennya
+          const map = new Map([["a", 1], ["b", 2]]);
 
-            map.set("c", 2); // menambahkan value
-            console.log(map.has("a")) // true
-            map.delete("c"); // menghapus value.
-            console.log(map.size) // memeriksa jumlah item map.
-            map.clear(); // menghapus semua item dalam map.
+          map.set("c", 2); // menambahkan value
+          console.log(map.has("a")) // true
+          map.delete("c"); // menghapus value.
+          console.log(map.size) // memeriksa jumlah item map.
+          map.clear(); // menghapus semua item dalam map.
 
-            // get value
-            for (const [key, value] of map) {
-            console.log(`${key} = ${value}`);
-            }
+          // get value
+          for (const [key, value] of map) {
+          console.log(`${key} = ${value}`);
+          }
 
-    - **_method Map dengan big-O Time Complexity yang umum terjadi_**:
+    - **_Method Map dengan big-O Time Complexity yang umum terjadi_**:
 
       `set(key, value)` / `get(key)` / `has(key)` / `delete(key)` / `clear()` / `size` atau `Map.size` = O(1) - Constant.
 
@@ -387,23 +387,23 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 1.  **Stack**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
-      stack adalah struktur data linear yang berupa kumpulan elemen berurutan dalam bentuk list. Menambah atau menghapus elemen menggunakan prinsip LIFO (Last-In-First-Out), yang berarti elemen terakhir yang dimasukkan ke dalam stack akan menjadi elemen pertama yang dihapus. Stack adala tipe data abstract, dimana Stack hanyalah list dan apa yang membuatnya menjadi Stack adalah bagaimana perilakunya. Stack mendukung dua operasi utama, `push()` dan `pop()`.
+      Stack adalah struktur data linear yang berupa kumpulan elemen berurutan dalam bentuk list. Menambah atau menghapus elemen menggunakan prinsip LIFO (Last-In-First-Out), yang berarti elemen terakhir yang dimasukkan ke dalam stack akan menjadi elemen pertama yang dihapus. Stack adala tipe data abstract, dimana Stack hanyalah list dan apa yang membuatnya menjadi Stack adalah bagaimana perilakunya. Stack mendukung dua operasi utama, `push()` dan `pop()`.
 
-    - **_analogi_**:
+    - **_Analogi_**:
 
-      ada tumpukan kertas di meja. Kita hanya dapat menambahkan lebih banyak kertas ke tumpukan dengan menempatkannya di atas yang lain. Ketika ingin mengeluarkan kertas dari tumpukan harus mengambil kertas dari yang teratas terlebih dahulu.
+      Ada tumpukan kertas di meja. Kita hanya dapat menambahkan lebih banyak kertas ke tumpukan dengan menempatkannya di atas yang lain. Ketika ingin mengeluarkan kertas dari tumpukan harus mengambil kertas dari yang teratas terlebih dahulu.
 
-    - **_kelemahan_**:
+    - **_Kelemahan_**:
 
-      hanya dari elemen teratas yang dapat diakses dan dihapus.
+      Hanya dari elemen teratas yang dapat diakses dan dihapus.
 
-    - **_contoh kegunaan_**:
+    - **_Contoh kegunaan_**:
 
-      biasanya Stack bagus ketika harus melacak kembali steps sebelumnya. Contoh: pelacakan riwayat browser, operasi undo ketika mengetik, Call Stack di javascript runtime atau mengelola pemanggilan fungsi.
+      Biasanya Stack bagus ketika harus melacak kembali steps sebelumnya. Contoh: pelacakan riwayat browser, operasi undo ketika mengetik, Call Stack di javascript runtime atau mengelola pemanggilan fungsi.
 
-    - **_implementasi Stack di JavaScript_**:
+    - **_Implementasi Stack di JavaScript_**:
 
       [Code example »»](./data-structures/stack.js)
 
@@ -421,13 +421,13 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       `clear()` => untuk mengosongkan Stack.
 
-    - **_big-O dari Stack method_**:
+    - **_Big-O dari Stack method_**:
 
-      insertion => O(1) - Constant
+      Insertion => O(1) - Constant
 
-      removal => O(1) - Constant
+      Removal => O(1) - Constant
 
-    - **_alasan mengapa struktur data stack khusus lebih disarankan daripada menggunakan struktur data array yang memiliki method serupa_**:
+    - **_Alasan mengapa struktur data stack khusus lebih disarankan daripada menggunakan struktur data array yang memiliki method serupa_**:
 
       Fokus pada fungsionalitas => struktur data Stack dirancang khusus untuk operasi tumpukan, memastikan bahwa operasi yang relevan dengan konsep tumpukan dilakukan dengan jelas.
 
@@ -437,37 +437,37 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 2.  **Queue**
 
-    linear queue dan circular queue dapat digunakan dalam berbagai aplikasi yang memerlukan pengaturan dan pengelolaan data dalam urutan linier dengan prinsip FIFO (First-In-First-Out).
+    Linear queue dan circular queue dapat digunakan dalam berbagai aplikasi yang memerlukan pengaturan dan pengelolaan data dalam urutan linier dengan prinsip FIFO (First-In-First-Out).
 
-    intinya adalah circular queue memungkinkan penggunaan ruang penyimpanan yang lebih efisien karena dapat mengisi kembali ruang kosong yang ada di belakang elemen terakhir yang telah dihapus. Namun, dalam hal alokasi memori dasar, baik linear queue maupun circular queue membutuhkan jumlah memori yang sama untuk menyimpan elemen-elemen yang sama.
+    Intinya adalah circular queue memungkinkan penggunaan ruang penyimpanan yang lebih efisien karena dapat mengisi kembali ruang kosong yang ada di belakang elemen terakhir yang telah dihapus. Namun, dalam hal alokasi memori dasar, baik linear queue maupun circular queue membutuhkan jumlah memori yang sama untuk menyimpan elemen-elemen yang sama.
 
     - [ ] **Linear Queue**
 
-      - **_karakteristik_**:
+      - **_Karakteristik_**:
 
-        linear queue adalah struktur data queue yang memiliki batas awal dan batas akhir yang tetap. Ketika elemen-elemen ditambahkan `enqueue` ke linear queue, mereka ditempatkan di belakang elemen terakhir dan batas akhir bergerak ke elemen baru tersebut. Ketika elemen-elemen dihapus `dequeue` dari linear queue, elemen pertama dihapus dan batas awal bergerak ke elemen berikutnya.
+        Linear queue adalah struktur data queue yang memiliki batas awal dan batas akhir yang tetap. Ketika elemen-elemen ditambahkan `enqueue` ke linear queue, mereka ditempatkan di belakang elemen terakhir dan batas akhir bergerak ke elemen baru tersebut. Ketika elemen-elemen dihapus `dequeue` dari linear queue, elemen pertama dihapus dan batas awal bergerak ke elemen berikutnya.
 
-      - **_analogi_**:
+      - **_Analogi_**:
 
-        saat orang-orang yang mengantri membeli makanan. Logikanya disini adalah orang yang berada pada antrean pertama, itulah yang akan dilayani terlebih dahulu. Jika sampai di sana lebih dulu, akan menjadi yang pertama keluar (FIFO).
+        Saat orang-orang yang mengantri membeli makanan. Logikanya disini adalah orang yang berada pada antrean pertama, itulah yang akan dilayani terlebih dahulu. Jika sampai di sana lebih dulu, akan menjadi yang pertama keluar (FIFO).
 
-      - **_kelemahan_**:
+      - **_Kelemahan_**:
 
         Hanya elemen pertama yang dapat diakses dan dihapus.
 
-      - **_kapan penggunaannya_**:
+      - **_Kapan penggunaannya_**:
 
-        saat membutuhkan elemen-elemen untuk disimpan dan diakses dalam urutan linier dan tidak perlu memanfaatkan ruang kosong yang dihasilkan oleh penghapusan elemen.
+        Saat membutuhkan elemen-elemen untuk disimpan dan diakses dalam urutan linier dan tidak perlu memanfaatkan ruang kosong yang dihasilkan oleh penghapusan elemen.
 
-        jika hanya membutuhkan implementasi yang sederhana dan tidak memerlukan manajemen index batas yang kompleks.
+        Jika hanya membutuhkan implementasi yang sederhana dan tidak memerlukan manajemen index batas yang kompleks.
 
-        jika alokasi memori tidak menjadi masalah utama dan tidak terbatas pada ruang penyimpanan.
+        Jika alokasi memori tidak menjadi masalah utama dan tidak terbatas pada ruang penyimpanan.
 
-      - **_contoh kegunaan_**:
+      - **_Contoh kegunaan_**:
 
-        biasanya sangat bagus ketika harus memproses secara teratur. Misalnya, printer yang mencetak beberapa document, CPU ketika menjadwalkan tugas atau yang paling penting Callback Queue pada JavaScript runtime.
+        Biasanya sangat bagus ketika harus memproses secara teratur. Misalnya, printer yang mencetak beberapa document, CPU ketika menjadwalkan tugas atau yang paling penting Callback Queue pada JavaScript runtime.
 
-      - **_implementasi linear queue di JavaScript_**:
+      - **_Implementasi linear queue di JavaScript_**:
 
         [Code example »»](./data-structures/queue-linear.js)
 
@@ -491,35 +491,35 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
     - [ ] **Circular Queue**
 
-      - **_karakteristik_**:
+      - **_Karakteristik_**:
 
-        circular queue adalah variasi dari struktur data queue yang memperlakukan array atau buffer penyimpanan sebagai cincin atau siklus. Ini berarti batas awal dan batas akhir tidak tetap pada indeks awal dan akhir array, melainkan dapat melintasi batas array dan kembali ke awal. Ketika elemen-elemen ditambahkan ke circular queue, batas akhir bergerak maju dan jika mencapai batas akhir array, ia melompat ke indeks awal. Demikian pula, ketika elemen-elemen dihapus, batas awal bergerak maju dan jika mencapai batas akhir array, ia melompat kembali ke indeks awal. Data struktur Circular Queue didukung 2 operasi utama yaitu **enqueue** (menambahkan elemen ke belakang/ekor dari koleksi) dan **dequeue** (menghapus elemen dari depan/kepala koleksi)
+        Circular queue adalah variasi dari struktur data queue yang memperlakukan array atau buffer penyimpanan sebagai cincin atau siklus. Ini berarti batas awal dan batas akhir tidak tetap pada indeks awal dan akhir array, melainkan dapat melintasi batas array dan kembali ke awal. Ketika elemen-elemen ditambahkan ke circular queue, batas akhir bergerak maju dan jika mencapai batas akhir array, ia melompat ke indeks awal. Demikian pula, ketika elemen-elemen dihapus, batas awal bergerak maju dan jika mencapai batas akhir array, ia melompat kembali ke indeks awal. Data struktur Circular Queue didukung 2 operasi utama yaitu **enqueue** (menambahkan elemen ke belakang/ekor dari koleksi) dan **dequeue** (menghapus elemen dari depan/kepala koleksi)
 
-      - **_analogi_**:
+      - **_Analogi_**:
 
-        kita dapat membayangkan Circular Queue sebagai lintasan balapan berbentuk lingkaran. Mobil-mobil balap (elemen-elemen dalam antrian) bergerak di sepanjang lintasan dan ketika mobil terakhir mencapai akhir lintasan, mobil berikutnya akan kembali ke awal lintasan tanpa memerlukan perubahan posisi fisik.
+        Kita dapat membayangkan Circular Queue sebagai lintasan balapan berbentuk lingkaran. Mobil-mobil balap (elemen-elemen dalam antrian) bergerak di sepanjang lintasan dan ketika mobil terakhir mencapai akhir lintasan, mobil berikutnya akan kembali ke awal lintasan tanpa memerlukan perubahan posisi fisik.
 
-      - **_kelemahan_**:
+      - **_Kelemahan_**:
 
-        kapasitas terbatas pada jumlah elemen yang dapat disimpan dalam antrian dan kompleksitas implementasi yang rumit karena memerlukan manipulasi index untuk mengatur penambahan dan penghapusan elemen.
+        Kapasitas terbatas pada jumlah elemen yang dapat disimpan dalam antrian dan kompleksitas implementasi yang rumit karena memerlukan manipulasi index untuk mengatur penambahan dan penghapusan elemen.
 
-      - **_kapan penggunaannya_**:
+      - **_Kapan penggunaannya_**:
 
-        jika efisiensi memori sangat penting, terutama jika memiliki sumber daya yang terbatas atau membatasi alokasi memori. karena circular queue dapat memungkinkan penggunaan memori yang lebih efisien dengan memanfaatkan kembali ruang kosong yang dihasilkan oleh penghapusan elemen.
+        Jika efisiensi memori sangat penting, terutama jika memiliki sumber daya yang terbatas atau membatasi alokasi memori. karena circular queue dapat memungkinkan penggunaan memori yang lebih efisien dengan memanfaatkan kembali ruang kosong yang dihasilkan oleh penghapusan elemen.
 
-        jika perlu mengakses elemen secara berulang dengan perputaran yang cepat tanpa mempengaruhi kinerja keseluruhan. Karena circular queue dapat memungkinkan akses yang lebih efisien dan menghindari pergeseran data yang tidak perlu.
+        Jika perlu mengakses elemen secara berulang dengan perputaran yang cepat tanpa mempengaruhi kinerja keseluruhan. Karena circular queue dapat memungkinkan akses yang lebih efisien dan menghindari pergeseran data yang tidak perlu.
 
-        jika membutuhkan implementasi buffer atau antrian berputar yang memproses data secara kontinu, circular queue dapat menjadi solusi yang cocok untuk memperlakukan array sebagai cincin.
+        Jika membutuhkan implementasi buffer atau antrian berputar yang memproses data secara kontinu, circular queue dapat menjadi solusi yang cocok untuk memperlakukan array sebagai cincin.
 
-      - **_contoh penggunaan_**:
+      - **_Contoh penggunaan_**:
 
-        buffer audio: untuk menyimpan sampel audio dengan efisien dan penggantian yang mudah tanpa realokasi memori.
+        **Buffer audio**: untuk menyimpan sampel audio dengan efisien dan penggantian yang mudah tanpa realokasi memori.
 
-        sistem komunikasi: sebagai buffer pesan untuk menyimpan pesan masuk sebelum diproses, dengan penambahan pesan baru di akhir antrian dan penghapusan pesan tertua dari awal antrian ketika penuh.
+        **Sistem komunikasi**: sebagai buffer pesan untuk menyimpan pesan masuk sebelum diproses, dengan penambahan pesan baru di akhir antrian dan penghapusan pesan tertua dari awal antrian ketika penuh.
 
-        algoritma penjadwalan: untuk mengalokasikan sumber daya sesuai dengan urutan dan prioritas tugas-tugas.
+        **Algoritma penjadwalan**: untuk mengalokasikan sumber daya sesuai dengan urutan dan prioritas tugas-tugas.
 
-      - **_implementasi circular queue di JavaScript_**:
+      - **_Implementasi circular queue di JavaScript_**:
 
         [Code example »»](./data-structures/queue-circular.js)
 
@@ -537,51 +537,51 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       - **_big-O dari queue method_**:
 
-        enqueue => O(1) - Constant
+        Enqueue => O(1) - Constant
 
-        dequeue => O(1) - Constant
+        Dequeue => O(1) - Constant
 
 3.  **Linked List**
 
-    linked list adalah struktur data linier yang terdiri dari simpul-simpul (node) yang saling terhubung secara dinamis menggunakan referensi atau pointer.
+    Linked list adalah struktur data linier yang terdiri dari simpul-simpul (node) yang saling terhubung secara dinamis menggunakan referensi atau pointer.
 
-    struktur data linked list mendukung tiga operasi utama yaitu **_insertion_** (untuk menambahkan elemen dari awal atau akhir atau juga pada index yang diberikan dalam list), **_deletion_** (untuk menghapus elemen berdasarkan index atau nilai yang ditentukan) dan **_search_** (untuk menemukan elemen berdasarkan nilainya).
+    Struktur data linked list mendukung tiga operasi utama yaitu **_insertion_** (untuk menambahkan elemen dari awal atau akhir atau juga pada index yang diberikan dalam list), **_deletion_** (untuk menghapus elemen berdasarkan index atau nilai yang ditentukan) dan **_search_** (untuk menemukan elemen berdasarkan nilainya).
 
-    ada dua jenis linked list yang umum yaitu **singly linked list** (linked list tunggal) di mana setiap simpul hanya memiliki pointer ke simpul berikutnya, dan **doubly linked list** (linked list ganda) di mana setiap simpul memiliki pointer ke simpul berikutnya dan sebelumnya.
+    Ada dua jenis linked list yang umum yaitu **singly linked list** (linked list tunggal) di mana setiap simpul hanya memiliki pointer ke simpul berikutnya, dan **doubly linked list** (linked list ganda) di mana setiap simpul memiliki pointer ke simpul berikutnya dan sebelumnya.
 
     - [x] **Singly Linked List**
 
-      - **_karakteristik_**:
+      - **_Karakteristik_**:
 
-        singly linked list adalah struktur data linear di mana setiap elemen (node) terhubung ke node berikutnya dalam satu arah. Setiap node memiliki dua komponen: `element` yang menyimpan data dan pointer `next` yang menunjuk ke node berikutnya.
+        Singly linked list adalah struktur data linear di mana setiap elemen (node) terhubung ke node berikutnya dalam satu arah. Setiap node memiliki dua komponen: `element` yang menyimpan data dan pointer `next` yang menunjuk ke node berikutnya.
 
-      - **_kelebihan_**:
+      - **_Kelebihan_**:
 
-        penambahan dan penghapusan elemen dari depan (head) maupun dari belakang (tail) dilakukan dengan sederhana dan efisien, karena hanya perlu memperbarui pointer head dan tail.
+        Penambahan dan penghapusan elemen dari depan (head) maupun dari belakang (tail) dilakukan dengan sederhana dan efisien, karena hanya perlu memperbarui pointer head dan tail.
 
-        memiliki penggunaan memori yang lebih efisien dibandingkan dengan doubly linked list karena tidak memerlukan pointer ke node sebelumnya.
+        Memiliki penggunaan memori yang lebih efisien dibandingkan dengan doubly linked list karena tidak memerlukan pointer ke node sebelumnya.
 
-      - **_kelemahan_**:
+      - **_Kelemahan_**:
 
-        akses lambat: mencari atau mengakses elemen secara acak (random) dalam linked list tidak efisien, karena perlu melintasi linked list dari awal hingga mencapai elemen yang ditentukan.
+        Akses lambat: mencari atau mengakses elemen secara acak (random) dalam linked list tidak efisien, karena perlu melintasi linked list dari awal hingga mencapai elemen yang ditentukan.
 
-        ruang overhead: membutuhkan lebih banyak ruang penyimpanan dibandingkan dengan array, karena setiap node memiliki overhead tambahan untuk menyimpan pointer.
+        Ruang overhead: membutuhkan lebih banyak ruang penyimpanan dibandingkan dengan array, karena setiap node memiliki overhead tambahan untuk menyimpan pointer.
 
-        tidak dapat melakukan iterasi mundur secara langsung.
+        Tidak dapat melakukan iterasi mundur secara langsung.
 
-      - **_kapan penggunaannya_**:
+      - **_Kapan penggunaannya_**:
 
-        jika perlu melakukan operasi penambahan atau penghapusan elemen secara efisien di awal atau akhir linked list.
+        Jika perlu melakukan operasi penambahan atau penghapusan elemen secara efisien di awal atau akhir linked list.
 
-        jika pencarian elemen jarang dilakukan dalam struktur data.
+        Jika pencarian elemen jarang dilakukan dalam struktur data.
 
-      - **_contoh penggunaan_**:
+      - **_Contoh penggunaan_**:
 
-        ketika perlu melakukan penambahan atau penghapusan elemen dari depan atau belakang list secara efisien, seperti dalam implementasi stack atau queue.
+        Ketika perlu melakukan penambahan atau penghapusan elemen dari depan atau belakang list secara efisien, seperti dalam implementasi stack atau queue.
 
-        implementasi algoritma pemrosesan berkas berurutan.
+        Implementasi algoritma pemrosesan berkas berurutan.
 
-      - **_implementasi singly linked list di JavaScript_**:
+      - **_Implementasi singly linked list di JavaScript_**:
 
         [Code example »»](./data-structures/linked-list.js)
 
@@ -609,7 +609,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
         `print()` => memvisualisasikan elemen pada linked list.
 
-      - **_big-O dari singly linked list method_**:
+      - **_Big-O dari singly linked list method_**:
 
         `prepend(value)` => O(1) - Constant
 
@@ -629,21 +629,21 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
         `reverse()` => O(n) - Linear
 
-      - **_implementasi Stack data structure menggunakan singly linkede list di JavaScript_**:
+      - **_Implementasi Stack data structure menggunakan singly linkede list di JavaScript_**:
 
         Stack data structure dapat diimplementasikan dengan linked list. berikut beberapa faktor atau pertimbangan yang dapat dijadikan acukan kapan harus menggunakan Stack data structure dengan atau tanpa linked list:
 
         Stack tanpa Linked List:
 
-        - cocok jika kebutuhan operasi push (penambahan) dan pop (penghapusan) pada elemen dalam urutan terbalik.
-        - tidak dinamis, elemen tetap, dan jumlah elemen kecil.
-        - alokasi memori tidak menjadi masalah utama.
+        - Cocok jika kebutuhan operasi push (penambahan) dan pop (penghapusan) pada elemen dalam urutan terbalik.
+        - Tidak dinamis, elemen tetap, dan jumlah elemen kecil.
+        - Alokasi memori tidak menjadi masalah utama.
 
         Stack dengan Linked List:
 
-        - cocok jika membutuhkan struktur data stack yang dinamis dan dapat menyesuaikan ukuran dan jumlah elemen.
-        - efisien dalam penambahan dan penghapusan elemen tanpa memerlukan pergeseran.
-        - cocok untuk mengelola jumlah elemen yang berubah secara dinamis.
+        - Cocok jika membutuhkan struktur data stack yang dinamis dan dapat menyesuaikan ukuran dan jumlah elemen.
+        - Efisien dalam penambahan dan penghapusan elemen tanpa memerlukan pergeseran.
+        - Cocok untuk mengelola jumlah elemen yang berubah secara dinamis.
 
         [Code example »»](./data-structures/linked-list-stack.js)
 
@@ -653,21 +653,21 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
         `peek()` => mengembalikan elemen teratas pada stack tanpa menghapusnya.
 
-      - **_implementasi Queue data structure menggunakan singly linkede list di JavaScript_**:
+      - **_Implementasi Queue data structure menggunakan singly linkede list di JavaScript_**:
 
         Queue data structure dapat diimplementasikan dengan linked list. berikut beberapa faktor atau pertimbangan yang dapat dijadikan acukan kapan harus menggunakan Queue data structure dengan atau tanpa linked list:
 
         Queue tanpa Linked List:
 
-        - cocok jika kebutuhan operasi enqueue (penambahan) dan dequeue (penghapusan) pada elemen dalam urutan tetap.
-        - tidak dinamis, elemen tetap, dan jumlah elemen kecil.
-        - alokasi memori tidak menjadi masalah utama.
+        - Cocok jika kebutuhan operasi enqueue (penambahan) dan dequeue (penghapusan) pada elemen dalam urutan tetap.
+        - Tidak dinamis, elemen tetap, dan jumlah elemen kecil.
+        - Alokasi memori tidak menjadi masalah utama.
 
         Queue dengan Linked List:
 
-        - cocok jika membutuhkan struktur data queue yang dinamis dan dapat menyesuaikan ukuran dan jumlah elemen.
-        - efisien dalam penambahan dan penghapusan elemen di ujung-ujung queue tanpa pergeseran.
-        - cocok untuk mengelola jumlah elemen yang berubah secara dinamis.
+        - Cocok jika membutuhkan struktur data queue yang dinamis dan dapat menyesuaikan ukuran dan jumlah elemen.
+        - Efisien dalam penambahan dan penghapusan elemen di ujung-ujung queue tanpa pergeseran.
+        - Cocok untuk mengelola jumlah elemen yang berubah secara dinamis.
 
         [Code example »»](./data-structures/linked-list-queue.js)
 
@@ -679,37 +679,37 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
     - [x] **Doubly Linked List**
 
-      - **_karakteristik_**:
+      - **_Karakteristik_**:
 
-        doubly linked list adalah struktur data linear di mana setiap elemen (node) terhubung ke node sebelumnya dan node berikutnya dalam satu arah. Setiap node memiliki dua komponen: `element` yang menyimpan data, pointer `prev` yang merujuk ke node sebelumnya dan pointer `next` yang menunjuk ke node berikutnya.
+        Doubly linked list adalah struktur data linear di mana setiap elemen (node) terhubung ke node sebelumnya dan node berikutnya dalam satu arah. Setiap node memiliki dua komponen: `element` yang menyimpan data, pointer `prev` yang merujuk ke node sebelumnya dan pointer `next` yang menunjuk ke node berikutnya.
 
-      - **_kelebihan_**:
+      - **_Kelebihan_**:
 
-        mendukung pencarian maju dan mundur secara efisien. Iterasi maju dan mundur dapat dilakukan dengan mudah.
+        Mendukung pencarian maju dan mundur secara efisien. Iterasi maju dan mundur dapat dilakukan dengan mudah.
 
-        memungkinkan operasi penambahan atau penghapusan elemen di awal, akhir, dan tengah linked list dengan efisiensi yang lebih baik dibandingkan dengan singly linked list, meskipun untuk penghapusan elemen di tengah linked list keduanya mempunyai kompleksitas linear O(n).
+        Memungkinkan operasi penambahan atau penghapusan elemen di awal, akhir, dan tengah linked list dengan efisiensi yang lebih baik dibandingkan dengan singly linked list, meskipun untuk penghapusan elemen di tengah linked list keduanya mempunyai kompleksitas linear O(n).
 
-      - **_kelemahan_**:
+      - **_Kelemahan_**:
 
-        memerlukan penggunaan memori lebih banyak dibandingkan dengan singly linked list karena setiap node menyimpan pointer ke node sebelumnya dan node berikutnya.
+        Memerlukan penggunaan memori lebih banyak dibandingkan dengan singly linked list karena setiap node menyimpan pointer ke node sebelumnya dan node berikutnya.
 
-      - **_kapan penggunaannya_**:
+      - **_Kapan penggunaannya_**:
 
-        jika perlu melakukan operasi pencarian maju dan mundur yang efisien.
+        Jika perlu melakukan operasi pencarian maju dan mundur yang efisien.
 
-        jika operasi penambahan atau penghapusan elemen di awal, akhir, dan tengah linked list perlu dilakukan dengan efisiensi yang lebih baik dibandingkan dengan singly linked list.
+        Jika operasi penambahan atau penghapusan elemen di awal, akhir, dan tengah linked list perlu dilakukan dengan efisiensi yang lebih baik dibandingkan dengan singly linked list.
 
-      - **_contoh penggunaan_**:
+      - **_Contoh penggunaan_**:
 
-        implementasi cache dengan kemampuan untuk menghapus entri tertentu dengan cepat.
+        Implementasi cache dengan kemampuan untuk menghapus entri tertentu dengan cepat.
 
-        implementasi history management pada web browser.
+        Implementasi history management pada web browser.
 
-      - **_implementasi doubly linked list di JavaScript_**:
+      - **_Implementasi doubly linked list di JavaScript_**:
 
         [Code example »»](./data-structures/linked-list-double.js)
 
-      - **_big-O dari doubly linked list method_**:
+      - **_Big-O dari doubly linked list method_**:
 
         `prepend(value)` => O(1) - Constant
 
@@ -721,7 +721,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 4.  **Hash Table**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
       Hash table adalah struktur data yang digunakan untuk menyimpan data dalam bentuk pasangan kunci-nilai (`key`-`value`). Karakteristik utama dari hash table adalah penggunaan fungsi `hash` untuk mengubah `key` menjadi indeks dalam array, di mana `value` yang sesuai disimpan. Dengan teknik ini, pencarian, penghapusan, dan pengambilan data biasanya dapat dilakukan dalam waktu konstan, membuat hash table sangat efisien untuk banyak kasus.
 
@@ -729,50 +729,50 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       Map dan Object javascript adalah implementasi khusus dari data struktur hash table. Object Class menambahkan `key`nya sendiri, sehingga key yang dimasukkan kemungkinan akan terjadi konflik dan menimpa default property bawaan. Sedangkan struktur data Map datang untuk mengatasi masalah ini, dan sejujurnya ini adalah implementasi yang harus digunakan saat menulis kode. Meskipun javascript sudah memiliki dua implementasi hash table, menulis implementasi hash table kita sendiri juga penting untuk pertanyaan wawancara.
 
-    - **_kelebihan_**:
+    - **_Kelebihan_**:
 
-      kecepatan: operasi pencarian, penambahan, dan penghapusan data biasanya berjalan dengan waktu konstan O(1) dengan catatan kasus terburuk linear O(n), menjadikan hash table sangat efisien.
+      Kecepatan: operasi pencarian, penambahan, dan penghapusan data biasanya berjalan dengan waktu konstan O(1) dengan catatan kasus terburuk linear O(n), menjadikan hash table sangat efisien.
 
-      efisien: Dalam situasi tertentu, hash table dapat mengungguli struktur data lainnya dalam hal kecepatan dan efisiensi memori.
+      Efisien: Dalam situasi tertentu, hash table dapat mengungguli struktur data lainnya dalam hal kecepatan dan efisiensi memori.
 
-    - **_kelemahan_**:
+    - **_Kelemahan_**:
 
-      collision (tabrakan): dalam beberapa kasus, dua atau lebih kunci berbeda dapat menghasilkan indeks yang sama. Untuk mengatasinya, teknik resolusi tabrakan seperti **chaining** (menggunakan linked list di setiap index) atau **open addressing** (menyimpan data di index lain jika terjadi tabrakan) digunakan, yang dapat mengurangi kecepatan operasi menjadi O(n) dalam situasi terburuk.
+      Collision (tabrakan): dalam beberapa kasus, dua atau lebih kunci berbeda dapat menghasilkan indeks yang sama. Untuk mengatasinya, teknik resolusi tabrakan seperti **chaining** (menggunakan linked list di setiap index) atau **open addressing** (menyimpan data di index lain jika terjadi tabrakan) digunakan, yang dapat mengurangi kecepatan operasi menjadi O(n) dalam situasi terburuk.
 
-      pengurangan efisiensi: jika fungsi hash yang buruk digunakan, banyak tabrakan dapat terjadi, menyebabkan performa hash table menurun.
+      Pengurangan efisiensi: jika fungsi hash yang buruk digunakan, banyak tabrakan dapat terjadi, menyebabkan performa hash table menurun.
 
-    - **_kapan penggunaannya_**:
+    - **_Kapan penggunaannya_**:
 
-      dapat diimplementasikan jika ingin pencarian, penyisipan dan penghapusan data berdasarkan `key` secara konstan diperlukan.
+      Dapat diimplementasikan jika ingin pencarian, penyisipan dan penghapusan data berdasarkan `key` secara konstan diperlukan.
 
-      hash table sangat disarankan untuk algoritma yang memprioritaskan operasi pencarian dan pengambilan data. Karena akan menghasilkan time complexity constant.
+      Hash table sangat disarankan untuk algoritma yang memprioritaskan operasi pencarian dan pengambilan data. Karena akan menghasilkan time complexity constant.
 
-      hash table adalah pilihan yang tepat untuk data yang diurutkan secara acak karena pengaturan pasangan kunci-nilainya.
+      Hash table adalah pilihan yang tepat untuk data yang diurutkan secara acak karena pengaturan pasangan kunci-nilainya.
 
-      jika ingin menghindari pengulangan data dalam kumpulan besar dan menginginkan operasi yang efisien untuk memastikan uniknya setiap kunci.
+      Jika ingin menghindari pengulangan data dalam kumpulan besar dan menginginkan operasi yang efisien untuk memastikan uniknya setiap kunci.
 
-    - **_contoh penggunaan_**:
+    - **_Contoh penggunaan_**:
 
-      kamus (dictionary): Hash table dapat digunakan untuk mengimplementasikan kamus, di mana setiap kata memiliki arti atau definisi yang terkait.
+      Kamus (dictionary): Hash table dapat digunakan untuk mengimplementasikan kamus, di mana setiap kata memiliki arti atau definisi yang terkait.
 
-      caching: Hash table sering digunakan dalam teknik caching untuk menyimpan hasil perhitungan atau data yang sering digunakan sehingga dapat diakses dengan cepat.
+      Caching: Hash table sering digunakan dalam teknik caching untuk menyimpan hasil perhitungan atau data yang sering digunakan sehingga dapat diakses dengan cepat.
 
-      penghitungan frekuensi: Hash table dapat digunakan untuk menghitung frekuensi kemunculan elemen dalam array atau string.
+      Penghitungan frekuensi: Hash table dapat digunakan untuk menghitung frekuensi kemunculan elemen dalam array atau string.
 
-      autentikasi: Hash table digunakan dalam pengembangan sistem keamanan untuk menyimpan informasi pengguna dan token otentikasi.
+      Autentikasi: Hash table digunakan dalam pengembangan sistem keamanan untuk menyimpan informasi pengguna dan token otentikasi.
 
-    - **_implementasi Hash table menggunakan Object dengan Chaining untuk menghindari tabrakan index yang sama di JavaScript_**:
+    - **_Implementasi Hash table menggunakan Object dengan Chaining untuk menghindari tabrakan index yang sama di JavaScript_**:
 
-      kelebihan:
+      Kelebihan:
 
-      - sederhana dan cepat: Objek adalah struktur data yang sangat cepat dan mudah digunakan di JavaScript. Pengambilan nilai berdasarkan kunci di objek memiliki kompleksitas O(1) (waktu konstan), yang menjadikannya pilihan yang cepat untuk hash table dengan kunci yang sederhana seperti string atau angka.
-      - dukungan pada versi javascript lama: Objek adalah bagian dari bahasa JavaScript sejak awal, sehingga dapat digunakan pada versi JavaScript yang lebih lama tanpa masalah.
+      - Sederhana dan cepat: Objek adalah struktur data yang sangat cepat dan mudah digunakan di JavaScript. Pengambilan nilai berdasarkan kunci di objek memiliki kompleksitas O(1) (waktu konstan), yang menjadikannya pilihan yang cepat untuk hash table dengan kunci yang sederhana seperti string atau angka.
+      - Dukungan pada versi javascript lama: Objek adalah bagian dari bahasa JavaScript sejak awal, sehingga dapat digunakan pada versi JavaScript yang lebih lama tanpa masalah.
 
-      kekurangan:
+      Kekurangan:
 
-      - tidak mendukung semua tipe data kunci: Objek hanya mendukung kunci dalam bentuk string atau simbol. Penggunaan kunci yang kompleks seperti array atau objek dapat menghadirkan tantangan dalam implementasi hash table.
-      - iterasi lebih rumit: meskipun objek dapat diiterasi melalui loop `for...in`, pengaturan loop yang benar untuk mendapatkan seluruh pasangan kunci-nilai dalam hash table dapat sedikit rumit.
-      - penanganan tabrakan lebih rumit: ketika terjadi tabrakan, kita harus memperhatikan cara mengelola data dalam objek agar tidak menimpa nilai-nilai yang ada dan memastikan kunci yang unik.
+      - Tidak mendukung semua tipe data kunci: Objek hanya mendukung kunci dalam bentuk string atau simbol. Penggunaan kunci yang kompleks seperti array atau objek dapat menghadirkan tantangan dalam implementasi hash table.
+      - Iterasi lebih rumit: meskipun objek dapat diiterasi melalui loop `for...in`, pengaturan loop yang benar untuk mendapatkan seluruh pasangan kunci-nilai dalam hash table dapat sedikit rumit.
+      - Penanganan tabrakan lebih rumit: ketika terjadi tabrakan, kita harus memperhatikan cara mengelola data dalam objek agar tidak menimpa nilai-nilai yang ada dan memastikan kunci yang unik.
 
       [Code example »»](./data-structures/hash-table-object.js)
 
@@ -784,19 +784,19 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       `remove()` => untuk menghapus pasangan `key`-`value`. Kompleksitas waktunya O(k) di rata-rata kasus, dengan k adalah jumlah kunci yang ada dalam setiap bucket. Biasanya memiliki kompleksitas lebih baik karena penggunaan teknik chaining yang efektif.
 
-    - **_implementasi Hash table menggunakan Map dengan Chaining untuk menghindari tabrakan index yang sama di JavaScript_**:
+    - **_Implementasi Hash table menggunakan Map dengan Chaining untuk menghindari tabrakan index yang sama di JavaScript_**:
 
-      kelebihan:
+      Kelebihan:
 
-      - tipe kunci yang fleksibel: Map dapat menggunakan berbagai tipe data sebagai kunci, termasuk string, angka, objek, dan tipe data lainnya. Ini memberikan fleksibilitas lebih besar dalam memilih kunci sesuai kebutuhan.
-      - iterasi mudah: Map memiliki method `forEach()` dan `for...of`, yang memudahkan iterasi melalui seluruh pasangan kunci-nilai dalam hash table tanpa perlu mengonversi menjadi array terlebih dahulu.
-      - efisiensi pada kunci Objek: Ketika ingin menggunakan objek JavaScript sebagai kunci dalam hash table, Map menangani objek dengan benar sebagai kunci, sehingga kunci objek yang berbeda dianggap unik.
-      - method bawaan yang berguna: Map menyediakan method bawaan untuk memeriksa ukuran hash table (`size`), menghapus semua pasangan kunci-nilai (`clear()`), dan lainnya, yang membuatnya lebih mudah digunakan dan dikelola.
+      - Tipe kunci yang fleksibel: Map dapat menggunakan berbagai tipe data sebagai kunci, termasuk string, angka, objek, dan tipe data lainnya. Ini memberikan fleksibilitas lebih besar dalam memilih kunci sesuai kebutuhan.
+      - Iterasi mudah: Map memiliki method `forEach()` dan `for...of`, yang memudahkan iterasi melalui seluruh pasangan kunci-nilai dalam hash table tanpa perlu mengonversi menjadi array terlebih dahulu.
+      - Efisiensi pada kunci Objek: Ketika ingin menggunakan objek JavaScript sebagai kunci dalam hash table, Map menangani objek dengan benar sebagai kunci, sehingga kunci objek yang berbeda dianggap unik.
+      - Method bawaan yang berguna: Map menyediakan method bawaan untuk memeriksa ukuran hash table (`size`), menghapus semua pasangan kunci-nilai (`clear()`), dan lainnya, yang membuatnya lebih mudah digunakan dan dikelola.
 
-      kekurangan:
+      Kekurangan:
 
-      - kompatibilitas: Map mungkin tidak sepenuhnya kompatibel dengan beberapa pustaka atau lingkungan lama yang belum mendukung ECMAScript 6 (ES6), karena Map diperkenalkan dalam ES6.
-      - keterbatasan key ttype: beberapa penggunaan kunci dengan tipe data yang kompleks, seperti array asosiatif, bisa lebih rumit dalam Map. Meskipun Map mendukung objek sebagai kunci, terkadang keterbatasannya tergantung pada cara objek tersebut di-hash.
+      - Kompatibilitas: Map mungkin tidak sepenuhnya kompatibel dengan beberapa pustaka atau lingkungan lama yang belum mendukung ECMAScript 6 (ES6), karena Map diperkenalkan dalam ES6.
+      - Keterbatasan key ttype: beberapa penggunaan kunci dengan tipe data yang kompleks, seperti array asosiatif, bisa lebih rumit dalam Map. Meskipun Map mendukung objek sebagai kunci, terkadang keterbatasannya tergantung pada cara objek tersebut di-hash.
 
       [Code example »»](./data-structures/hash-table-map.js)
 
@@ -810,78 +810,78 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 5.  **Tree**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
-      struktur data tree adalah struktur data yang berbentuk seperti pohon yang terdiri dari simpul-simpul (node) yang saling terhubung melalui garis-garis (edge). Setiap simpul memiliki tepat satu simpul atasannya, kecuali simpul atas (root) yang tidak memiliki simpul atasannya, dan setiap simpul dapat memiliki banyak simpul anak (child).
+      Struktur data tree adalah struktur data yang berbentuk seperti pohon yang terdiri dari simpul-simpul (node) yang saling terhubung melalui garis-garis (edge). Setiap simpul memiliki tepat satu simpul atasannya, kecuali simpul atas (root) yang tidak memiliki simpul atasannya, dan setiap simpul dapat memiliki banyak simpul anak (child).
 
-      struktur data tree adalah struktur data non-linear, tidak seperti array, linked list, stack dan queue yang merupakan struktur data linear. Dalam struktur data linear, waktu yang diperlukan untuk melakukan "search" sebanding dengan ukuran kumpulan data, lebih banyak data lebih banyak pula waktu yang dibutuhkan untuk mencari data tersebut. Disisi lain non-linear memungkinkan akses yang lebih cepat dan lebih mudah ke data.
+      Struktur data tree adalah struktur data non-linear, tidak seperti array, linked list, stack dan queue yang merupakan struktur data linear. Dalam struktur data linear, waktu yang diperlukan untuk melakukan "search" sebanding dengan ukuran kumpulan data, lebih banyak data lebih banyak pula waktu yang dibutuhkan untuk mencari data tersebut. Disisi lain non-linear memungkinkan akses yang lebih cepat dan lebih mudah ke data.
 
-      struktur data tree juga tidak akan berisi loop atau siklus apapun
+      Struktur data tree juga tidak akan berisi loop atau siklus apapun
 
-    - **_kelebihan_**:
+    - **_Kelebihan_**:
 
-      representasi hierarki: tree sangat baik untuk merepresentasikan data dalam bentuk hierarki.
+      Representasi hierarki: tree sangat baik untuk merepresentasikan data dalam bentuk hierarki.
 
-      pencarian efisien: pencarian pada tree biasanya lebih efisien daripada pencarian linear pada array atau linked list jika tree cukup terstruktur.
+      Pencarian efisien: pencarian pada tree biasanya lebih efisien daripada pencarian linear pada array atau linked list jika tree cukup terstruktur.
 
-      penyimpanan data terstruktur: tree memungkinkan penyimpanan data yang terstruktur dengan mudah sehingga operasi seperti penambahan, penghapusan, dan pemutakhiran data dapat dilakukan secara efisien.
+      Penyimpanan data terstruktur: tree memungkinkan penyimpanan data yang terstruktur dengan mudah sehingga operasi seperti penambahan, penghapusan, dan pemutakhiran data dapat dilakukan secara efisien.
 
-      pengurutan: tree dapat digunakan untuk mengimplementasikan struktur data lain seperti binary search tree (BST) yang memungkinkan pengurutan data.
+      Pengurutan: tree dapat digunakan untuk mengimplementasikan struktur data lain seperti binary search tree (BST) yang memungkinkan pengurutan data.
 
-    - **_kelemahan_**:
+    - **_Kelemahan_**:
 
-      penggunaan memori: implementasi tree memerlukan alokasi memori untuk menyimpan simpul dan tepi, yang dapat menyebabkan penggunaan memori yang lebih besar daripada struktur data lain seperti array atau linked list.
+      Penggunaan memori: implementasi tree memerlukan alokasi memori untuk menyimpan simpul dan tepi, yang dapat menyebabkan penggunaan memori yang lebih besar daripada struktur data lain seperti array atau linked list.
 
-      kesulitan pengelolaan: tree memerlukan pengelolaan dan perhatian lebih untuk memastikan agar tree tetap terstruktur dan tidak menjadi cemara (degenerate), yang dapat mempengaruhi efisiensi operasi.
+      Kesulitan pengelolaan: tree memerlukan pengelolaan dan perhatian lebih untuk memastikan agar tree tetap terstruktur dan tidak menjadi cemara (degenerate), yang dapat mempengaruhi efisiensi operasi.
 
-    - **_contoh penggunaan_**:
+    - **_Contoh penggunaan_**:
 
-      struktur organisasi: representasi hierarki dari departemen dan pegawai dalam sebuah organisasi.
+      Struktur organisasi: representasi hierarki dari departemen dan pegawai dalam sebuah organisasi.
 
-      folder dalam sistem file: representasi folder dan subfolder dalam sistem file komputer.
+      Folder dalam sistem file: representasi folder dan subfolder dalam sistem file komputer.
 
-      kehidupan: representasi silsilah keluarga atau hierarki kehidupan dalam biologi.
+      Kehidupan: representasi silsilah keluarga atau hierarki kehidupan dalam biologi.
 
       DOM
 
-      chat bots
+      Chat bots
 
-    - **_implementasi Tree menggunakan Binary Search Tree di JavaScript_**:
+    - **_Implementasi Tree menggunakan Binary Search Tree di JavaScript_**:
 
-      biasanya struktur data tree jarang diminta untuk mengimplementasikannya dengan **generic tree**, melainkan menggunakan **binary search tree**.
+      Biasanya struktur data tree jarang diminta untuk mengimplementasikannya dengan **generic tree**, melainkan menggunakan **binary search tree**.
 
-      binary search tree (BST):
+      Binary search tree (BST):
 
-      binary search tree (BST) adalah salah satu jenis struktur data tree yang memiliki sifat terurut dan efisien dalam melakukan operasi pencarian, penambahan, dan penghapusan data. BST memiliki struktur data hierarki dimana setiap simpul memiliki paling banyak **_dua anak_**, yaitu anak kiri dan anak kanan.
+      Binary search tree (BST) adalah salah satu jenis struktur data tree yang memiliki sifat terurut dan efisien dalam melakukan operasi pencarian, penambahan, dan penghapusan data. BST memiliki struktur data hierarki dimana setiap simpul memiliki paling banyak **_dua anak_**, yaitu anak kiri dan anak kanan.
 
-      binary search tree memiliki dua sifat berikut: nilai di setiap simpul anak kiri harus lebih kecil daripada nilai di simpul induk, sedangkan nilai di setiap simpul anak kanan harus lebih besar daripada nilai di simpul induk.
+      Binary search tree memiliki dua sifat berikut: nilai di setiap simpul anak kiri harus lebih kecil daripada nilai di simpul induk, sedangkan nilai di setiap simpul anak kanan harus lebih besar daripada nilai di simpul induk.
 
-      operasi utama binary search tree: `insert` (untuk menambahkan sebuah node ke tree), `search` (untuk menemukan node berdasarkan valuenya), `DFS` atau `BFS` dan `deletion` (untuk menghapus node berdasarkan valuenya).
+      Operasi utama binary search tree: `insert` (untuk menambahkan sebuah node ke tree), `search` (untuk menemukan node berdasarkan valuenya), `DFS` atau `BFS` dan `deletion` (untuk menghapus node berdasarkan valuenya).
 
-      teknik traversal (BST):
+      Teknik traversal (BST):
 
-      teknik traversal pada struktur data Binary Search Tree (BST) dalam JavaScript adalah metode pencarian dengan cara mengunjungi atau melintasi semua node dalam BST dengan urutan tertentu.
+      Teknik traversal pada struktur data Binary Search Tree (BST) dalam JavaScript adalah metode pencarian dengan cara mengunjungi atau melintasi semua node dalam BST dengan urutan tertentu.
 
-      - teknik traversal pada (BST) menggunakan pendekatan **Depth-First Search (DFS)** mempunyai tiga varian pencarian, yaitu : `inorder` (node-node dalam BST dikunjungi secara urut mulai dari node paling kiri, kemudian ke node induk, dan akhirnya ke node paling kanan), `preorder` (node-node dalam BST dikunjungi secara urut mulai dari node induk, kemudian ke node kiri, dan akhirnya ke node kanan), dan `postorder` (node-node dalam BST dikunjungi secara urut mulai dari node paling kiri, kemudian ke node paling kanan, dan akhirnya ke node induk). Dengan menggunakan salah satu teknik traversal ini, kita dapat mengakses dan memanipulasi data pada BST sesuai dengan urutan yang diinginkan.
+      - Teknik traversal pada (BST) menggunakan pendekatan **Depth-First Search (DFS)** mempunyai tiga varian pencarian, yaitu : `inorder` (node-node dalam BST dikunjungi secara urut mulai dari node paling kiri, kemudian ke node induk, dan akhirnya ke node paling kanan), `preorder` (node-node dalam BST dikunjungi secara urut mulai dari node induk, kemudian ke node kiri, dan akhirnya ke node kanan), dan `postorder` (node-node dalam BST dikunjungi secara urut mulai dari node paling kiri, kemudian ke node paling kanan, dan akhirnya ke node induk). Dengan menggunakan salah satu teknik traversal ini, kita dapat mengakses dan memanipulasi data pada BST sesuai dengan urutan yang diinginkan.
 
-      - teknik traversal pada (BST) menggunakan pendekatan **Breadth-First Search (BFS)** adalah untuk mencetak nilai (value) dari setiap node dalam BST secara level-by-level, dimulai dari root node hingga mencapai daun pada level terakhir.
+      - Teknik traversal pada (BST) menggunakan pendekatan **Breadth-First Search (BFS)** adalah untuk mencetak nilai (value) dari setiap node dalam BST secara level-by-level, dimulai dari root node hingga mencapai daun pada level terakhir.
 
-      kelebihan (BST):
+      Kelebihan (BST):
 
-      - pencarian efisien: BST memungkinkan pencarian data dengan cepat karena kita dapat mengurangi jumlah simpul yang harus diperiksa secara signifikan pada setiap langkah.
-      - penyimpanan terurut: data dalam BST disimpan secara terurut, sehingga memudahkan dalam operasi pengurutan dan pemrosesan data dalam urutan tertentu.
-      - operasi sisip dan hapus: BST memungkinkan penambahan dan penghapusan data dengan efisien, mempertahankan sifat terurutnya.
+      - Pencarian efisien: BST memungkinkan pencarian data dengan cepat karena kita dapat mengurangi jumlah simpul yang harus diperiksa secara signifikan pada setiap langkah.
+      - Penyimpanan terurut: data dalam BST disimpan secara terurut, sehingga memudahkan dalam operasi pengurutan dan pemrosesan data dalam urutan tertentu.
+      - Operasi sisip dan hapus: BST memungkinkan penambahan dan penghapusan data dengan efisien, mempertahankan sifat terurutnya.
 
-      kekurangan (BST):
+      Kekurangan (BST):
 
       - kemungkinan degenerasi: jika data yang dimasukkan ke BST sudah terurut atau hampir terurut, BST dapat menjadi tidak seimbang dan berubah menjadi struktur linear, yang dapat mengurangi efisiensi operasi.
-      - sensitif terhadap data: kinerja BST sangat bergantung pada seberapa seimbang struktur tree. Jika data yang dimasukkan memiliki pola yang tidak seimbang, performa pencarian bisa menurun.
+      - Sensitif terhadap data: kinerja BST sangat bergantung pada seberapa seimbang struktur tree. Jika data yang dimasukkan memiliki pola yang tidak seimbang, performa pencarian bisa menurun.
 
-      kapan harus menggunakan (BST):
+      Kapan harus menggunakan (BST):
 
-      - data perlu disimpan secara terurut untuk memudahkan pencarian dan pengurutan data.
-      - diperlukan operasi pencarian, penambahan, dan penghapusan data dengan efisien.
-      - data yang dimasukkan tidak memiliki pola yang cenderung tidak seimbang atau terurut.
+      - Data perlu disimpan secara terurut untuk memudahkan pencarian dan pengurutan data.
+      - Diperlukan operasi pencarian, penambahan, dan penghapusan data dengan efisien.
+      - Data yang dimasukkan tidak memiliki pola yang cenderung tidak seimbang atau terurut.
 
       [Code example »»](./data-structures/binary-search-tree.js)
 
@@ -903,50 +903,50 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 6.  **Graph**
 
-    - **_karakteristik_**:
+    - **_Karakteristik_**:
 
       Graph adalah struktur data non-linear yang terdiri dari kumpulan node atau vertex (simpul) yang saling terhubung melalui edge (garis). Node mewakili objek atau entitas dan setiap Node diberi nama unik yang membedakannya dari Node yang lain, sedangkan edge menunjukkan hubungan antara dua node. Graph digunakan untuk merepresentasikan berbagai jenis koneksi, seperti jaringan sosial, peta, dan sistem transportasi. Tree merupakan tipe khusus dari struktur data Graph.
 
-      ada dua jenis Graph:
+      Ada dua jenis Graph:
 
-      - **directed** yang berarti hubungan antara dua node atau edge memiliki arah (biasanya edge direpresentasikan oleh arah panah pada Graph yang dapat dilalui) ini seperti jalur satu arah, misalnya instagram yang mana kita bisa mengikuti seseorang tapi dia tidak otomatis mengikuti kita.
-      - **undirected** yang berarti edge tidak memiliki arah (tidak adanya panah memberi tahu kita bahwa graph merupakan undirected) ini seperti jalur dua arah, misalnya facebook yang mana kita dan teman kita saling berteman.
+      - **Directed** yang berarti hubungan antara dua node atau edge memiliki arah (biasanya edge direpresentasikan oleh arah panah pada Graph yang dapat dilalui) ini seperti jalur satu arah, misalnya instagram yang mana kita bisa mengikuti seseorang tapi dia tidak otomatis mengikuti kita.
+      - **Undirected** yang berarti edge tidak memiliki arah (tidak adanya panah memberi tahu kita bahwa graph merupakan undirected) ini seperti jalur dua arah, misalnya facebook yang mana kita dan teman kita saling berteman.
 
-      setiap edge juga bisa memiliki bobot (weighted) atau tidak memiliki bobot (unweighted). Bobot ini bisa berarti jarak, waktu, atau nilai lainnya yang mewakili tingkat keterkaitan antara dua node. Misalnya dalam Graph rute transportasi, bobot bisa merepresentasikan jarak atau waktu antara dua tempat yang ditentukan.
+      Setiap edge juga bisa memiliki bobot (weighted) atau tidak memiliki bobot (unweighted). Bobot ini bisa berarti jarak, waktu, atau nilai lainnya yang mewakili tingkat keterkaitan antara dua node. Misalnya dalam Graph rute transportasi, bobot bisa merepresentasikan jarak atau waktu antara dua tempat yang ditentukan.
 
       Intinya, data struktur Graph ini memudahkan kita untuk menggambarkan dan menganalisis hubungan kompleks antara berbagai elemen, dan banyak aplikasi keren yang bisa dibangun dengan bantuan Graph.
 
-    - **_kelebihan_**:
+    - **_Kelebihan_**:
 
-      representasi hubungan yang kompleks: Graph memungkinkan representasi hubungan yang kompleks antara entitas-entitas yang terkait.
+      Representasi hubungan yang kompleks: Graph memungkinkan representasi hubungan yang kompleks antara entitas-entitas yang terkait.
 
-      pencarian jalur: Graph sangat efisien untuk melakukan pencarian jalur dan menjawab pertanyaan seperti "Apakah ada jalan dari node A ke node B?".
+      Pencarian jalur: Graph sangat efisien untuk melakukan pencarian jalur dan menjawab pertanyaan seperti "Apakah ada jalan dari node A ke node B?".
 
-      model real-world scenarios: Graph digunakan untuk memodelkan banyak skenario dalam kehidupan nyata, seperti jaringan sosial, sistem transportasi, dan jaringan komputer.
+      Model real-world scenarios: Graph digunakan untuk memodelkan banyak skenario dalam kehidupan nyata, seperti jaringan sosial, sistem transportasi, dan jaringan komputer.
 
-    - **_kelemahan_**:
+    - **_Kelemahan_**:
 
-      penggunaan memori: Implementasi graph dengan jumlah node dan edge yang besar bisa memakan banyak memori.
+      Penggunaan memori: Implementasi graph dengan jumlah node dan edge yang besar bisa memakan banyak memori.
 
-      kompleksitas implementasi: Mengelola graph, terutama ketika ukurannya besar, dapat menjadi rumit.
+      Kompleksitas implementasi: Mengelola graph, terutama ketika ukurannya besar, dapat menjadi rumit.
 
-    - **_contoh penggunaan_**:
+    - **_Contoh penggunaan_**:
 
-      peta dan rute (google map): Graph digunakan untuk merepresentasikan jalan dan keterhubungan antara tempat-tempat di peta.
+      Peta dan rute (google map): Graph digunakan untuk merepresentasikan jalan dan keterhubungan antara tempat-tempat di peta.
 
-      grafik akhir (finite state machine): Graph digunakan untuk merepresentasikan aliran program atau bahasa formal.
+      Grafik akhir (finite state machine): Graph digunakan untuk merepresentasikan aliran program atau bahasa formal.
 
-      sistem rekomendasi: Graph digunakan untuk merepresentasikan hubungan antara produk dan preferensi pengguna.
+      Sistem rekomendasi: Graph digunakan untuk merepresentasikan hubungan antara produk dan preferensi pengguna.
 
-      jaringan sosial: Graph digunakan untuk merepresentasikan koneksi antara pengguna. Facebook, instagram, linkedin semuanya menggunakan strukur data Graph untuk menunjukkan hubungan timbal balik, saran postingan dan rekomendasi lainnya.
+      Jaringan sosial: Graph digunakan untuk merepresentasikan koneksi antara pengguna. Facebook, instagram, linkedin semuanya menggunakan strukur data Graph untuk menunjukkan hubungan timbal balik, saran postingan dan rekomendasi lainnya.
 
-    - **_representasi struktur data Graph_**:
+    - **_Representasi struktur data Graph_**:
 
-      1.  representasi Graph dengan menggunakan Array (Adjacency Matrix)
+      1.  Representasi Graph dengan menggunakan Array (Adjacency Matrix)
 
-          metode ini menggunakan array dua dimensi untuk menyimpan status keterhubungan antara node-node. Ukuran array ini adalah (n x n), dimana n adalah jumlah node dalam graph. Baris dan kolom dalam matriks menunjukkan node-node yang ada, dan nilai dalam sel matriks menunjukkan apakah ada edge atau tidak antara node-node tersebut. Metode ini cocok untuk graph yang padat dengan banyak edge.
+          Metode ini menggunakan array dua dimensi untuk menyimpan status keterhubungan antara node-node. Ukuran array ini adalah (n x n), dimana n adalah jumlah node dalam graph. Baris dan kolom dalam matriks menunjukkan node-node yang ada, dan nilai dalam sel matriks menunjukkan apakah ada edge atau tidak antara node-node tersebut. Metode ini cocok untuk graph yang padat dengan banyak edge.
 
-          contoh:
+          Contoh:
 
               // graph:
 
@@ -962,11 +962,11 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
                 [ 0, 1, 0], // Node C terhubung dengan B
               ];
 
-      2.  representasi Graph dengan menggunakan Object (Adjacency List)
+      2.  Representasi Graph dengan menggunakan Object (Adjacency List)
 
-          metode ini menggunakan objek (atau Map) JavaScript untuk merepresentasikan setiap node dan array (arau Set) untuk menyimpan node yang terhubung. Setiap node akan menjadi properti dari objek, dan nilai dari properti tersebut akan berupa array yang berisi node-node yang terhubung dengan node tersebut melalui edge. Ini adalah metode yang paling umum digunakan karena efisien untuk graph yang jarang terhubung (sparse graph) karena hanya menyimpan informasi tentang edge yang ada.
+          Metode ini menggunakan objek (atau Map) JavaScript untuk merepresentasikan setiap node dan array (arau Set) untuk menyimpan node yang terhubung. Setiap node akan menjadi properti dari objek, dan nilai dari properti tersebut akan berupa array yang berisi node-node yang terhubung dengan node tersebut melalui edge. Ini adalah metode yang paling umum digunakan karena efisien untuk graph yang jarang terhubung (sparse graph) karena hanya menyimpan informasi tentang edge yang ada.
 
-          contoh: misalkan kita memiliki graph untuk merepresentasikan jaringan sosial sederhana. Node-node dalam graph mewakili pengguna, dan edge-edge mewakili pertemanan di antara mereka.
+          Contoh: misalkan kita memiliki graph untuk merepresentasikan jaringan sosial sederhana. Node-node dalam graph mewakili pengguna, dan edge-edge mewakili pertemanan di antara mereka.
 
               Graph:
               A -- B -- C
@@ -989,11 +989,11 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       Adjacency Matrix Vs Adjacency List:
 
-      - jika graph jarang terhubung, representasi menggunakan objek (Adjacency List) lebih efisien karena hanya menyimpan informasi tentang edge yang ada. Sedangkan menggunakan array (Adjacency Matrik) akan menyimpan informasi tentang ada atau tidaknya edge.
-      - jika graph padat dan memiliki banyak edge, representasi menggunakan array (Adjacency Matrix) dapat lebih efisien karena hanya menggunakan ruang memori untuk seluruh kumpulan node.
-      - dengan Adjacency List, menyisipkan (inserting) dan mendapatkan (finding) node yang bersebelahan memiliki constant time complexity. lain halnya dengan Adjacency Matrik yang memiliki linear time complexity.
+      - Jika graph jarang terhubung, representasi menggunakan objek (Adjacency List) lebih efisien karena hanya menyimpan informasi tentang edge yang ada. Sedangkan menggunakan array (Adjacency Matrik) akan menyimpan informasi tentang ada atau tidaknya edge.
+      - Jika graph padat dan memiliki banyak edge, representasi menggunakan array (Adjacency Matrix) dapat lebih efisien karena hanya menggunakan ruang memori untuk seluruh kumpulan node.
+      - Dengan Adjacency List, menyisipkan (inserting) dan mendapatkan (finding) node yang bersebelahan memiliki constant time complexity. lain halnya dengan Adjacency Matrik yang memiliki linear time complexity.
 
-      - **_implementasi graph dengan adjacency list di JavaScript_**:
+      - **_Implementasi graph dengan adjacency list di JavaScript_**:
 
         [Code example »»](./data-structures/graph.js)
 
@@ -1009,7 +1009,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
         `hasEdge(fromNode, toNode)` => mengecek apakah ada edge yang menghubungkan dua node yang diberikan.
 
-      - **_big-O dari graph dengan adjacency list method_**:
+      - **_Big-O dari graph dengan adjacency list method_**:
 
         `addNode(node)` => O(1) - Constant
 
@@ -1030,47 +1030,47 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 **Search Algorithms**
 
 1. Linear Search
-   - time complexity: O(n) - Linear
-   - space complexity: O(1) - Constant
-   - digunakan ketika: list atau array kecil, data tidak terurut, atau tidak ada informasi tentang pola data.
+   - Time complexity: O(n) - Linear
+   - Space complexity: O(1) - Constant
+   - Digunakan ketika: list atau array kecil, data tidak terurut, atau tidak ada informasi tentang pola data.
 2. Binary Search
-   - time complexity: O(log n) - Logarithmic
-   - space complexity: O(1) - Constant
-   - digunakan ketika: data sudah terurut dan besar, untuk mengurutkan daftar sebelum mencari.
+   - Time complexity: O(log n) - Logarithmic
+   - Space complexity: O(1) - Constant
+   - Digunakan ketika: data sudah terurut dan besar, untuk mengurutkan daftar sebelum mencari.
 
 **Sort Algorithms**
 
 1. Bubble Sort
-   - time complexity: O(n^2) - Quadratic
-   - space complexity: O(1) - Constant
-   - digunakan ketika: jumlah data terbatas dan tidak terlalu besar.
+   - Time complexity: O(n^2) - Quadratic
+   - Space complexity: O(1) - Constant
+   - Digunakan ketika: jumlah data terbatas dan tidak terlalu besar.
 2. Selection Sort
-   - time complexity: O(n^2) - Quadratic
-   - space complexity: O(1) - Constant
-   - digunakan ketika: jumlah data terbatas dan tidak terlalu besar.
+   - Time complexity: O(n^2) - Quadratic
+   - Space complexity: O(1) - Constant
+   - Digunakan ketika: jumlah data terbatas dan tidak terlalu besar.
 3. Insertion Sort
-   - time complexity: O(n^2) - Quadratic
-   - space complexity: O(1) - Constant
-   - digunakan ketika: jumlah data terbatas dan sebagian besar sudah terurut.
+   - Time complexity: O(n^2) - Quadratic
+   - Space complexity: O(1) - Constant
+   - Digunakan ketika: jumlah data terbatas dan sebagian besar sudah terurut.
 4. Merge Sort
-   - time complexity: O(n log n)
-   - space complexity: O(n) - Linear
-   - digunakan ketika: menguatkan pengurutan data besar, performa dan stabilitas sangat diutamakan
+   - Time complexity: O(n log n)
+   - Space complexity: O(n) - Linear
+   - Digunakan ketika: menguatkan pengurutan data besar, performa dan stabilitas sangat diutamakan
 5. Quick Sort
-   - time complexity: O(n log n) pada kasus rata-rata dan O(n^2) pada kasus terburuk
-   - space complexity: O(log n) pada kasus rata-rata dan O(n) pada kasus terburuk
-   - digunakan ketika: menguatkan pengurutan data besar, performa baik pada kasus rata-rata.
+   - Time complexity: O(n log n) pada kasus rata-rata dan O(n^2) pada kasus terburuk
+   - Space complexity: O(log n) pada kasus rata-rata dan O(n) pada kasus terburuk
+   - Digunakan ketika: menguatkan pengurutan data besar, performa baik pada kasus rata-rata.
 
 **Graph Algorithms**
 
 1. Depth-First Search (DFS)
-   - time complexity: O(v + e) dimana 'v' = jumlah node dan 'e' = jumlah edge
-   - space complexity: O(v)
-   - digunakan ketika: ingin menjelajahi seluruh cabang suatu graph, atau mencari jalur tertentu dari satu node ke node lainnya.
+   - Time complexity: O(v + e) dimana 'v' = jumlah node dan 'e' = jumlah edge
+   - Space complexity: O(v)
+   - Digunakan ketika: ingin menjelajahi seluruh cabang suatu graph, atau mencari jalur tertentu dari satu node ke node lainnya.
 2. Breadth-First Search (BFS)
-   - time complexity: O(v + e) dimana 'v' = jumlah node dan 'e' = jumlah edge
-   - space complexity: O(v)
-   - digunakan ketika: mencari jalur terpendek atau menjelajahi seluruh level pada graph.
+   - Time complexity: O(v + e) dimana 'v' = jumlah node dan 'e' = jumlah edge
+   - Space complexity: O(v)
+   - Digunakan ketika: mencari jalur terpendek atau menjelajahi seluruh level pada graph.
 
 ### Struktur data:
 
@@ -1078,122 +1078,122 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
 1. Array:
 
-   - time complexity:
-     - akses elemen berdasarkan indeks: O(1)
-     - pencarian elemen: O(n)
-     - penambahan atau penghapusan elemen di akhir: O(1)
-     - penambahan atau penghapusan elemen di tengah: O(n)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - mengakses elemen berdasarkan indeks atau pengaksesan data yang cepat melalui index.
-     - untuk penyimpanan data dengan ukuran tetap atau terurut.
+   - Time complexity:
+     - Akses elemen berdasarkan indeks: O(1)
+     - Pencarian elemen: O(n)
+     - Penambahan atau penghapusan elemen di akhir: O(1)
+     - Penambahan atau penghapusan elemen di tengah: O(n)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Mengakses elemen berdasarkan indeks atau pengaksesan data yang cepat melalui index.
+     - Untuk penyimpanan data dengan ukuran tetap atau terurut.
 
 2. Object:
 
-   - time complexity:
-     - akses elemen: O(1)
-     - pencarian elemen: O(n)
-     - penambahan atau penghapusan elemen: O(1)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - untuk menyimpan data dalam bentuk key-value (pair) dengan akses cepat berdasarkan key.
+   - Time complexity:
+     - Akses elemen: O(1)
+     - Pencarian elemen: O(n)
+     - Penambahan atau penghapusan elemen: O(1)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Untuk menyimpan data dalam bentuk key-value (pair) dengan akses cepat berdasarkan key.
 
 3. Set:
 
-   - time complexity:
-     - insert (penambahan data): O(1)
-     - search (pencarian data): O(1)
-     - delete (penghapusan data): O(1)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - untuk menyimpan himpunan data unik tanpa duplikat.
-     - contoh penggunaan: menghilangkan duplikat dalam array, operasi matematika.
+   - Time complexity:
+     - Insert (penambahan data): O(1)
+     - Search (pencarian data): O(1)
+     - Delete (penghapusan data): O(1)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Untuk menyimpan himpunan data unik tanpa duplikat.
+     - Contoh penggunaan: menghilangkan duplikat dalam array, operasi matematika.
 
 4. Map:
 
-   - time complexity:
-     - insert (penambahan data): O(1)
-     - search (pencarian data): O(1)
-     - delete (penghapusan data): O(1)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - untuk memetakan kunci unik ke nilai tertentu.
-     - contoh penggunaan: penyimpanan data berstruktur dengan kunci yang dapat diakses.
+   - Time complexity:
+     - Insert (penambahan data): O(1)
+     - Search (pencarian data): O(1)
+     - Delete (penghapusan data): O(1)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Untuk memetakan kunci unik ke nilai tertentu.
+     - Contoh penggunaan: penyimpanan data berstruktur dengan kunci yang dapat diakses.
 
 **Custom Data Struktur:**
 
 1. Stack:
 
-   - time complexity:
-     - push (penambahan elemen): O(1)
-     - pop (penghapusan elemen): O(1)
-     - top (mengakses elemen teratas): O(1)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - untuk menangani tumpukan data dengan prinsip "last in, first out" (LIFO).
-     - contoh penggunaan: pengelolaan rekursi, penghitungan ekspresi matematika.
+   - Time complexity:
+     - Push (penambahan elemen): O(1)
+     - Pop (penghapusan elemen): O(1)
+     - Top (mengakses elemen teratas): O(1)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Untuk menangani tumpukan data dengan prinsip "last in, first out" (LIFO).
+     - Contoh penggunaan: pengelolaan rekursi, penghitungan ekspresi matematika.
 
 2. Queue:
 
-   - time complexity:
+   - Time complexity:
      - Enqueue (penambahan elemen): O(1)
      - Dequeue (penghapusan elemen): O(1)
      - Front (mengakses elemen depan): O(1)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - untuk mengelola antrian data dengan prinsip "first in, first out" (FIFO).
-     - contoh penggunaan: pengelolaan antrian tugas, simulasi proses.
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Untuk mengelola antrian data dengan prinsip "first in, first out" (FIFO).
+     - Contoh penggunaan: pengelolaan antrian tugas, simulasi proses.
 
 3. Linked List:
 
-   - time complexity:
-     - akses elemen berdasarkan indeks: O(1)
-     - pencarian elemen: O(n)
-     - penambahan atau penghapusan elemen: O(1) (jika akses ke node yang bersangkutan telah diketahui), O(n) (jika mencari node terlebih dahulu)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - membutuhkan fleksibilitas dalam penambahan atau penghapusan elemen secara dinamis.
-     - untuk mengimplementasikan stack, queue, dan linked list terurut.
+   - Time complexity:
+     - Akses elemen berdasarkan indeks: O(1)
+     - Pencarian elemen: O(n)
+     - Penambahan atau penghapusan elemen: O(1) (jika akses ke node yang bersangkutan telah diketahui), O(n) (jika mencari node terlebih dahulu)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Membutuhkan fleksibilitas dalam penambahan atau penghapusan elemen secara dinamis.
+     - Untuk mengimplementasikan stack, queue, dan linked list terurut.
 
 4. Doubly Linked List:
 
-   - time complexity: sama dengan Linked List
-   - space complexity: O(n)
-   - digunakan ketika:
-     - membutuhkan kemampuan untuk mengakses elemen ke depan dan ke belakang.
-     - untuk implementasi yang lebih kompleks yang membutuhkan traversal maju dan mundur.
+   - Time complexity: sama dengan Linked List
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Membutuhkan kemampuan untuk mengakses elemen ke depan dan ke belakang.
+     - Untuk implementasi yang lebih kompleks yang membutuhkan traversal maju dan mundur.
 
 5. Hash Table:
 
-   - time complexity:
-     - insert (penambahan data): O(1) (rata-rata), O(n) (kasus terburuk)
-     - search (pencarian data): O(1) (rata-rata), O(n) (kasus terburuk)
-     - delete (penghapusan data): O(1) (rata-rata), O(n) (kasus terburuk)
-   - space complexity: O(n)
-   - digunakan ketika:
-     - untuk melakukan pencarian cepat berdasarkan kunci unik.
-     - contoh penggunaan: penyimpanan data dengan indeks yang dikenali.
+   - Time complexity:
+     - Insert (penambahan data): O(1) (rata-rata), O(n) (kasus terburuk)
+     - Search (pencarian data): O(1) (rata-rata), O(n) (kasus terburuk)
+     - Delete (penghapusan data): O(1) (rata-rata), O(n) (kasus terburuk)
+   - Space complexity: O(n)
+   - Digunakan ketika:
+     - Untuk melakukan pencarian cepat berdasarkan kunci unik.
+     - Contoh penggunaan: penyimpanan data dengan indeks yang dikenali.
 
 6. Trie:
 
-   - time complexity:
-     - insert (penambahan data): O(m), m adalah panjang string
-     - search (pencarian data): O(m), m adalah panjang string
-     - delete (penghapusan data): O(m), m adalah panjang string
-   - space complexity: O(n \* m), n adalah jumlah node, m adalah panjang string
-   - digunakan ketika:
-     - untuk pencarian, penambahan, dan penghapusan cepat dari string.
-     - contoh penggunaan: kamus, autocorrect, spell checker.
+   - Time complexity:
+     - Insert (penambahan data): O(m), m adalah panjang string
+     - Search (pencarian data): O(m), m adalah panjang string
+     - Delete (penghapusan data): O(m), m adalah panjang string
+   - Space complexity: O(n \* m), n adalah jumlah node, m adalah panjang string
+   - Digunakan ketika:
+     - Untuk pencarian, penambahan, dan penghapusan cepat dari string.
+     - Contoh penggunaan: kamus, autocorrect, spell checker.
 
 7. Binary Search Tree (BST):
 
-- time complexity:
-  - insert (penambahan data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
-  - search (pencarian data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
-  - delete (penghapusan data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
-- space complexity: O(n)
-- digunakan ketika:
-  - untuk mencari, menambahkan, dan menghapus data dengan efisien.
-  - contoh penggunaan: struktur data tree dengan kunci terurut.
+- Time complexity:
+  - Insert (penambahan data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
+  - Search (pencarian data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
+  - Delete (penghapusan data): O(log n) (rata-rata), O(n) (kasus terburuk, jika sudah terurut)
+- Space complexity: O(n)
+- Digunakan ketika:
+  - Untuk mencari, menambahkan, dan menghapus data dengan efisien.
+  - Contoh penggunaan: struktur data tree dengan kunci terurut.
 
 Note: kompleksitas waktu dan ruang dapat berbeda tergantung pada implementasi algoritma dan struktur data tertentu, serta input yang diberikan. Dalam pemrograman, pemilihan algoritma dan struktur data yang tepat sangat penting untuk mencapai performa yang optimal sesuai dengan kasus penggunaan.
