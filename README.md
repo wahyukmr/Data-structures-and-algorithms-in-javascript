@@ -355,7 +355,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       Object bukan merupakan iterable, sedangkan Map merupakan iterable.
 
-      Jumlah item dalam Object harus ditentukan secara manual, sedangkan itu sudah tersedia dengan property `size`pada Map.
+      Jumlah item dalam Object harus ditentukan secara manual, sedangkan itu sudah tersedia dengan property `size` pada Map.
 
       Selain menyimpan data, kita dapat melampirkan fungsionalitas ke dalam Object sedangkan Map hanya dibatasi untuk menyinpan data.
 
