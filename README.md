@@ -239,6 +239,27 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
    Mutabilitas string merujuk pada kemampuan untuk mengubah string setelah dibuat. Beberapa bahasa memperbolehkan perubahan (mutabilitas string) seperti Ruby dan PHP, sementara yang lain menggunakan immutabilitas seperti Java, C#, JavaScript, Python, Go. Immutabilitas dapat menghemat memori dengan mengarahkan variabel ke lokasi yang sama saat terjadi perubahan.
 
+2. **Bilangan Bulat**
+
+   Bilangan bulat digunakan untuk menyimpan nilai numerik, bisa menampung angka positif dan negatif, atau hanya menampung angka positif. Representasi bilangan bulat memerlukan 4 byte dalam memori.
+
+   Ada beberapa cara untuk merepresentasikan bilangan bulat dalam biner, salah satunya adalah "Sign-magnitude" (Besaran tanda). Untuk membedakan antara nilai positif dan negatif dalam biner, Sign-magnitude menggunakan indikator di ujung kiri bilangan biner untuk menunjukkan polaritas.
+
+   | Bilangan Bulat | Representasi Sign-magnitude(4-bit) |
+   | :------------- | ---------------------------------: |
+   | +2             |                               0010 |
+   | +1             |                               0001 |
+   | +0             |                               0000 |
+   | -0             |                               1000 |
+   | -1             |                               1001 |
+   | -2             |                               1010 |
+
+   Bilangan bulat tidak dapat mewakili pecahan; untuk itu, gunakan desimal atau float. IEEE 754 adalah standar umum untuk merepresentasikan angka dengan pendekatan tetap. Beberapa bahasa tingkat tinggi seperti Python dan JavaScript menggunakan pendekatan ini dan merangkum inisialisasi bilangan bulat ke representasi tetap ini. Hal ini membuat bekerja dengan angka menjadi mudah dalam bahasa dinamis tingkat tinggi ini, tetapi menghilangkan kemampuan untuk menyesuaikan pendekatan pengoptimalan memori.
+
+   Bahasa yang diketik secara statis seperti C++, Rust, dan C memungkinkan penyesuaian ukuran memori. Contoh: C++ menggunakan `unsigned short int` hanya memerlukan 2 byte, Rust memungkinkan instantiasi bilangan bulat 1-byte yang hanya menampung angka positif, cocok untuk penghematan memori.
+
+   Selain bilangan bulat primitif yang dilambangkan dengan `int`, Java memungkinkan Anda untuk membungkus nilai bilangan bulat ke dalam kelas pembungkus `Integer`. Hal ini memungkinkan beberapa metode untuk menangani bilangan bulat, seperti mengubah dari string ke double, perbandingan, ukuran maksimum dan minimum, dan sebagainya. Kelas integer tidak dapat diubah, yang membuatnya aman untuk di-root. Fungsionalitas dan keamanan ekstra ini membutuhkan biaya memori, dan `Integer` objek akan membutuhkan 16 byte memori untuk menyimpannya.
+
 ### 2.2. Built-in Data Structure di JavaScript:
 
 1.  **Array**
