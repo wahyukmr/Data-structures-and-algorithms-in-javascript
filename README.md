@@ -244,12 +244,11 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 1.  **Array**
 
     **_karakteristik_**:
-
     Array adalah struktur data linear yang dapat menyimpan kumpulan value yang disimpan secara berurutan dalam memori. Array dapat berisi campuran tipe data yang berbeda. Elemen-elemen dalam array diakses menggunakan indeks. Index pertama dimulai dari 0 bukan 1. Array adalah iterables, mereka dapat digunakan dengan for-of loop.
 
-**_kapan penggunaannya_**:
+    **_kapan penggunaannya_**:
 
-      berguna saat kita harus menyimpan nilai individual dan menambah/menghapus nilai dari akhir struktur data.
+    berguna saat kita harus menyimpan nilai individual dan menambah/menghapus nilai dari akhir struktur data.
 
     - **_kelemahan_**:
 
@@ -298,7 +297,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
       access => O(1) - Constant
       `Object.keys()`, `Object.values()`, `Object.entries()`, akan memiliki time complexity O(n) - Linear.
 
-2.  **Set**
+1.  **Set**
 
     - **_karakteristik_**:
 
@@ -339,7 +338,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
       `forEach()` = O(n) - Linear.
 
-3.  **Map**
+1.  **Map**
 
     - **_karakteristik_**:
 
