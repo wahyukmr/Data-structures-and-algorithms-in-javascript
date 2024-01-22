@@ -267,11 +267,17 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
    - _Conditional statements (pernyataan kondisional)_
 
      Ekspresi Boolean melibatkan operator relasional untuk perbandingan, meliputi:
+
      Lebih besar dari (>)
+
      Kurang dari (<)
+
      Lebih besar dari atau sama dengan (>=)
+
      Kurang dari atau sama dengan (<=)
+
      Sama dengan (==)
+
      Tidak sama dengan (!=)
 
      Pernyataan kondisional meliputi `if`, `else`, `else if`, `while`, dll. Memungkinkan eksekusi opsi kode yang berbeda berdasarkan kondisi Boolean.
