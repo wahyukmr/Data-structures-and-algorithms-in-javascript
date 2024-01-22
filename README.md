@@ -265,6 +265,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
    Boolean digunakan untuk merepresentasikan nilai "true (benar)" atau "false (salah)", sering ditemui dalam pernyataan pilihan ganda atau pernyataan true/false.
 
    - _Conditional statements (pernyataan kondisional)_
+
      Ekspresi Boolean melibatkan operator relasional untuk perbandingan, meliputi:
      Lebih besar dari (>)
      Kurang dari (<)
@@ -288,6 +289,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
      ```
 
    - _Logical Operators (operator logika)_
+
      Operator logika `||`, `&&`, `!` memperluas cakupan aplikasi:
      Logika OR (||)
      Logika AND (&&)
@@ -309,7 +311,7 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
      }
      ```
 
-Ekspresi Boolean bersifat biner (benar atau salah, setara dengan 0 atau 1 dalam biner). Meskipun hanya memiliki dua nilai, Booleans mencapai kompleksitas saat digabungkan dengan Conditional statements (pernyataan kondisional) dan Logical operators (operator logika).
+   Ekspresi Boolean bersifat biner (benar atau salah, setara dengan 0 atau 1 dalam biner). Meskipun hanya memiliki dua nilai, Booleans mencapai kompleksitas saat digabungkan dengan Conditional statements (pernyataan kondisional) dan Logical operators (operator logika).
 
 ### 2.2. Built-in Data Structure di JavaScript:
 
