@@ -260,6 +260,57 @@ Klasifikasi Struktur data yang dikategorikan menjadi dua cabang utama, Linear da
 
    Selain bilangan bulat primitif yang dilambangkan dengan `int`, Java memungkinkan Anda untuk membungkus nilai bilangan bulat ke dalam kelas pembungkus `Integer`. Hal ini memungkinkan beberapa metode untuk menangani bilangan bulat, seperti mengubah dari string ke double, perbandingan, ukuran maksimum dan minimum, dan sebagainya. Kelas integer tidak dapat diubah, yang membuatnya aman untuk di-root. Fungsionalitas dan keamanan ekstra ini membutuhkan biaya memori, dan `Integer` objek akan membutuhkan 16 byte memori untuk menyimpannya.
 
+3. **Boolean**
+
+   Boolean digunakan untuk merepresentasikan nilai "true (benar)" atau "false (salah)", sering ditemui dalam pernyataan pilihan ganda atau pernyataan true/false.
+
+   - _Conditional statements (pernyataan kondisional)_
+     Ekspresi Boolean melibatkan operator relasional untuk perbandingan, meliputi:
+     Lebih besar dari (>)
+     Kurang dari (<)
+     Lebih besar dari atau sama dengan (>=)
+     Kurang dari atau sama dengan (<=)
+     Sama dengan (==)
+     Tidak sama dengan (!=)
+
+     Pernyataan kondisional meliputi `if`, `else`, `else if`, `while`, dll. Memungkinkan eksekusi opsi kode yang berbeda berdasarkan kondisi Boolean.
+
+     Contoh dalam JavaScript:
+
+     ```javascript
+     if (right > left) {
+       doTheRightThing();
+     } else if (right < left) {
+       doTheLeftThing();
+     } else {
+       keepResearching();
+     }
+     ```
+
+   - _Logical Operators (operator logika)_
+     Operator logika `||`, `&&`, `!` memperluas cakupan aplikasi:
+     Logika OR (||)
+     Logika AND (&&)
+     Logika NOT (!)
+
+     Operator logika dapat digabungkan dengan ekspresi Boolean untuk hasil kode yang lebih beragam.
+
+     Contoh dengan Operator Logika:
+
+     ```javascript
+     if (condition_1 || condition_2) {
+       doActionOne();
+     } else if (condition_1 && condition_2) {
+       doActionTwo();
+     } else if (!condition_1) {
+       doActionFour();
+     } else {
+       waitForInstruction();
+     }
+     ```
+
+Ekspresi Boolean bersifat biner (benar atau salah, setara dengan 0 atau 1 dalam biner). Meskipun hanya memiliki dua nilai, Booleans mencapai kompleksitas saat digabungkan dengan Conditional statements (pernyataan kondisional) dan Logical operators (operator logika).
+
 ### 2.2. Built-in Data Structure di JavaScript:
 
 1.  **Array**
